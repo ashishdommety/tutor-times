@@ -36,8 +36,3 @@ Tutor-time is a web application that allows individual tutors to manage tutoring
 ### Second Run - 
 1. Tutor can set up their calendar, schedule open slots
 2. Students can schedule their class in an open slot
-
-### Third Run - 
-1. 
-
-©️Trans-Domain LLC.
