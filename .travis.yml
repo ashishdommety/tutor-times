@@ -9,13 +9,11 @@ cache:
 
 before_install: cd client
 
-install: 
-  - yarn install
-  - yarn build
-  
 script:
+  - yarn install
   - yarn test
   - CI=false
+  - yarn build
 
 deploy: 
   provider: heroku
