@@ -1,0 +1,16 @@
+{
+  "name": "tutor-time",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ashishdommety/tutor-time.git",
+  "author": "<ashishuiux@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "mongoose": "^5.2.5",
+    "react-google-login": "^3.2.1"
+  }
+}
