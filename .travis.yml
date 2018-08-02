@@ -11,3 +11,12 @@ script:
   - yarn test
   - CI=false
   - yarn build
+
+deploy: 
+  provider: heroku
+  api_key: 
+    secure: $HEROKU_KEY
+  app: tutortimes
+  on:
+    repo: ashishdommety/tutor-times
+    branch: master
