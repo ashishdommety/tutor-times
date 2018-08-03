@@ -1,10 +1,19 @@
 {
   "name": "tutor-time",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "git@github.com:ashishdommety/tutor-time.git",
   "author": "<ashishuiux@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "server": "node server.js",
+    "client": "cd client && npm run start",
+    "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+  },
   "dependencies": {
     "body-parser": "^1.18.3",
     "chai": "^4.1.2",
