@@ -10,7 +10,7 @@ const Home = (props) => {
           <h1 className="App-title">Welcome to Tutor Time</h1>
         </header>
         <p className="App-intro">
-          A place where tutors and students meet.
+          A place where tutors and students meet to learn from each other.
         </p>
         <p>{props.status}</p>
         <button
