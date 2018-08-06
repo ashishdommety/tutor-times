@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './Home.css';
 import { GoogleLogin } from 'react-google-login';
-import runtimeEnv from '@mars/heroku-js-runtime-env';
+// import runtimeEnv from '@mars/heroku-js-runtime-env';
 
-const env = runtimeEnv();
+// const env = runtimeEnv();
 
 const responseGoogle = (response) => console.log(response);
 
@@ -22,7 +22,7 @@ const Home = (props) => {
         {/* <button
           onClick={props.instigateLogin}>Login with Google</button> */}
         <GoogleLogin
-            clientId={env.G_CLIENT}
+            clientId={G_CLIENT}
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
