@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './Home.css';
+import { GoogleLogin } from 'react-google-login';
+import runtimeEnv from '@mars/heroku-js-runtime-env';
+
+const env = runtimeEnv();
+
+const responseGoogle = (response) => console.log(response);
 
 const Home = (props) => {
     return (
@@ -13,8 +19,14 @@ const Home = (props) => {
           A place where tutors and students meet to learn from each other.
         </p>
         <p>{props.status}</p>
-        <button
-          onClick={props.instigateLogin}>Login with Google</button>
+        {/* <button
+          onClick={props.instigateLogin}>Login with Google</button> */}
+        <GoogleLogin
+            clientId={env.G_CLIENT}
+            buttonText="Login"
+            onSuccess={responseGoogle}
+             onFailure={responseGoogle}
+        />
       </div>
     );
 }

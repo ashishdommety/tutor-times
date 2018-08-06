@@ -22,3 +22,9 @@ deploy:
   on:
     repo: ashishdommety/tutor-times
     branch: master
+
+#safelist
+branches: 
+  only:
+  - master
+
