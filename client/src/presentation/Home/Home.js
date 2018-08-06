@@ -25,7 +25,7 @@ const Home = (props) => {
             clientId={env.G_CLIENT}
             buttonText="Login"
             onSuccess={responseGoogle}
-             onFailure={responseGoogle}
+            onFailure={responseGoogle}
         />
       </div>
     );
