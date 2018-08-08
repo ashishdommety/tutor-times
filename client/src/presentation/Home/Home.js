@@ -4,9 +4,10 @@ import './Home.css';
 import { GoogleLogin } from 'react-google-login';
 import runtimeEnv from '@mars/heroku-js-runtime-env';
 
-const env = runtimeEnv();
-
 const responseGoogle = (response) => console.log(response);
+
+const env = runtimeEnv();
+console.log(env);
 
 const Home = (props) => {
     return (
@@ -22,7 +23,7 @@ const Home = (props) => {
         {/* <button
           onClick={props.instigateLogin}>Login with Google</button> */}
         <GoogleLogin
-            clientId={env.GCLIENT}
+            clientId={"155095156692-9mti1snraf70l1fnqel9mfa5bfpukp99.apps.googleusercontent.com"}
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
