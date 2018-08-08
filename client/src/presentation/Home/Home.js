@@ -22,7 +22,7 @@ const Home = (props) => {
         {/* <button
           onClick={props.instigateLogin}>Login with Google</button> */}
         <GoogleLogin
-            clientId={GCLIENT}
+            clientId={env.GCLIENT}
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
