@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import HomeContainer from '../../containers/HomeContainer';
+import Dashboard from '../Dashboard/Dashboard'; // temporary
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const App = (props) => {
     return (
-      <HomeContainer/>
+      <BrowserRouter>
+        <Switch>
+          <Route exact={true} path="/" component={HomeContainer}/>
+          <Route exact={true} path="/dashboard" component={Dashboard}/>
+        </Switch>
+      </BrowserRouter>
     );
 }
 
