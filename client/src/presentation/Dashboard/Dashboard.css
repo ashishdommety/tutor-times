@@ -1,9 +1,16 @@
 .dash{
-  background-color: lightgrey;
+  background-color: #3A3335;
   display:grid;
   padding: 20px;
+  text-align:center;
+}
+a{
+  color:white;
 }
 #profile_pic{
+  margin-left:auto;
+  margin-right: auto;
+  padding: 10px;
   border-radius: 100%;
   width: 50px;
 }
@@ -12,6 +19,7 @@
     display: inline-grid;
     height: 100vh;
     text-align: center;
+    grid-template-rows: 150px 40px 40px;
   }
   #profile_pic{
     border-radius: 0%;
