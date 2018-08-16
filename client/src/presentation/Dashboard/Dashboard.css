@@ -1,0 +1,21 @@
+.dash{
+  background-color: lightgrey;
+  display:grid;
+  padding: 20px;
+}
+#profile_pic{
+  border-radius: 100%;
+  width: 50px;
+}
+@media only screen and (min-width:450px){
+  .dash{
+    display: inline-grid;
+    height: 100vh;
+    text-align: center;
+  }
+  #profile_pic{
+    border-radius: 0%;
+    width: 100px;
+  }
+
+}
