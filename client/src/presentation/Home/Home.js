@@ -4,10 +4,10 @@ import './Home.css';
 import { GoogleLogin } from 'react-google-login';
 import runtimeEnv from '@mars/heroku-js-runtime-env';
 
-const responseGoogle = (response) => console.log(response);
+const responseGoogle = (response) => console.log(response); // once response comes in dispatch an action that changes the state with some of the users details.
 
 const env = runtimeEnv();
-console.log(env);
+// console.log(env);
 
 const Home = (props) => {
     return (

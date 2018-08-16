@@ -13,6 +13,7 @@ a{
   padding: 10px;
   border-radius: 100%;
   width: 50px;
+  height: 50px;
 }
 @media only screen and (min-width:450px){
   .dash{
@@ -24,6 +25,7 @@ a{
   #profile_pic{
     border-radius: 0%;
     width: 100px;
+    height: 100px;
   }
 
 }
