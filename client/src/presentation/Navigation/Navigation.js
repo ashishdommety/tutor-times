@@ -8,12 +8,14 @@ const Navigation = (props) => {
       <img src="https://via.placeholder.com/200x200" alt="thing" id="profile_pic" />
       {props.isTutor ? 
       <div>
-        <Link to="/students">My Students</Link>
-        <Link to="/calendar">Calendar</Link>
+        <Link to="/dashboard">Home</Link>
+        <Link to="/dashboard/students">Students</Link>
+        <Link to="/dashboard/calendar">Calendar</Link>
       </div> :
       <div>
-        <Link to="/notes/:id">My Students</Link>
-        <Link to="/schedule-class">Calendar</Link>
+        <Link to="/dashboard">Home</Link>
+        <Link to="/dashboard/notes/:id">Notes</Link>
+        <Link to="/dashboard/schedule-class">Schedule</Link>
       </div>  
       }
       
