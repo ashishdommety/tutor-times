@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
+import { GoogleLogout } from 'react-google-login';
 
 const Navigation = (props) => {
+  const logout = (response) => {
+    console.log(response);
+    // window.location.pathname = "/";
+  }
   return(
     <div className="nav">
       <img src="https://via.placeholder.com/200x200" alt="thing" id="profile_pic" />
@@ -18,7 +23,11 @@ const Navigation = (props) => {
         <Link to="/dashboard/schedule-class">Schedule</Link>
       </div>  
       }
-      
+      <GoogleLogout
+        buttonText="Logout"
+        onLogoutSuccess={logout}
+      >
+      </GoogleLogout>
     </div>
   )
 }

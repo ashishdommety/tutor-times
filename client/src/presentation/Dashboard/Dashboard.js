@@ -35,5 +35,4 @@ const Dashboard = (props) => {
   }
 }
 
-console.log(Dashboard);
 export default Dashboard;
