@@ -5,7 +5,8 @@ import { fetchGoogleData } from '../actionCreators/async';
 
 function mapStateToProps(state){
   return {
-    status: state.status
+    status: state.status,
+    picture: state.picture
   }
 }
 

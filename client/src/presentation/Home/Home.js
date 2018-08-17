@@ -6,6 +6,9 @@ import { GoogleLogin } from 'react-google-login';
 
 // const env = runtimeEnv();
 
+// uxMode='redirect'
+// redirectUri="http://localhost:3000/dashboard"
+
 const Home = (props) => {
   const responseGoogle = (response) => {
     console.log(response.profileObj.givenName);
@@ -23,15 +26,12 @@ const Home = (props) => {
         <p className="App-intro">
           A place where tutors and students meet to learn from each other.
         </p>
-        <button
-          onClick={props.fetchGoogleData}
-        >Click for google stuff</button>
         <GoogleLogin
             clientId={"155095156692-9mti1snraf70l1fnqel9mfa5bfpukp99.apps.googleusercontent.com"}
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
-            uxMode='redirect'
+            uxMode="redirect"
             redirectUri="http://localhost:3000/dashboard"
         />
       </div>
