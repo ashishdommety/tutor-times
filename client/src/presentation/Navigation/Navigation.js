@@ -5,8 +5,7 @@ import './Navigation.css';
 const Navigation = (props) => {
   return(
     <div className="nav">
-      <img src="https://via.placeholder.com/100x100" alt="thing" id="profile_pic" />
-      {/* <div></div> */}
+      <img src={props.picture} alt="thing" id="profile_pic" />
       {props.isTutor ? 
       <div>
         <Link to="/students">My Students</Link>

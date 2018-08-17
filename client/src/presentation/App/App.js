@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import HomeContainer from '../../containers/HomeContainer';
 import Dashboard from '../Dashboard/Dashboard'; // temporary
 import { BrowserRouter, Switch, Route } from 'react-router-dom';

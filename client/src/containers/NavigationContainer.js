@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Navigation from '../presentation/Navigation/Navigation';
-// import { checkLogin } from '../actionCreators/async';
+// import { fetchGoogleData } from '../actionCreators/async';
 
 function mapStateToProps(state){
   return {
@@ -12,7 +12,7 @@ function mapStateToProps(state){
 
 // function mapDispatchToProps(dispatch){  
 //   return{ 
-//     instigateLogin: () => dispatch(checkLogin())
+//     fetchGoogleData: () => dispatch(fetchGoogleData)
 //   }
 // }
 
