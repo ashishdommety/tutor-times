@@ -28,7 +28,7 @@ branches:
   only:
   - master
 
-  # blocklist
+# blocklist
 branches:
   except:
   - dashboard
