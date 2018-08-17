@@ -23,6 +23,7 @@ const Navigation = (props) => {
         <Link to="/dashboard/schedule-class">Schedule</Link>
       </div>  
       }
+      <Link to="/">Logout</Link>
       {/* <GoogleLogout
         buttonText="Logout"
         onLogoutSuccess={logout}
