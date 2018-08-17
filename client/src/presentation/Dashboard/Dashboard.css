@@ -1,31 +1,11 @@
-.dash{
-  background-color: #3A3335;
-  display:grid;
-  padding: 20px;
-  text-align:center;
+.main-body{
+  background-color: lightgrey;
 }
-a{
-  color:white;
-}
-#profile_pic{
-  margin-left:auto;
-  margin-right: auto;
-  padding: 10px;
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-}
+
 @media only screen and (min-width:450px){
   .dash{
-    display: inline-grid;
-    height: 100vh;
-    text-align: center;
-    grid-template-rows: 150px 40px 40px;
+    display:grid;
+    grid-template-columns: 200px 1fr;
   }
-  #profile_pic{
-    border-radius: 0%;
-    width: 100px;
-    height: 100px;
-  }
-
 }
+
