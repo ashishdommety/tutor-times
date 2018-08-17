@@ -2,12 +2,6 @@ import React from 'react';
 import logo from './logo.svg';
 import './Home.css';
 import { GoogleLogin } from 'react-google-login';
-// import runtimeEnv from '@mars/heroku-js-runtime-env';
-
-// const env = runtimeEnv();
-
-// uxMode='redirect'
-// redirectUri="http://localhost:3000/dashboard"
 
 const Home = (props) => {
   const responseGoogle = (response) => {
