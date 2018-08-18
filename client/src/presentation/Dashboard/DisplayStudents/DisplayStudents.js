@@ -8,7 +8,7 @@ const DisplayStudents = (props) =>{
 
   return(
     <div id="display-students">
-      {arr.map(x => <div className="student">
+      {arr.map((x,i) => <div className="student" key={i}>
           <h4>John Doe</h4>
           <img src="https://via.placeholder.com/100x100" alt="profile"/>
           <h5>Subjects:</h5>

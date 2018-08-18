@@ -23,6 +23,7 @@ a{
     height: 100vh;
     text-align: center;
     grid-template-rows: 150px;
+    position:fixed;
   }
   #profile_pic{
     border-radius: 0%;
