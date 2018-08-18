@@ -19,7 +19,6 @@ a{
 }
 @media only screen and (min-width:450px){
   .nav{
-    display: inline-grid;
     height: 100vh;
     text-align: center;
     grid-template-rows: 150px;

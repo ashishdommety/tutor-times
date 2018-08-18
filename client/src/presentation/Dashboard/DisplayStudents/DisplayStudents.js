@@ -4,7 +4,7 @@ import './DisplayStudents.css'
 
 const DisplayStudents = (props) =>{
 
-  let arr = [1,2,3,4,5];
+  let arr = [1,2,3,4,5,1,2,3,4,5];
 
   return(
     <div id="display-students">

@@ -1,5 +1,5 @@
 .student{
-  display: inline-block;
+  /* display: inline-block; */
   border: 1px solid black;
   padding: 5px;
   height: 200px;
@@ -7,4 +7,12 @@
   text-align: center;
   border-radius: 20px;
   margin: 5px;
+}
+
+@media only screen and (min-width:450px){
+  #display-students{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left:200px;
+  }
 }
