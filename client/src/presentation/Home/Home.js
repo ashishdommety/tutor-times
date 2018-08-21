@@ -11,6 +11,9 @@ const Home = (props) => {
     let photo = response.profileObj.imageUrl;
     props.fetchGoogleData(name, photo);
   }; 
+
+  const pathName = window.location.origin;
+  console.log(pathName);
     return (
       <div className="App">
         <header className="App-header">
@@ -26,7 +29,7 @@ const Home = (props) => {
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
             uxMode="redirect"
-            redirectUri="http://localhost:3000/dashboard"
+            redirectUri={pathName + "/dashboard"}
         />
       </div>
     );
