@@ -3,6 +3,8 @@ const initialState = {
   picture: '',
   email: '',
   status:'not logged in',
+  isTutor: true,
+  organization: '',
   subjects: [],
   students: [],
   tutors: [],

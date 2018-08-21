@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './logo.svg';
 import './Home.css';
 import { GoogleLogin } from 'react-google-login';
-import runtimeEnv from '@mars/heroku-js-runtime-env';
-
-const responseGoogle = (response) => console.log(response);
-
-const env = runtimeEnv();
-console.log(env);
 
 const Home = (props) => {
+  const responseGoogle = (response) => {
+    console.log(response.profileObj.givenName);
+    console.log(response.profileObj.imageUrl);
+    let name = response.profileObj.givenName;
+    let photo = response.profileObj.imageUrl;
+    props.fetchGoogleData(name, photo);
+  }; 
     return (
       <div className="App">
         <header className="App-header">
@@ -19,14 +20,13 @@ const Home = (props) => {
         <p className="App-intro">
           A place where tutors and students meet to learn from each other.
         </p>
-        <p>{props.status}</p>
-        {/* <button
-          onClick={props.instigateLogin}>Login with Google</button> */}
         <GoogleLogin
             clientId={"155095156692-9mti1snraf70l1fnqel9mfa5bfpukp99.apps.googleusercontent.com"}
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
+            uxMode="redirect"
+            redirectUri="http://localhost:3000/dashboard"
         />
       </div>
     );

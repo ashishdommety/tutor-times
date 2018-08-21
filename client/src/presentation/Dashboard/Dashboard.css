@@ -1,0 +1,11 @@
+.main-body{
+  background-color: lightgrey;
+}
+
+@media only screen and (min-width:450px){
+  .dash{
+    display:grid;
+    grid-template-columns: 160px 1fr;
+  }
+}
+
