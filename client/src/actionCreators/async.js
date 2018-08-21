@@ -1,16 +1,22 @@
 import axios from 'axios';
 
-import * as loginStatus from './index';
+import * as syncActions from './index';
 
 export const checkLogin = function checkLogin(){
   return function(dispatch){
-    dispatch(loginStatus.startLogin());
+    dispatch(syncActions.startLogin());
     axios.post('/login')
       .then((response) => {
-        dispatch(loginStatus.finLogin(response.data.message));
+        dispatch(syncActions.finLogin(response.data.message));
       })
       .catch((err) => {
-        dispatch(loginStatus.errLogin());
+        dispatch(syncActions.errLogin());
       })
+  }
+}
+
+export const fetchGoogleData = function fetchGoogleData(name, photo){
+  return function(dispatch){
+    dispatch(syncActions.googleData(name, photo));
   }
 }

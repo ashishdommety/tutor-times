@@ -1,4 +1,4 @@
-import * as actions from './index';
+import * as actions from '../index';
 
 test('start login action', () => {
   expect(actions.startLogin().type).toBe("start");

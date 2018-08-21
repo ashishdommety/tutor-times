@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
 import Home from '../presentation/Home/Home';
-import { checkLogin } from '../actionCreators/async';
+import { fetchGoogleData } from '../actionCreators/async';
 // console.log(finLogin);
 
 function mapStateToProps(state){
   return {
-    status: state.status
+    status: state.status,
+    picture: state.picture
   }
 }
 
 function mapDispatchToProps(dispatch){  
   return{ 
-    instigateLogin: () => dispatch(checkLogin())
+    fetchGoogleData: (name, photo) => dispatch(fetchGoogleData(name, photo))
   }
 }
 

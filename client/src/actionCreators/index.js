@@ -9,3 +9,7 @@ export const finLogin = function finLogin(message){
 export const errLogin = function errLogin(){
   return {type: 'error'}
 }
+
+export const googleData = function (name, photo){
+  return {type: 'loggedIn', name, photo}
+}
