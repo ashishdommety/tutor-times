@@ -32,4 +32,5 @@ branches:
 branches:
   except:
   - dashboard
+  - tutor-form
 
