@@ -1,11 +1,13 @@
 import React from 'react';
+import './Form.css';
 
 const Form = (props) => {
   return(
-    <div>
-      <input text="text" name="subjects"/>
-      <input text="text" name="motto"/>
-      <input text="text" name="calendarLink"/>
+    <div id="tutor-form">
+      <input text="text" name="subjects" placeholder="subject"/>
+      <input text="text" name="motto" placeholder="motto"/>
+      <input text="text" name="calendarLink" placeholder="link"/>
+      <input type="Submit" value="Confirm"></input>
     </div>
   )
 };
