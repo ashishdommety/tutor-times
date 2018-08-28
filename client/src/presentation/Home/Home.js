@@ -5,11 +5,18 @@ import { GoogleLogin } from 'react-google-login';
 
 const Home = (props) => {
   const responseGoogle = (response) => {
-    console.log(response.profileObj.givenName);
-    console.log(response.profileObj.imageUrl);
-    let name = response.profileObj.givenName;
-    let photo = response.profileObj.imageUrl;
-    props.fetchGoogleData(name, photo);
+    let storage = window.localStorage;
+
+    if(!storage.length){
+      let name = response.profileObj.givenName;
+      let photo = response.profileObj.imageUrl;
+      let googleId = response.profileObj.googleId;
+      localStorage.setItem("gId", googleId);
+      window.location.pathname = "/dashboard";
+    }else{
+      window.location.pathname = "/dashboard";
+    }
+
   }; 
 
   const pathName = window.location.origin;
@@ -28,8 +35,6 @@ const Home = (props) => {
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
-            uxMode="redirect"
-            redirectUri={pathName + "/dashboard"}
         />
       </div>
     );
