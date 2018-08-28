@@ -8,8 +8,9 @@ const Navigation = (props) => {
     console.log(response);
     console.log('you logged out');
     //clear localStorage
+    localStorage.clear();
     // send user back to the homepage
-    // window.location.pathname = "/";
+    window.location.pathname = "/";
   }
 
   return(
