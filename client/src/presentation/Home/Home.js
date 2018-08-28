@@ -12,6 +12,8 @@ const Home = (props) => {
       let photo = response.profileObj.imageUrl;
       let googleId = response.profileObj.googleId;
       localStorage.setItem("gId", googleId);
+      localStorage.setItem("name", name);
+      localStorage.setItem("photoLink", photo);
       window.location.pathname = "/dashboard";
     }else{
       window.location.pathname = "/dashboard";
