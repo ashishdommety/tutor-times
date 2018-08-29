@@ -1,6 +1,9 @@
 import React from "react";
 import './TutorLanding.css';
+import {getStuff} from '../../../actionCreators/async'; 
 
+let data = getStuff();
+console.log(data);
 const TutorLanding = () =>{
   return(
     <div id="tutor-landing">

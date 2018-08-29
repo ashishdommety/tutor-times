@@ -3,6 +3,9 @@ const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
+const dummy = require("./dummy.js");
+
+console.log(dummy);
 
 // Serve static files from the React app (New website)
 app.use(express.static(path.join(__dirname, 'client/build')));
@@ -18,6 +21,10 @@ app.post("/login", function(req,res){
   // if user doesn't exist, write them in and serve introduction page
   // if they do exist, respond with their profile object (either tutor or student)
 });
+
+app.get("/test", function(req,res){
+  res.send(dummy);
+})
 
 app.get("/dashboard/:id", function(req,res){
   console.log('return all the users data');

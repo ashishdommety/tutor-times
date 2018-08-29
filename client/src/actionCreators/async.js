@@ -20,3 +20,15 @@ export const fetchGoogleData = function fetchGoogleData(name, photo){
     dispatch(syncActions.googleData(name, photo));
   }
 }
+
+export const getStuff = function(){
+  axios.get("/test")
+    .then((response) => {
+      console.log(response.data);
+      
+      // console.log(response.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+}
