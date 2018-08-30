@@ -1,14 +1,14 @@
 const initialState = {
-  name: '',
-  picture: '',
-  email: '',
-  status:'not logged in',
-  isTutor: true,
-  organization: '',
-  subjects: [],
-  students: [],
-  tutors: [],
-  notes: []
+  "home": {
+    "nextStudent":{
+      "name": "",
+      "date": "",
+      "day": "",
+      "time": "",
+      "photoURL": ""
+    }
+  },
+  "students": []
 };
 
 export default initialState;
