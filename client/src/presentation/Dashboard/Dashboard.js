@@ -1,7 +1,7 @@
 import React from 'react';
 import './Dashboard.css';
 import NavigationContainer from '../../containers/NavigationContainer';
-import TutorLanding from './TutorLanding/TutorLanding';
+import TutorLandingContainer from '../../containers/TutorLandingContainer';
 import DisplayStudents from './DisplayStudents/DisplayStudents';
 
 const Dashboard = (props) => {
@@ -11,7 +11,7 @@ const Dashboard = (props) => {
       return(
         <div className="dash">
         <NavigationContainer/>
-            <TutorLanding/>
+            <TutorLandingContainer/>
         </div>
       )
     }else if(path === "/dashboard/students"){

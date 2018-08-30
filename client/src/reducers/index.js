@@ -10,7 +10,19 @@ function login(state = initialState, action){
       return Object.assign({}, state, {status: 'error!'})
     case 'loggedIn':
       console.log(action);
-      return Object.assign({}, state, {name: action.name, picture: action.photo})
+      return Object.assign({}, state, {name: action.name, picture: action.photo});
+    case 'fetchTutorLandingData':
+      return Object.assign({}, state, 
+        { home: 
+          { nextStudent : 
+            { name: action.next,
+              date: action.date,
+              day: action.day, 
+              time: action.time,
+              photoURL: action.photo 
+            }
+          }
+        })
     default: 
       return state;
   }

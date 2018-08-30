@@ -1,24 +1,22 @@
-import React from "react";
-import './TutorLanding.css';
-import {getStuff} from '../../../actionCreators/async'; 
+import React, {Component} from "react";
+import './TutorLanding.css'; 
 
-class TutorLanding extends React{
+class TutorLanding extends Component{
   constructor(props){
     super(props);
   }
 
-  ComponentDidMount(){
-    // this.props.getStuff
-    getStuff();
+  componentDidMount(){
+    this.props.getTutorDataAsync();
   }
 
   render(){
     return(
       <div id="tutor-landing">
         <h3>You have a class coming up with:</h3>
-        <h2>John Doe</h2>
-        <img src="https://via.placeholder.com/100x100" alt="profile"/>
-        <h4>on Thursday, August 30th, 2018 @ 4:30 pm</h4>
+        <h2>{this.props.name}</h2>
+        <img src={this.props.picture} alt="profile"/>
+        <h4>on {this.props.day}, {this.props.date} @ {this.props.time}</h4>
       </div>
     )
   }

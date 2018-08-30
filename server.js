@@ -5,7 +5,7 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const dummy = require("./dummy.js");
 
-console.log(dummy);
+// console.log(dummy);
 
 // Serve static files from the React app (New website)
 app.use(express.static(path.join(__dirname, 'client/build')));
@@ -23,6 +23,7 @@ app.post("/login", function(req,res){
 });
 
 app.get("/test", function(req,res){
+  console.log('call made successfully');
   res.send(dummy);
 })
 

@@ -2,6 +2,8 @@ import axios from 'axios';
 
 import * as syncActions from './index';
 
+// console.log(syncActions.getTutorData);
+
 export const checkLogin = function checkLogin(){
   return function(dispatch){
     dispatch(syncActions.startLogin());
@@ -21,14 +23,16 @@ export const fetchGoogleData = function fetchGoogleData(name, photo){
   }
 }
 
-export const getStuff = function(){
-  axios.get("/test")
-    .then((response) => {
-      console.log(response.data);
-      
-      // console.log(response.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    })
+export const getTutorDataAsync = function(){
+  return function(dispatch){
+      axios.get("/test")
+      .then((response) => {
+        console.log(response.data);
+        let data = response.data.home.nextStudent;
+        dispatch(syncActions.getTutorData(data.name, data.date, data.day, data.time, data.photoURL));
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
 }

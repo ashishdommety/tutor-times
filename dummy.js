@@ -1,11 +1,11 @@
 const dummy = {
   "home": {
     "nextStudent":{
-      "name": "John Doe",
+      "name": "Jane Doe",
       "date": "August 30th, 2018",
       "day": "Thursday",
       "time": "4:30pm",
-      "photoURL": "https://via.placeholder.it/300x300"
+      "photoURL": "https://via.placeholder.com/200x200"
     }
   },
   "students": [

@@ -13,3 +13,7 @@ export const errLogin = function errLogin(){
 export const googleData = function (name, photo){
   return {type: 'loggedIn', name, photo}
 }
+
+export const getTutorData = function (next, date, day, time, photo){
+  return {type: 'fetchTutorLandingData', next:next, date:date, day:day, time:time, photo:photo }
+}
