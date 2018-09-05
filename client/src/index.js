@@ -6,7 +6,7 @@ import App from './presentation/App/App';
 import store from './store';
 import { Provider } from 'react-redux';
 
-console.log(store.getState());
+// console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>

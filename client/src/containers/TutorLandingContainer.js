@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import TutorLanding from '../presentation/Dashboard/TutorLanding/TutorLanding';
-import { getTutorDataAsync } from '../actionCreators/async';
+import { fetchNextClassAsync } from '../actionCreators/async';
 
 function mapStateToProps(state){
-  console.log(state.home.nextStudent);
+  // console.log(state.home.nextStudent);
   return {
     name: state.home.nextStudent.name,
     picture: state.home.nextStudent.photoURL,
@@ -15,7 +15,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){  
   return{ 
-    getTutorDataAsync: () => dispatch(getTutorDataAsync())
+    fetchNextClassAsync: () => dispatch(fetchNextClassAsync())
   }
 }
 

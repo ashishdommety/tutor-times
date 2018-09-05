@@ -7,7 +7,7 @@ class TutorLanding extends Component{
   }
 
   componentDidMount(){
-    this.props.getTutorDataAsync();
+    this.props.fetchNextClassAsync();
   }
 
   render(){

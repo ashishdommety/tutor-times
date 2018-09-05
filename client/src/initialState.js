@@ -8,7 +8,8 @@ const initialState = {
       "photoURL": ""
     }
   },
-  "students": []
+  "students": ["person"],
+  "isTutor": true
 };
 
 export default initialState;

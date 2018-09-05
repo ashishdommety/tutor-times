@@ -70,6 +70,8 @@ module.exports = {
   res.send(data);
   },
   getStudentNotes: function(req,res){
+    let id = req.params.id;
+    console.log("the id entered is: " + id);
     let data = {
       "name": "alien",
       "photoURL": "https://via.placeholder.it/300x300",

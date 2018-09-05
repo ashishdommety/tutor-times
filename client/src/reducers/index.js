@@ -11,7 +11,7 @@ function login(state = initialState, action){
     case 'loggedIn':
       console.log(action);
       return Object.assign({}, state, {name: action.name, picture: action.photo});
-    case 'fetchTutorLandingData':
+    case 'fetchNextClass':
       return Object.assign({}, state, 
         { home: 
           { nextStudent : 
@@ -22,7 +22,10 @@ function login(state = initialState, action){
               photoURL: action.photo 
             }
           }
-        })
+        });
+    case 'fetchAllStudents':
+      // console.log(action.allStudents);
+      return Object.assign({},state,{students:action.allStudents});
     default: 
       return state;
   }
