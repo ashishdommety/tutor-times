@@ -21,7 +21,7 @@ module.exports = {
       "students": [
         {
           "name": "person",
-          "photoURL": "https://via.placeholder.it/300x300",
+          "photoURL": "https://via.placeholder.com/100x100",
           "subjects":[
             "physics",
             "math",
@@ -31,9 +31,9 @@ module.exports = {
         },
         {
           "name": "human",
-          "photoURL": "https://via.placeholder.it/300x300",
+          "photoURL": "https://via.placeholder.com/100x100",
           "subjects":[
-            "chemisty",
+            "chemistry",
             "math",
             "french"
           ],
@@ -41,7 +41,7 @@ module.exports = {
         },
         {
           "name": "alien",
-          "photoURL": "https://via.placeholder.it/300x300",
+          "photoURL": "https://via.placeholder.com/100x100",
           "subjects":[
             "space science",
             "math",
@@ -52,14 +52,14 @@ module.exports = {
       ]
     }
 
-    res.send(data);
+    res.json(data);
   },
   getOneStudent: function(req,res){
     let id = req.params.id;
     console.log('the id is: '+ id);
     let data = {
         "name": "alien",
-        "photoURL": "https://via.placeholder.it/300x300",
+        "photoURL": "https://via.placeholder.com/100x100",
         "subjects":[
           "space science",
           "math",
@@ -74,7 +74,7 @@ module.exports = {
     console.log("the id entered is: " + id);
     let data = {
       "name": "alien",
-      "photoURL": "https://via.placeholder.it/300x300",
+      "photoURL": "https://via.placeholder.com/100x100",
       "subject": "space science",
       "notes": [
         {
