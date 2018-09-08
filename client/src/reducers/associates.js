@@ -1,10 +1,10 @@
 
 const associates = function(state = [], action){
-  console.log(action.allStudents);
-  if(action.allStudents !== undefined){
-    return [...action.allStudents];
-  }else{
-    return [...state];
+  switch(action.type){
+    case "fetchAllStudents":
+      return [...action.allStudents];
+    default: 
+      return state;
   }
 }
 

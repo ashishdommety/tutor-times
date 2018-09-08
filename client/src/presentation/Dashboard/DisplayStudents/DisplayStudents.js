@@ -10,7 +10,7 @@ class DisplayStudents extends Component{
   render(){
     return(
       <div id="display-students">
-        {this.props.associates[0] === undefined ? 'loading...' : this.props.associates.map((x,i) =>{
+        {!this.props.associates.length ? 'loading...' : this.props.associates.map((x,i) =>{
           return (
             <div className="student" key={i}>
               <h2>{x.name}</h2>
