@@ -1,4 +1,5 @@
 const initialState = {
+  "isTutor": false,
   "home": {
     "nextStudent":{
       "name": "",
@@ -8,8 +9,35 @@ const initialState = {
       "photoURL": ""
     }
   },
+  "classes": [
+    {
+      "date": "",
+      "day": "",
+      "time": "",
+      "name": "",
+      "photoURL": ""
+    }
+  ],
+  "notes":[
+    {
+      "title": "",
+      "date": "",
+      "content": ""
+    }
+  ],
   "students": ["person"],
-  "isTutor": true
+  "associates":[
+    {
+      "name": "",
+      "photoURL": "",
+      "subjects": [],
+      "notes": [{
+        "title": "",
+        "date": "",
+        "content": ""
+      }]
+    }
+  ]
 };
 
 export default initialState;

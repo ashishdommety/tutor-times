@@ -7,10 +7,8 @@ const Navigation = (props) => {
   const logout = (response) => {
     console.log(response);
     console.log('you logged out');
-    //clear localStorage
-    localStorage.clear();
-    // send user back to the homepage
-    window.location.pathname = "/";
+    localStorage.clear(); //clear localStorage
+    window.location.pathname = "/"; // send user back to the homepage
   }
 
   return(
@@ -24,7 +22,7 @@ const Navigation = (props) => {
       </div> :
       <div>
         <Link to="/dashboard">Home</Link>
-        <Link to="/dashboard/notes/:id">Notes</Link>
+        <Link to="/dashboard/notes">Notes</Link>
         <Link to="/dashboard/schedule-class">Schedule</Link>
       </div>  
       }

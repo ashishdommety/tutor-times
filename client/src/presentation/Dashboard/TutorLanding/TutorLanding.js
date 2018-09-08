@@ -1,6 +1,10 @@
 import React, {Component} from "react";
 import './TutorLanding.css'; 
 
+/* 
+  Make TutorLanding into 'GeneralLanding' so that a student can see when their next class is also.
+*/
+
 class TutorLanding extends Component{
   constructor(props){
     super(props);
