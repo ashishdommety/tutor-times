@@ -1,14 +1,15 @@
-import initialState from '../initialState.js';
 import {combineReducers} from 'redux';
 
-import profile from './profile.js';
+import profile from './profile';
 import classes from './classes.js';
-import assosciates from './assosciates.js';
+import associates from './associates';
+import isTutor from './isTutor';
 
 const rootReducer = combineReducers({
   profile,
   classes,
-  assosciates
+  associates,
+  isTutor
 });
 
 export default rootReducer;

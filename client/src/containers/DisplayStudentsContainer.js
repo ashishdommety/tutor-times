@@ -4,8 +4,8 @@ import { fetchAllStudentsAsync } from '../actionCreators/async';
 // import ajax call to back-end
 
 function mapStateToProps(state){
-  return{
-    students: state.students
+  return {
+    associates: state.associates
   }
 }
 

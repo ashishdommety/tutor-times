@@ -2,19 +2,15 @@ import React, {Component} from "react";
 import './DisplayStudents.css';
 
 class DisplayStudents extends Component{
-  constructor(props){
-    super(props);
-    
-  }
 
-  componentWillMount(){
+  componentDidMount(){
     this.props.fetchAllStudentsAsync();
   }
   
   render(){
     return(
       <div id="display-students">
-        {this.props.students.map((x,i) =>{
+        {this.props.associates[0] === undefined ? 'loading...' : this.props.associates.map((x,i) =>{
           return (
             <div className="student" key={i}>
               <h2>{x.name}</h2>

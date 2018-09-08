@@ -42,7 +42,7 @@ export const fetchAllStudentsAsync = function(){
     axios.get("/get-students")
       .then((response) => {
         let students = response.data.students;
-        // console.log(response.data.students);
+        console.log(response.data.students);
         dispatch(syncActions.fetchAllStudents(students));
       })
       .catch((err) => {
