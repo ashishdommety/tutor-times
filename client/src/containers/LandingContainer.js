@@ -5,11 +5,11 @@ import { fetchNextClassAsync } from '../actionCreators/async';
 function mapStateToProps(state){
   // console.log(state.home.nextStudent);
   return {
-    name: state.home.nextStudent.name,
-    picture: state.home.nextStudent.photoURL,
-    day: state.home.nextStudent.day,
-    date: state.home.nextStudent.date,
-    time: state.home.nextStudent.time
+    name: state.classes[state.classes.length-1].name,
+    picture: state.classes[state.classes.length-1].photoURL,
+    day: state.classes[state.classes.length-1].day,
+    date: state.classes[state.classes.length-1].date,
+    time: state.classes[state.classes.length-1].time
   }
 }
 

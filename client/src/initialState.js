@@ -1,5 +1,6 @@
 const initialState = {
-  "isTutor": false,
+  "isTutor": true,
+  // do we really need this? What about the last object on the classes array.
   "home": {
     "nextStudent":{
       "name": "",
@@ -11,11 +12,11 @@ const initialState = {
   },
   "classes": [
     {
-      "date": "",
-      "day": "",
-      "time": "",
-      "name": "",
-      "photoURL": ""
+      "date": "19-25-2018",
+      "day": "Tuesday",
+      "time": "10:40am",
+      "name": "Ash",
+      "photoURL": "https://via.placeholder.com/100x100"
     }
   ],
   "notes":[
@@ -25,7 +26,7 @@ const initialState = {
       "content": ""
     }
   ],
-  "students": ["person"],
+  "students": ["person"], // wouldn't it be easier to use associates
   "associates":[
     {
       "name": "",

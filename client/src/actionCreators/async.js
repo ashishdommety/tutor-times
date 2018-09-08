@@ -27,7 +27,7 @@ export const fetchNextClassAsync = function(){
   return function(dispatch){
       axios.get("/next-class")
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         let data = response.data.home.nextStudent;
         dispatch(syncActions.fetchNextClass(data.name, data.date, data.day, data.time, data.photoURL));
       })

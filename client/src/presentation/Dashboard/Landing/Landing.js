@@ -18,9 +18,13 @@ class Landing extends Component{
     return(
       <div id="tutor-landing">
         <h3>You have a class coming up with:</h3>
-        <h2>{this.props.name}</h2>
-        <img src={this.props.picture} alt="profile"/>
-        <h4>on {this.props.day}, {this.props.date} @ {this.props.time}</h4>
+        {this.props == undefined ? <p>loading...</p> : 
+          <div>
+            <h2>{this.props.name}</h2>
+            <img src={this.props.picture} alt="profile"/>
+            <h4>on {this.props.day}, {this.props.date} @ {this.props.time}</h4>
+          </div>
+        }
       </div>
     )
   }
