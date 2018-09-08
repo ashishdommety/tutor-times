@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import './TutorLanding.css'; 
+import './Landing.css'; 
 
 /* 
-  Make TutorLanding into 'GeneralLanding' so that a student can see when their next class is also.
+  Make Landing into 'GeneralLanding' so that a student can see when their next class is also.
 */
 
-class TutorLanding extends Component{
+class Landing extends Component{
   constructor(props){
     super(props);
   }
@@ -26,4 +26,4 @@ class TutorLanding extends Component{
   }
 }
 
-export default TutorLanding;
+export default Landing;

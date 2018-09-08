@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import TutorLanding from '../presentation/Dashboard/TutorLanding/TutorLanding';
+import Landing from '../presentation/Dashboard/Landing/Landing';
 import { fetchNextClassAsync } from '../actionCreators/async';
 
 function mapStateToProps(state){
@@ -19,6 +19,6 @@ function mapDispatchToProps(dispatch){
   }
 }
 
-const TutorLandingContainer = connect(mapStateToProps, mapDispatchToProps)(TutorLanding);
+const LandingContainer = connect(mapStateToProps, mapDispatchToProps)(Landing);
 
-export default TutorLandingContainer;
+export default LandingContainer;
