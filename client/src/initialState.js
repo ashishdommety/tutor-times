@@ -26,7 +26,7 @@ const initialState = {
       "content": ""
     }
   ],
-  "students": ["person"], // wouldn't it be easier to use associates
+  "students": ["person"], // wouldn't it be easier to use associates?
   "associates":[
     {
       "name": "",
