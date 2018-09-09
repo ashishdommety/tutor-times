@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
-// import { GoogleLogout } from 'react-google-login';
+// import { GoogleLogout } from 'react-google-login'; // test GoogleLogout on Heroku
 
 const Navigation = (props) => {
   const logout = (response) => {
