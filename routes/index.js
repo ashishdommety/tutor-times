@@ -4,7 +4,7 @@ const tutorController = require("../controllers/tutor");
 
 module.exports = router
   .get("/next-class", tutorController.nextClass)
-  .get("/get-students", tutorController.allStudents)
-  .get("/get-students/:id", tutorController.oneStudent)
-  .get("/get-students/:id/notes", tutorController.studentNotes)
+  .get("/get-associates", tutorController.allStudents)
+  .get("/get-associates/:id", tutorController.oneStudent)
+  .get("/get-associates/:id/notes", tutorController.studentNotes)
 

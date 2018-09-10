@@ -24,7 +24,7 @@ export const fetchNextClassAsync = function(){
 
 export const fetchAllAssociatesAsync = function(){
   return function(dispatch){
-    axios.get("/get-students")
+    axios.get("/get-associates")
       .then((response) => {
         let associates = response.data.students;
         dispatch(syncActions.fetchAllAssociates(associates));
