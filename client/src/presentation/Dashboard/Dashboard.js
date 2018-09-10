@@ -1,53 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Dashboard.css';
+import {Switch, Route} from 'react-router-dom';
 import NavigationContainer from '../../containers/NavigationContainer';
 import LandingContainer from '../../containers/LandingContainer';
 import DisplayStudentsContainer from '../../containers/DisplayStudentsContainer';
 
-const Dashboard = (props) => {
-/* 
-  Re-factor these paths to include a Route tag within a Route tag - Don't use window.location.pathname - something seems off about it.
-
-  Maybe look something like:
-    if(localStorage.length !== 0){
-      <div className="dash">
-        <NavigationContainer />
-        <Route for tutor landing />
-        <Route for students />
-        <Route for calendar />
-      </div>
-    }
- */
-
-  let path = window.location.pathname;
-  if(localStorage.length!==0){
-    if(path === "/dashboard"){
-      return(
+class Dashboard extends Component{
+  render(){
+    return (
         <div className="dash">
-          <NavigationContainer/>
-          <LandingContainer/>
+        <NavigationContainer/>
+        {!localStorage.length ? 
+          <h1 class="error-message">Please log in</h1>:
+          <Switch>
+            <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
+            <Route exact={true} path={this.props.match.path + "/students"} component={DisplayStudentsContainer}/>       
+          </Switch>
+        }
         </div>
-      )
-    }else if(path === "/dashboard/students"){
-      return(
-        <div className="dash">
-          <NavigationContainer/>
-          <DisplayStudentsContainer/>
-        </div>
-      )
-    }else if(path === "/dashboard/calendar"){
-      return(
-        <div className="dash">
-          <NavigationContainer/>
-          <h3>This is the calendar page</h3>
-        </div>
-      )
-    }
-  }else{
-    return(
-      <h1>Sorry, you need to log-in</h1>
     )
   }
 }
+
 
 export default Dashboard;
