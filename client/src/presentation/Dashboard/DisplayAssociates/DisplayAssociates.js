@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import './DisplayStudents.css';
+import './DisplayAssociates.css';
 
-class DisplayStudents extends Component{
+class DisplayAssociates extends Component{
 
   componentDidMount(){
     this.props.fetchAllStudentsAsync();
@@ -9,10 +9,10 @@ class DisplayStudents extends Component{
   
   render(){
     return(
-      <div id="display-students">
+      <div id="display-associates">
         {!this.props.associates.length ? 'loading...' : this.props.associates.map((x,i) =>{
           return (
-            <div className="student" key={i}>
+            <div className="associate" key={i}>
               <h2>{x.name}</h2>
               <img src={x.photoURL} alt="profile"/>
               <h3>Subjects: </h3>
@@ -27,4 +27,4 @@ class DisplayStudents extends Component{
   }
 }
 
-export default DisplayStudents;
+export default DisplayAssociates;

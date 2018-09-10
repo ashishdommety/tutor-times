@@ -18,7 +18,7 @@ const Navigation = (props) => {
       <div>
         <Link to="/dashboard">Home</Link>
         <Link to="/dashboard/students">Students</Link>
-        <Link to="/dashboard/calendar">Calendar</Link>
+        <Link to="/dashboard/notes">Notes</Link>
       </div> :
       <div>
         <Link to="/dashboard">Home</Link>

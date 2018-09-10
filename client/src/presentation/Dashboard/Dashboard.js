@@ -3,7 +3,7 @@ import './Dashboard.css';
 import {Switch, Route} from 'react-router-dom';
 import NavigationContainer from '../../containers/NavigationContainer';
 import LandingContainer from '../../containers/LandingContainer';
-import DisplayStudentsContainer from '../../containers/DisplayStudentsContainer';
+import DisplayAssociatesContainer from '../../containers/DisplayAssociatesContainer';
 
 class Dashboard extends Component{
   render(){
@@ -11,10 +11,10 @@ class Dashboard extends Component{
         <div className="dash">
         <NavigationContainer/>
         {!localStorage.length ? 
-          <h1 class="error-message">Please log in</h1>:
+          <h1 className="error-message">Please log in</h1>:
           <Switch>
             <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
-            <Route exact={true} path={this.props.match.path + "/students"} component={DisplayStudentsContainer}/>       
+            <Route exact={true} path={this.props.match.path + "/students"} component={DisplayAssociatesContainer}/>       
           </Switch>
         }
         </div>

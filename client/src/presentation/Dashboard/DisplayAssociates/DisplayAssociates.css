@@ -1,13 +1,17 @@
-.student{
+.associate{
   /* display: inline-block; */
   border: 1px solid black;
   text-align: center;
   border-radius: 20px;
-  margin: 5px;
+  margin: 15px;
+}
+
+#display-associates{
+  margin: 50px;
 }
 
 @media only screen and (min-width:450px){
-  #display-students{
+  #display-associates{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-start: 2;

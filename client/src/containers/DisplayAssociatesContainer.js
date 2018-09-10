@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import DisplayStudents from '../presentation/Dashboard/DisplayStudents/DisplayStudents';
+import DisplayAssociates from '../presentation/Dashboard/DisplayAssociates/DisplayAssociates';
 import { fetchAllStudentsAsync } from '../actionCreators/async';
 // import ajax call to back-end
 
@@ -15,6 +15,6 @@ function mapDispatchToProps(dispatch){
   }
 }
 
-const DisplayStudentsContainer  = connect(mapStateToProps, mapDispatchToProps)(DisplayStudents);
+const DisplayAssociatesContainer  = connect(mapStateToProps, mapDispatchToProps)(DisplayAssociates);
 
-export default DisplayStudentsContainer;
+export default DisplayAssociatesContainer;
