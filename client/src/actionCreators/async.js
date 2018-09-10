@@ -22,12 +22,12 @@ export const fetchNextClassAsync = function(){
   }
 }
 
-export const fetchAllStudentsAsync = function(){
+export const fetchAllAssociatesAsync = function(){
   return function(dispatch){
     axios.get("/get-students")
       .then((response) => {
         let students = response.data.students;
-        dispatch(syncActions.fetchAllStudents(students));
+        dispatch(syncActions.fetchAllAssociates(students));
       })
       .catch((err) => {
         console.log(err);

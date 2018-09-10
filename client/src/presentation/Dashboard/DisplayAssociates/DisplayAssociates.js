@@ -4,7 +4,7 @@ import './DisplayAssociates.css';
 class DisplayAssociates extends Component{
 
   componentDidMount(){
-    this.props.fetchAllStudentsAsync();
+    this.props.fetchAllAssociatesAsync();
   }
   
   render(){

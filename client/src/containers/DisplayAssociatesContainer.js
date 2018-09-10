@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import DisplayAssociates from '../presentation/Dashboard/DisplayAssociates/DisplayAssociates';
-import { fetchAllStudentsAsync } from '../actionCreators/async';
+import { fetchAllAssociatesAsync } from '../actionCreators/async';
 // import ajax call to back-end
 
 function mapStateToProps(state){
@@ -11,7 +11,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
   return{
-    fetchAllStudentsAsync: () => dispatch(fetchAllStudentsAsync())
+    fetchAllAssociatesAsync: () => dispatch(fetchAllAssociatesAsync())
   }
 }
 

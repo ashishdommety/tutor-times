@@ -1,7 +1,7 @@
 
 const associates = function(state = [], action){
   switch(action.type){
-    case "fetchAllStudents":
+    case "fetchAllAssociates":
       return [...action.allStudents];
     default: 
       return state;

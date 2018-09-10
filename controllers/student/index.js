@@ -13,4 +13,7 @@
       - get all notes - READ
     Associates: 
       - view tutors/students - READ
+      - find friends (all users) - READ
+    Profile:
+      - users public profile - READ (This could evolve depending on what info we want to display)
 */
