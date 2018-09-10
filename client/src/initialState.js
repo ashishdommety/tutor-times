@@ -1,14 +1,8 @@
 const initialState = {
   "isTutor": true,
-  // do we really need this? What about the last object on the classes array.
-  "home": {
-    "nextStudent":{
-      "name": "",
-      "date": "",
-      "day": "",
-      "time": "",
-      "photoURL": ""
-    }
+  "profile": {
+    "name": "Unknown",
+    "image": "via.placeholder.com/100x100"
   },
   "classes": [
     {
@@ -26,7 +20,6 @@ const initialState = {
       "content": ""
     }
   ],
-  "students": ["person"], // wouldn't it be easier to use associates?
   "associates":[
     {
       "name": "",
