@@ -26,8 +26,8 @@ export const fetchAllAssociatesAsync = function(){
   return function(dispatch){
     axios.get("/get-students")
       .then((response) => {
-        let students = response.data.students;
-        dispatch(syncActions.fetchAllAssociates(students));
+        let associates = response.data.students;
+        dispatch(syncActions.fetchAllAssociates(associates));
       })
       .catch((err) => {
         console.log(err);

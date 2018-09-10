@@ -6,6 +6,6 @@ export const fetchNextClass = function (next, date, day, time, photo){
   return {type: 'fetchNextClass', next:next, date:date, day:day, time:time, photo:photo }
 }
 
-export const fetchAllAssociates = function(students){
-  return {type: 'fetchAllAssociates', allStudents: students }
+export const fetchAllAssociates = function(associates){
+  return {type: 'fetchAllAssociates', associates }
 }
