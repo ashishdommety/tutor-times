@@ -1,6 +1,6 @@
 module.exports = function (req,res){
   let data = {
-    "students": [
+    "associates": [
       {
         "name": "person",
         "photoURL": "https://via.placeholder.com/100x100",
