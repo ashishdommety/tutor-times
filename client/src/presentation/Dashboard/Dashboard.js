@@ -19,7 +19,6 @@ class Dashboard extends Component{
           <h1 className="error-message">Please log in</h1>:
           <Switch>
             <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
-            {/* make the /students path flexible to use either students or tutors depending on the user*/}
             <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={DisplayAssociatesContainer}/>       
           </Switch>
         }
