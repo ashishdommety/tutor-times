@@ -34,4 +34,5 @@ branches:
   - dashboard
   - google-login
   - dummy-backend
+  - classes-tab
 

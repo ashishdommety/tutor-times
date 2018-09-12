@@ -1,0 +1,14 @@
+ .class{
+  margin: 10px;
+  border: 1px solid black;
+  text-align:center;
+  padding: 10px
+}
+@media only screen and (min-width:450px){
+  #allClasses{
+    grid-column-start: 2;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+ 
