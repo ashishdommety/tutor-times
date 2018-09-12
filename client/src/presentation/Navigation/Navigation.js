@@ -15,18 +15,12 @@ const Navigation = (props) => {
     <div className="nav">
       <img src={localStorage.length !== 0 ? localStorage.getItem("photoLink") : "https://via.placeholder.com/200x200" } alt="thing" id="profile_pic" />
       {/* use the state instead of local storage to fetch the users profile picture in the future - pull this data from the db, rather than google each time. */}
-      {props.isTutor ? 
       <div>
         <Link to="/dashboard">Home</Link>
-        <Link to="/dashboard/students">Students</Link>
+        <Link to="/dashboard/classes">Classes</Link>
         <Link to="/dashboard/notes">Notes</Link>
-      </div> :
-      <div>
-        <Link to="/dashboard">Home</Link>
-        <Link to="/dashboard/notes">Notes</Link>
-        <Link to="/dashboard/schedule-class">Schedule</Link>
-      </div>  
-      }
+        <Link to={"/dashboard/" + props.title}>{props.title[0].toUpperCase() + props.title.substring(1,props.title.length)}</Link>
+      </div>
       <div>
       <button 
         id="logout-button"

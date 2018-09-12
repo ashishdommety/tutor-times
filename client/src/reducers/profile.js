@@ -1,6 +1,7 @@
 let initial = {
   name: "Unknown",
   photo: "via.placeholder.com/200x200",
+  title: "tutor",
   subjects: ["french","english","physics"]
 }
 
