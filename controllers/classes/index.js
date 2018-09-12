@@ -9,7 +9,9 @@
 */
 
 const nextClass = require("./nextClass");
+const allClasses = require("./allClasses");
 
 module.exports = {
-  nextClass: nextClass
+  nextClass: nextClass,
+  allClasses
 }

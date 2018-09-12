@@ -34,3 +34,17 @@ export const fetchAllAssociatesAsync = function(){
       })
   }
 }
+
+export const fetchAllClassesAsnyc = function(){
+  return function(dispatch){
+    axios.get("/get-all-classes")
+      .then((response) => {
+        let classData = response.data;
+        dispatch(syncActions.fetchAllClasses(classData));
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+  }
+}
+

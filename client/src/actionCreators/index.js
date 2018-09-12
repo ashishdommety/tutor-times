@@ -9,3 +9,7 @@ export const fetchNextClass = function (nextClass){
 export const fetchAllAssociates = function(associates){
   return {type: 'fetchAllAssociates', associates }
 }
+
+export const fetchAllClasses = function(classes){
+  return {type: 'fetchAllClasses', classes}
+}

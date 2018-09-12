@@ -2,6 +2,11 @@ import React, {Component} from 'react';
 import './Classes.css';
 
 class Classes extends Component{
+
+  componentDidMount(){
+    this.props.fetchAllClassesAsync();
+  }
+
   render(){
     return(
       <div id="allClasses">

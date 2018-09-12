@@ -12,6 +12,10 @@ const classes = function(state = [], action){
       }
 
       return [...state, action.nextClass];
+
+    case "fetchAllClasses":
+      return [...action.classes];
+      
     default: 
         return state;
   }
