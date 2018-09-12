@@ -2,7 +2,10 @@ const initialState = {
   "isTutor": true,
   "profile": {
     "name": "Unknown",
-    "image": "via.placeholder.com/100x100"
+    "image": "via.placeholder.com/100x100",
+    "subjects": [],
+    "motto": "",
+    "goal": ""
   },
   "classes": [
     {

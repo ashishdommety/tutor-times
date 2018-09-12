@@ -1,6 +1,7 @@
 let initial = {
   name: "Unknown",
-  photo: "via.placeholder.com/200x200"
+  photo: "via.placeholder.com/200x200",
+  subjects: ["french","english","physics"]
 }
 
 const profile = function(state = initial, action){

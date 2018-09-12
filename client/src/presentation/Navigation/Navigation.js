@@ -14,6 +14,7 @@ const Navigation = (props) => {
   return(
     <div className="nav">
       <img src={localStorage.length !== 0 ? localStorage.getItem("photoLink") : "https://via.placeholder.com/200x200" } alt="thing" id="profile_pic" />
+      {/* use the state instead of local storage to fetch the users profile picture in the future - pull this data from the db, rather than google each time. */}
       {props.isTutor ? 
       <div>
         <Link to="/dashboard">Home</Link>
