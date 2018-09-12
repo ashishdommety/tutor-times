@@ -6,8 +6,8 @@ class Classes extends Component{
     return(
       <div id="allClasses">
         {!this.props.classes.length ? 
-          "Loading..." : this.props.classes.map(x => 
-            <div className="class">
+          "Loading..." : this.props.classes.map((x,i) => 
+            <div className="class" key={i}>
               <p>{x.name}</p>
               <p>{x.date}</p>
               <p>{x.time}</p>
