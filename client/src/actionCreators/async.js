@@ -13,8 +13,8 @@ export const fetchNextClassAsync = function(){
       axios.get("/next-class")
       .then((response) => {
         // console.log(response.data);
-        let data = response.data;
-        dispatch(syncActions.fetchNextClass(data.name, data.date, data.day, data.time, data.photoURL));
+        let nextClassData = response.data;
+        dispatch(syncActions.fetchNextClass(nextClassData));
       })
       .catch((err) => {
         console.log(err);
