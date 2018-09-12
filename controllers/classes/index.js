@@ -6,3 +6,9 @@
     - class done - UPDATE
     - cancel class - DELETE
 */
+
+const nextClass = require("./nextClass");
+
+module.exports = {
+  nextClass: nextClass
+}

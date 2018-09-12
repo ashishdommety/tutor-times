@@ -1,6 +1,6 @@
 module.exports = function (req,res){
   let data = {
-        "name": "Jane Doe",
+        "name": "Jane Doe II",
         "date": "August 30th, 2018",
         "day": "Thursday",
         "time": "4:30pm",
