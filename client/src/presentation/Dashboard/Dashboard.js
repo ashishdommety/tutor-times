@@ -20,7 +20,7 @@ class Dashboard extends Component{
           <Switch>
             <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
             {/* make the /students path flexible to use either students or tutors depending on the user*/}
-            <Route exact={true} path={this.props.match.path + "/" + this.props.title} component={DisplayAssociatesContainer}/>       
+            <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={DisplayAssociatesContainer}/>       
           </Switch>
         }
         </div>
