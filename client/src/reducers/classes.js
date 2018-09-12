@@ -2,13 +2,15 @@
 const classes = function(state = [], action){
   switch(action.type){
     case "fetchNextClass":
-      /* check if student and class details already exist in the array - if they don't return below. If they do, just return state.
-        So:
-            if(state has identical value of name, class and time in action.nextClass)
-              return state;
-            else
-              return [...state, action.nextClass]
-      */  
+      // code-snippet to check if values already exist in the object
+      for(let i=0; i<state.length; i++){
+        let current = state[i];
+        let incoming = action.nextClass;
+        if((current.name === incoming.name) && (current.date === incoming.date) && (current.time === incoming.time)){
+          return state;
+        }
+      }
+
       return [...state, action.nextClass];
     default: 
         return state;
