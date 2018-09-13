@@ -33,4 +33,6 @@ branches:
   except:
   - dashboard
   - google-login
+  - dummy-backend
+  - classes-tab
 

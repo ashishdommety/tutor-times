@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const routes = require("./routes");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 
@@ -11,33 +12,8 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post("/login", function(req,res){
-  console.log("recieved request for login");
-  res.json({message: 'registered by back-end'});
-  // check in database if user exists
-  // if user doesn't exist, write them in and serve introduction page
-  // if they do exist, respond with their profile object (either tutor or student)
-});
-
-app.get("/dashboard/:id", function(req,res){
-  console.log('return all the users data');
-});
-
-app.post("/invite-student", function(req,res){
-  console.log('send an email to a potential student');
-});
-
-app.get("/dashboard/:id/students", function(req,res){
-  console.log("display all of the enlisted students");
-});
-
-app.get("/dashboard/:id/notes", function(req,res){
-  console.log("get all students notes");
-});
-
-app.post("/dashboard/:id/edit-note", function(req,res){
-  console.log("edit the notes that the user sent");
-});
+// add routes
+app.use("/",routes);
 
 // Send every request to the React app
 // Define any API routes before this runs

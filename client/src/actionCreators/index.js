@@ -1,15 +1,15 @@
-export const startLogin = function startLogin(){
-  return {type: 'start'}
-}
-
-export const finLogin = function finLogin(message){
-  return {type: 'end', message}
-}
-
-export const errLogin = function errLogin(){
-  return {type: 'error'}
-}
-
 export const googleData = function (name, photo){
   return {type: 'loggedIn', name, photo}
+}
+
+export const fetchNextClass = function (nextClass){
+  return {type: 'fetchNextClass', nextClass }
+}
+
+export const fetchAllAssociates = function(associates){
+  return {type: 'fetchAllAssociates', associates }
+}
+
+export const fetchAllClasses = function(classes){
+  return {type: 'fetchAllClasses', classes}
 }

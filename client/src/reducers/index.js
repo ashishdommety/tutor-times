@@ -1,19 +1,15 @@
-import initialState from '../initialState.js';
+import {combineReducers} from 'redux';
 
-function login(state = initialState, action){
-  switch(action.type){
-    case 'start':
-      return Object.assign({}, state, {status: 'loading...'})
-    case 'end':
-      return Object.assign({}, state, {status: action.message})
-    case 'error':
-      return Object.assign({}, state, {status: 'error!'})
-    case 'loggedIn':
-      console.log(action);
-      return Object.assign({}, state, {name: action.name, picture: action.photo})
-    default: 
-      return state;
-  }
-}
+import profile from './profile';
+import classes from './classes.js';
+import associates from './associates';
+import isTutor from './isTutor';
 
-export default login;
+const rootReducer = combineReducers({
+  profile,
+  classes,
+  associates,
+  isTutor
+});
+
+export default rootReducer;

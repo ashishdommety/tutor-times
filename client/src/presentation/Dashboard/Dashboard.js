@@ -1,39 +1,33 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './Dashboard.css';
+import {Switch, Route} from 'react-router-dom';
 import NavigationContainer from '../../containers/NavigationContainer';
-import TutorLanding from './TutorLanding/TutorLanding';
-import DisplayStudents from './DisplayStudents/DisplayStudents';
+import LandingContainer from '../../containers/LandingContainer';
+import DisplayAssociatesContainer from '../../containers/DisplayAssociatesContainer';
+import ClassesContainer from '../../containers/ClassesContainer';
 
-const Dashboard = (props) => {
-  let path = window.location.pathname;
-  if(localStorage.length!==0){
-    if(path === "/dashboard"){
-      return(
+class Dashboard extends Component{
+
+  determineOpposite(title){
+    return title === "tutor" ? "students" : "tutors";
+  }
+
+  render(){
+    return (
         <div className="dash">
-        <NavigationContainer/>
-            <TutorLanding/>
+        <NavigationContainer title={this.determineOpposite(this.props.title)}/>
+        {!localStorage.length ? 
+          <h1 className="error-message">Please log in</h1>:
+          <Switch>
+            <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
+            <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={DisplayAssociatesContainer}/>
+            <Route exact={true} path={this.props.match.path + "/classes"} component={ClassesContainer}/>
+          </Switch>
+        }
         </div>
-      )
-    }else if(path === "/dashboard/students"){
-      return(
-        <div className="dash">
-        <NavigationContainer/>
-            <DisplayStudents count='10'/>
-        </div>
-      )
-    }else if(path === "/dashboard/calendar"){
-      return(
-        <div className="dash">
-        <NavigationContainer/>
-          <h3>This is the calendar page</h3>
-        </div>
-      )
-    }
-  }else{
-    return(
-      <h1>Sorry, you need to log-in</h1>
     )
   }
 }
+
 
 export default Dashboard;

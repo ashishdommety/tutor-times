@@ -1,0 +1,3 @@
+Temporary flow:-
+
+Send dummy json from back-end ==>> catch on the front-end ==>> Update the store ==>> send that data into the component 

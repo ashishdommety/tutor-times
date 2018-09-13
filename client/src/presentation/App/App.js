@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeContainer from '../../containers/HomeContainer';
-import Dashboard from '../Dashboard/Dashboard'; // temporary
+import DashboardContainer from '../../containers/DashboardContainer'; // temporary
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const App = (props) => {
@@ -8,7 +8,7 @@ const App = (props) => {
       <BrowserRouter>
         <Switch>
           <Route exact={true} path="/" component={HomeContainer}/>
-          <Route exact={false} path="/dashboard" component={Dashboard}/>
+          <Route exact={false} path="/dashboard" component={DashboardContainer}/>
         </Switch>
       </BrowserRouter>
     );
