@@ -10,6 +10,7 @@ class Classes extends Component{
   render(){
     return(
       <div id="allClasses">
+        <h2>Your Upcoming Classes:</h2>
         {!this.props.classes.length ? 
           "Loading..." : this.props.classes.map((x,i) => 
             <div className="class" key={i}>
