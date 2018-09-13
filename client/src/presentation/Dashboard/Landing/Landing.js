@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import './Landing.css'; 
 
 class Landing extends Component{
+  
   lastIndex(){
     return this.props.classes[this.props.classes.length - 1];
   }
