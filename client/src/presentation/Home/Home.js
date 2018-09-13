@@ -6,7 +6,7 @@ import { GoogleLogin } from 'react-google-login';
 const Home = (props) => {
   const responseGoogle = (response) => {
     let storage = window.localStorage;
-
+    console.log(response);
     if(!storage.length){
       let name = response.profileObj.givenName;
       let photo = response.profileObj.imageUrl;
