@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Landing from '../presentation/Dashboard/Landing/Landing';
-import { fetchNextClassAsync } from '../actionCreators/async';
+import { fetchNextClassAsync, fetchAllClassesAsync } from '../actionCreators/async';
 
 function mapStateToProps(state){
   // console.log(state.home.nextStudent);
@@ -11,7 +11,8 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){  
   return{ 
-    fetchNextClassAsync: () => dispatch(fetchNextClassAsync())
+    fetchNextClassAsync: () => dispatch(fetchNextClassAsync()),
+    fetchAllClassesAsync: () => dispatch(fetchAllClassesAsync())
   }
 }
 

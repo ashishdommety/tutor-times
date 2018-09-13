@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Classes from '../presentation/Dashboard/Classes/Classes';
-import { fetchAllClassesAsnyc } from '../actionCreators/async';
+import { fetchAllClassesAsync } from '../actionCreators/async';
+
 function mapStateToProps(state){
   return {
     classes: state.classes
@@ -9,7 +10,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
   return {
-    fetchAllClassesAsync: () => dispatch(fetchAllClassesAsnyc())
+    fetchAllClassesAsync: () => dispatch(fetchAllClassesAsync())
   }
 }
 const ClassesContainer = connect(mapStateToProps, mapDispatchToProps)(Classes);

@@ -1,16 +1,12 @@
 import React, {Component} from "react";
 import './Landing.css'; 
 
-/* 
-  Make Landing into 'GeneralLanding' so that a student can see when their next class is also.
-*/
-
 class Landing extends Component{
   lastIndex(){
     return this.props.classes[this.props.classes.length - 1];
   }
   componentDidMount(){
-    this.props.fetchNextClassAsync();
+    this.props.fetchAllClassesAsync();
   }
 
   render(){

@@ -35,7 +35,7 @@ export const fetchAllAssociatesAsync = function(){
   }
 }
 
-export const fetchAllClassesAsnyc = function(){
+export const fetchAllClassesAsync = function(){
   return function(dispatch){
     axios.get("/get-all-classes")
       .then((response) => {
