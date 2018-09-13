@@ -33,7 +33,7 @@ const Home = (props) => {
           A place where tutors and students meet to learn from each other.
         </p>
         <GoogleLogin
-            clientId={"155095156692-9mti1snraf70l1fnqel9mfa5bfpukp99.apps.googleusercontent.com"}
+            clientId={"155095156692-ej9fcu01heh431vrcqevdp918eantvoo.apps.googleusercontent.com"}
             buttonText="Login"
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
