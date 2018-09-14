@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const routes = require("./routes");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
+const AWS = require('aws-sdk');
+AWS.config.region = process.env.REGION;
 
 // Serve static files from the React app (New website)
 app.use(express.static(path.join(__dirname, 'client/build')));
