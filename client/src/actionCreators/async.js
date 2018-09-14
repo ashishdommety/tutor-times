@@ -48,3 +48,16 @@ export const fetchAllClassesAsync = function(){
   }
 }
 
+export const fetchAllNotesAsync = function(){
+  return function(dispatch){
+    axios.get("/get-notes")
+      .then((response) => {
+        let noteData = response.data;
+        dispatch(syncActions.fetchAllNotes(noteData));
+      })
+    .catch((err)=>{
+      console.log(err);
+    })
+  }
+}
+
