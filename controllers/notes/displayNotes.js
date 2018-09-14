@@ -14,6 +14,11 @@ module.exports = function(req,res){
         "title": "Random",
         "date": "9-10-2018",
         "content": "Hoping to learn more soon."
+      },
+      {
+        "title": "Note 4",
+        "date": "9-09-2018",
+        "content": "Hello there human."
       }
   ];
 
