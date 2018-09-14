@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import Notes from '../presentation/Dashboard/Notes/Notes';
+import { fetchAllNotesAsync } from '../actionCreators/async';
 
 function mapStateToProps(state){
   return {
@@ -7,5 +8,11 @@ function mapStateToProps(state){
   }
 }
 
-const NotesContainer = connect(mapStateToProps)(Notes);
+function mapDispatchToProps(dispatch){
+  return{
+    fetchAllNotesAsync: () => dispatch(fetchAllNotesAsync())
+  }
+}
+
+const NotesContainer = connect(mapStateToProps, mapDispatchToProps)(Notes);
 export default NotesContainer; 

@@ -2,10 +2,21 @@ import React, {Component} from 'react';
 import './Notes.css';
 
 class Notes extends Component{
+  componentDidMount(){
+    this.props.fetchAllNotesAsync();
+  }
   render(){
     return(
       <div id="allNotes">
-        <p>This is the notes tab</p>
+        {!this.props.notes.length ? 
+          "loading..." : this.props.notes.map((x,i) => 
+            <div className="noteBlock" key={i}>
+              <h2>{x.title}</h2>
+              <h3>{x.date}</h3>
+              <p>{x.content}</p>
+            </div>
+          )
+           }
       </div>
     )
   }
