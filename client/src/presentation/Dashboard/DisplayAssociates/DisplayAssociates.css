@@ -1,18 +1,20 @@
 .associate{
   border: 1px solid black;
   text-align: center;
-  /* border-radius: 20px; */
-  margin: 15px;
+  margin: 10px;
 }
 
-#display-associates{
+/* #display-associates{
   margin: 50px;
-}
+} */
 
 @media only screen and (min-width:450px){
   #display-associates{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-column-start: 2;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .associate{
+    width: 220px;
   }
 }
