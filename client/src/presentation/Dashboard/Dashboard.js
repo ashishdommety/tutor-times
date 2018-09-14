@@ -5,7 +5,7 @@ import NavigationContainer from '../../containers/NavigationContainer';
 import LandingContainer from '../../containers/LandingContainer';
 import DisplayAssociatesContainer from '../../containers/DisplayAssociatesContainer';
 import ClassesContainer from '../../containers/ClassesContainer';
-import Notes from './Notes';
+import Notes from './Notes/Notes';
 
 class Dashboard extends Component{
 
