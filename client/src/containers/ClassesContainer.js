@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Classes from '../presentation/Dashboard/Classes/Classes';
-import { fetchAllClassesAsync } from '../actionCreators/async';
+import fetchAllClassesAsync from '../actionCreators/async/fetchAllClassesAsync';
 
 function mapStateToProps(state){
   return {

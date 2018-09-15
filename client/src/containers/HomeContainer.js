@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import Home from '../presentation/Home/Home';
-import { fetchGoogleData } from '../actionCreators/async';
-// console.log(finLogin);
+import fetchGoogleData from '../actionCreators/async/fetchGoogleData';
 
 function mapStateToProps(state){
   return {

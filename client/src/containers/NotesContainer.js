@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Notes from '../presentation/Dashboard/Notes/Notes';
-import { fetchAllNotesAsync } from '../actionCreators/async';
+import fetchAllNotesAsync from '../actionCreators/async/fetchAllNotesAsync';
 
 function mapStateToProps(state){
   return {
