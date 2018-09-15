@@ -13,3 +13,7 @@ export const fetchAllAssociates = function(associates){
 export const fetchAllClasses = function(classes){
   return {type: 'fetchAllClasses', classes}
 }
+
+export const fetchAllNotes = function(notes){
+  return {type: 'fetchAllNotes', notes}
+}
