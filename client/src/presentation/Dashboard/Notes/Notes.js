@@ -11,6 +11,8 @@ class Notes extends Component{
         {!this.props.notes.length ? 
           "loading..." : this.props.notes.map((x,i) => 
             <div className="noteBlock" key={i}>
+              <button>x</button>
+              <button>Edit</button>
               <h2>{x.title}</h2>
               <h3>{x.date}</h3>
               <p>{x.content}</p>
