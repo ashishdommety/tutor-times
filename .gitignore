@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# config.json
+config.json
+
 # misc
 .DS_Store
 .env.local
