@@ -24,6 +24,6 @@
     "mysql": "^2.16.0",
     "path": "^0.12.7",
     "react-google-login": "^3.2.1",
-    "sequelize": "^4.38.0"
+    "sequelize": "^4.38.1"
   }
 }
