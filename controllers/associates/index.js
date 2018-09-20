@@ -4,7 +4,9 @@
 */
 
 const allAssociates = require('./allAssociates');
+const userAssociates = require('./userAssociates');
 
 module.exports = {
-      all: allAssociates
+      all: allAssociates,
+      userAssociates
 }

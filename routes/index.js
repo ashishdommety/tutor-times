@@ -10,6 +10,7 @@ module.exports = router
   .get("/next-class", classes.nextClass)
   .get("/get-associates", associates.all)
   .get("/get-all-classes", classes.all) // done
-  .get("/get-notes", notes.userNotes)
+  .get("/get-notes", notes.userNotes) // temp-done (needs data from front-end)
+  .get("/user-associates", associates.userAssociates);
   // .get("/get-associates/:id/notes", tutorController.studentNotes)
 
