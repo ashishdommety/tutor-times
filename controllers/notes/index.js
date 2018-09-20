@@ -8,5 +8,5 @@
 const displayNotes = require('./displayNotes');
 
 module.exports = {
-      showAll: displayNotes
+      userNotes: displayNotes
 }
