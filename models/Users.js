@@ -1,32 +1,56 @@
 module.exports = function(sequelize, DataTypes){
   var User = sequelize.define("User", {
     google_id: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false
     },
-    name: {
-      type: DataTypes.String,
+    firstName: {
+      type: DataTypes.STRING,
       allowNull: false
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    middleName: {
+      type: DataTypes.STRING,
+      allowNull: true
     },
     email: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false
     },
     photoURL: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false
     },
     isTutor: {
-      type: DataTypes.Boolean,
+      type: DataTypes.BOOLEAN,
       allowNull: false
     },
     bio: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    goal: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    motto: {
+      type: DataTypes.STRING,
       allowNull: false
     },
     phoneNumber: {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: true
+    },
+    createdAt: {
+     type: DataTypes.DATE,
+     defaultValue: sequelize.fn('now')
+    },
+    updatedAt: {
+      type: DataTypes.DATE,
+      defaultValue: sequelize.fn('now')
     }
   });
 
