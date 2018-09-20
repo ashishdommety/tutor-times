@@ -13,5 +13,5 @@ const allClasses = require("./allClasses");
 
 module.exports = {
   nextClass: nextClass,
-  allClasses
+  all: allClasses
 }

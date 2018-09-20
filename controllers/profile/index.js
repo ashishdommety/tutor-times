@@ -9,5 +9,5 @@ Controllers include:
 const allUsers = require("./allUsers");
 
 module.exports = {
-    allUsers
+    all: allUsers
 };

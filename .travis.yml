@@ -29,4 +29,5 @@ branches:
   - notes-tab
   - modularize-actions
   - db-connection
+  - rest-api
 
