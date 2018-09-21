@@ -18,5 +18,5 @@ module.exports = function(req,res){
           })
         }
         res.json(allAssociates);
-    })    
+    }).catch(err => console.log(err));    
 };

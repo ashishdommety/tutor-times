@@ -8,5 +8,5 @@ module.exports = function(req,res){
       }
     }).then(function(data){
         data === null ? res.json({path:"/sign-up"}) : res.json(data);
-    })    
+    }).catch(err => console.log(err));   
 };

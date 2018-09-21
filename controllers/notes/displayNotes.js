@@ -8,5 +8,5 @@ module.exports = function(req,res){
       }
     }).then(function(data){
         res.json(data);
-    })    
+    }).catch(err => console.log(err));  
 };
