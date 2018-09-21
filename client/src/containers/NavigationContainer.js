@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Navigation from '../presentation/Navigation/Navigation';
+import Navigation from '../presentation/Dashboard/Navigation/Navigation';
 // import { fetchGoogleData } from '../actionCreators/async';
 
 function mapStateToProps(state){
