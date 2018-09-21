@@ -10,8 +10,10 @@
 
 const nextClass = require("./nextClass");
 const allClasses = require("./allClasses");
+const userClasses = require("./usersClasses");
 
 module.exports = {
   nextClass: nextClass,
-  all: allClasses
+  all: allClasses,
+  userClasses
 }
