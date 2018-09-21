@@ -11,9 +11,11 @@
 const nextClass = require("./nextClass");
 const allClasses = require("./allClasses");
 const userClasses = require("./usersClasses");
+const createClass = require("./createClass");
 
 module.exports = {
   nextClass: nextClass,
   all: allClasses,
-  userClasses
+  userClasses,
+  createClass
 }

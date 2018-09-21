@@ -18,6 +18,7 @@ module.exports = router
   .get("/next-class", classes.nextClass)
   .get("/get-all-classes", classes.all) // done
   .get("/my-classes", classes.userClasses) // temp-done
+  .post("/schedule-class", classes.createClass)
   // associates routes
   .get("/get-associates", associates.all)
   .get("/user-associates", associates.userAssociates)
