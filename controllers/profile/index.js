@@ -7,7 +7,9 @@ Controllers include:
 */
 
 const allUsers = require("./allUsers");
+const findUser = require("./findUser");
 
 module.exports = {
-    all: allUsers
+    all: allUsers,
+    findUser
 };

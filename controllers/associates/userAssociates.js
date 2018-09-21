@@ -1,7 +1,7 @@
 const db = require("../../models");
 
 module.exports = function(req,res){
-    let g_id = "123abc"; //placeholder for google id
+    let g_id = "123abc"; // to be replaced by req.body.g_id
     db.Associate.findAll({
       where: {
         google_id: g_id
