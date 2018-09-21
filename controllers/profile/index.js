@@ -8,8 +8,10 @@ Controllers include:
 
 const allUsers = require("./allUsers");
 const findUser = require("./findUser");
+const createUser = require("./createUser");
 
 module.exports = {
     all: allUsers,
-    findUser
+    findUser,
+    createUser
 };

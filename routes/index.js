@@ -7,7 +7,8 @@ const profile = require("../controllers/profile");
 
 module.exports = router
   .get("/user-data", profile.all) // done
-  .get("/user-check", profile.findUser)
+  .get("/user-check", profile.findUser) // temp-done
+  .post("/create-user", profile.createUser)
   .get("/next-class", classes.nextClass)
   .get("/get-associates", associates.all)
   .get("/get-all-classes", classes.all) // done
