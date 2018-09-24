@@ -1,28 +1,23 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './Home.css';
 import { GoogleLogin } from 'react-google-login';
 
-const Home = (props) => {
-  const responseGoogle = (response) => {
-    let storage = window.localStorage;
-    console.log(response);
-    if(!storage.length){
-      let name = response.profileObj.givenName;
-      let photo = response.profileObj.imageUrl;
-      let googleId = response.profileObj.googleId;
-      localStorage.setItem("gId", googleId);
-      localStorage.setItem("name", name);
-      localStorage.setItem("photoLink", photo);
-      window.location.pathname = "/dashboard";
-    }else{
-      window.location.pathname = "/dashboard";
-    }
-
+class Home extends Component{
+  
+  responseGoogle = (response) => {
+    // search for user in db.
+    let google_id = response.profileObj.googleId;
+    this.props.fetchUserAsync(google_id);
+    // store login data in localStorage for immediate use
+    localStorage.setItem("gId", google_id);
+    localStorage.setItem("name", response.profileObj.givenName);
+    localStorage.setItem("photoLink", response.profileObj.imageUrl);
+    // if they don't exist, send to sign up. If they do, send to dashboard.
+    !this.props.google_id ? window.location.pathname = "/sign-up" : window.location.pathname = "/dashboard"; 
   }; 
-
-  const pathName = window.location.origin;
-  console.log(pathName);
+  
+  render(){
     return (
       <div className="App">
         <header className="App-header">
@@ -35,11 +30,12 @@ const Home = (props) => {
         <GoogleLogin
             clientId={"155095156692-ej9fcu01heh431vrcqevdp918eantvoo.apps.googleusercontent.com"}
             buttonText="Login"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
+            onSuccess={this.responseGoogle}
+            onFailure={this.responseGoogle}
         />
       </div>
     );
+  }
 }
 
 export default Home;
