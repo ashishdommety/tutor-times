@@ -4,7 +4,8 @@ import sendNewUserAsync from '../actionCreators/async/sendNewUserAsync';
 
 function mapStateToProps(state){
   return {
-    classes: state.classes
+    classes: state.classes,
+    pathName: state.pathName
   }
 }
 

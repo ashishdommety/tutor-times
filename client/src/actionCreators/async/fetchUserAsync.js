@@ -2,12 +2,12 @@ import axios from 'axios';
 import {fetchUser, noUser} from '../sync/fetchUser';
 
 const fetchUserAsync = function fetchUserAsync(google_id){
-  return async function(dispatch){
+  return function(dispatch){
     axios.get("/user-check", {
       params: {
         google_id: google_id
       }
-    }).then( await function(response){
+    }).then(function(response){
         let user = response.data;
         // if data has path, dispatch another action.
         if(user.path){

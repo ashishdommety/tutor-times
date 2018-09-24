@@ -23,6 +23,12 @@ class SignUp extends Component{
       this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidUpdate(){
+    if(this.props.pathName !== "/sign-up"){
+      this.props.history.push(this.props.pathName);
+    }
+  }
+
   handleInputChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
