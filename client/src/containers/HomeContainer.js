@@ -4,7 +4,7 @@ import fetchUserAsync from '../actionCreators/async/fetchUserAsync';
 
 function mapStateToProps(state){
   return {
-    userExists: state.profile.google_id
+    pathName: state.pathName
   }
 }
 

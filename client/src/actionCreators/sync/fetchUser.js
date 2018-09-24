@@ -1,5 +1,7 @@
-const fetchUser = function (user){
-  return {type: 'userDetails', user}
+export const fetchUser = function (user, pathName){
+  return {type: 'userDetails', user, pathName}
 };
 
-export default fetchUser;
+export const noUser = function(user, pathName){
+  return {type: 'noUser', pathName}
+};

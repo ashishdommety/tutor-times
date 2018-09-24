@@ -1,5 +1,5 @@
 import axios from 'axios';
-import fetchUser from '../sync/fetchUser';
+import {fetchUser, noUser} from '../sync/fetchUser';
 
 const fetchUserAsync = function fetchUserAsync(google_id){
   return async function(dispatch){
@@ -7,11 +7,16 @@ const fetchUserAsync = function fetchUserAsync(google_id){
       params: {
         google_id: google_id
       }
-    }).then((response) => {
+    }).then( await function(response){
         let user = response.data;
         // if data has path, dispatch another action.
-        // if not, dispatch fetchUser
-        dispatch(fetchUser(user));
+        if(user.path){
+          console.log("doesnt exist in store");
+          dispatch(noUser(user, "/sign-up"));
+        }else{
+          console.log("does exist in store");
+          dispatch(fetchUser(user, "/dashboard"));
+        }
       }).catch(err => console.log(err));
   }
 };
