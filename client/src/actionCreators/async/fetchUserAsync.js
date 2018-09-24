@@ -9,6 +9,8 @@ const fetchUserAsync = function fetchUserAsync(google_id){
       }
     }).then((response) => {
         let user = response.data;
+        // if data has path, dispatch another action.
+        // if not, dispatch fetchUser
         dispatch(fetchUser(user));
       }).catch(err => console.log(err));
   }
