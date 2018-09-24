@@ -1,8 +1,15 @@
 label{
   display:block;
+  margin-top: 20px;
   /* margin:20px; */
 }
 
 form{
   /* margin:20px; */
+  margin: 10px;
+  text-align:center;
+}
+
+input, textarea{
+  width: 100%;
 }

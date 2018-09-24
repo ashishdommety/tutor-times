@@ -24,7 +24,6 @@ class SignUp extends Component{
   handleInputChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
-    console.log(value);
     this.setState({
       [name]: value
     })
@@ -50,9 +49,10 @@ class SignUp extends Component{
           <label>Phone Number: </label>
             <input type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={this.handleInputChange}/>
           <label>I am here to:  </label>
-            Study <input type="radio" value={false} name="isTutor" onChange={this.handleInputChange}/>
-            Teach <input type="radio" value={true} name="isTutor" onChange={this.handleInputChange}/>
-         
+          <select value={this.state.isTutor} onChange={this.handleInputChange} name="isTutor">
+            <option value={false}>Study</option>
+            <option value={true}>Teach</option>
+          </select>
           <label>What do you hope to achieve from your classes? </label>
           <textarea type="text" name="goal" value={this.state.goal} onChange={this.handleInputChange}/>
           <label>What's your motto? </label>
