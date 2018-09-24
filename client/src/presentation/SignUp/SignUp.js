@@ -36,7 +36,8 @@ class SignUp extends Component{
 
   render(){
     return(
-      <div>
+      <div id="form-content">
+        <h2>Sign Up:</h2>
         <form>
           <label>First Name: </label>
             <input type="text" name="firstName" value={this.state.firstname} onChange={this.handleInputChange}/>
