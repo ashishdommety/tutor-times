@@ -60,7 +60,7 @@ class SignUp extends Component{
           <label>Tell us a little bit about yourself: </label>
           <textarea type="text" name="bio" value={this.state.bio} onChange={this.handleInputChange}/>
           <br/>
-          <button onClick={this.handleSubmit}>Submit</button>
+          <button id="submitUser" onClick={this.handleSubmit}>Submit</button>
         </form>
       </div>
     )
