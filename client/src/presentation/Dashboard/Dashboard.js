@@ -9,6 +9,10 @@ import NotesContainer from '../../containers/NotesContainer';
 
 class Dashboard extends Component{
 
+  componentDidMount(){
+    this.props.fetchUserAsync(localStorage.google_id);
+  }
+  
   determineOpposite(title){
     return title === "tutor" ? "students" : "tutors";
   }
