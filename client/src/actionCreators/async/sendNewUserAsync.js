@@ -1,5 +1,5 @@
 import axios from 'axios';
-import sendNewUser from '../sync/sendNewUser';
+// import sendNewUser from '../sync/sendNewUser';
 
 const sendNewUserAsync = function sendNewUserAsync(newUser){
   // console.log(newUser);

@@ -1,5 +1,5 @@
 const fetchUser = function (user){
-  return {type: 'userArr', user}
+  return {type: 'userDetails', user}
 };
 
 export default fetchUser;

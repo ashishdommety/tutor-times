@@ -5,7 +5,7 @@ import { GoogleLogin } from 'react-google-login';
 
 class Home extends Component{
   
-  responseGoogle = (response) => {
+ responseGoogle = (response) => {
     // search for user in db.
     let google_id = response.profileObj.googleId;
     this.props.fetchUserAsync(google_id);
@@ -13,8 +13,6 @@ class Home extends Component{
     localStorage.setItem("google_id", google_id);
     localStorage.setItem("name", response.profileObj.givenName);
     localStorage.setItem("photoLink", response.profileObj.imageUrl);
-    // if they don't exist, send to sign up. If they do, send to dashboard.
-    !this.props.google_id ? window.location.pathname = "/sign-up" : window.location.pathname = "/dashboard"; 
   }; 
   
   render(){
