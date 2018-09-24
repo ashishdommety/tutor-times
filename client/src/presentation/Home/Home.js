@@ -10,7 +10,7 @@ class Home extends Component{
     let google_id = response.profileObj.googleId;
     this.props.fetchUserAsync(google_id);
     // store login data in localStorage for immediate use
-    localStorage.setItem("gId", google_id);
+    localStorage.setItem("google_id", google_id);
     localStorage.setItem("name", response.profileObj.givenName);
     localStorage.setItem("photoLink", response.profileObj.imageUrl);
     // if they don't exist, send to sign up. If they do, send to dashboard.

@@ -6,6 +6,8 @@ class SignUp extends Component{
   constructor(props){
     super(props);
       this.state = {
+        google_id: localStorage.google_id,
+        photoURL: localStorage.photoLink,
         firstName: '',
         lastName: '',
         middleName: '',
@@ -31,6 +33,7 @@ class SignUp extends Component{
 
   handleSubmit = e => {
     e.preventDefault();
+    this.props.sendNewUserAsync(this.state);
     console.log(this.state);
   }
 

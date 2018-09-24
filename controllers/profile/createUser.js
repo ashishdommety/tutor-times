@@ -2,19 +2,20 @@ const db = require("../../models");
 
 module.exports = function(req,res){
    // placeholder before using req.body.new_user
-  let new_user = {
-    google_id: "456def",
-    firstName: "John", 
-    lastName: "Doe", 
-    middleName: "", 
-    email: "johndoe@gmail.com",
-    photoURL: "https://via.placeholder.com/100x100", 
-    isTutor: false, 
-    bio: "I'm all about awesomeness and learning more things",
-    goal: "To get an A in Math", 
-    motto: "Anything is possible", 
-    phoneNumber: 1234567890
-  };
+  let new_user = req.body;
+  // let new_user = {
+  //   google_id: "456def",
+  //   firstName: "John", 
+  //   lastName: "Doe", 
+  //   middleName: "", 
+  //   email: "johndoe@gmail.com",
+  //   photoURL: "https://via.placeholder.com/100x100", 
+  //   isTutor: false, 
+  //   bio: "I'm all about awesomeness and learning more things",
+  //   goal: "To get an A in Math", 
+  //   motto: "Anything is possible", 
+  //   phoneNumber: 1234567890
+  // };
   
   db.User.create({
     google_id: new_user.google_id,

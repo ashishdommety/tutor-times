@@ -12,6 +12,8 @@ const profile = function(state = initial, action){
       return Object.assign({}, state, {name: action.name, picture: action.photo});
     case "userArr":
       return Object.assign({},state, {google_id: action.user.google_id})
+    case "newUser":
+      return Object.assign({}, state, action.newUser)
   default:
       return state;
   }
