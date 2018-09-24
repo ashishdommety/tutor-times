@@ -6,13 +6,13 @@ import { GoogleLogin } from 'react-google-login';
 class Home extends Component{
   
  responseGoogle = (response) => {
-    // search for user in db.
-    let google_id = response.profileObj.googleId;
-    this.props.fetchUserAsync(google_id);
     // store login data in localStorage for immediate use
     localStorage.setItem("google_id", google_id);
     localStorage.setItem("name", response.profileObj.givenName);
     localStorage.setItem("photoLink", response.profileObj.imageUrl);
+    // search for user in db.
+    let google_id = response.profileObj.googleId;
+    this.props.fetchUserAsync(google_id);
   }; 
   
   render(){
