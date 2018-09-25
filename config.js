@@ -17,10 +17,10 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": process.env.DB_PROD_USER,
-    "password": process.env.DB_PROD_PASS,
+    "username": process.env.DB_STAGING_USER,
+    "password": process.env.DB_STAGING_PASS,
     "database": "tutortimesDB",
-    "host": process.env.DB_PROD_HOST,
+    "host": process.env.DB_STAGING_HOST,
     "dialect": "mysql"
   }
 }
