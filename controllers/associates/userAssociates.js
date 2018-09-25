@@ -9,10 +9,10 @@ module.exports = function(req,res){
     }).then(findUser(data)).catch(err => console.log(err));    
 };
 
-let findUser = async function(data){
+let findUser = function(data){
   let allAssociates = [];
   for(let i=0; i<data.length; i++){
-    await db.User.find({
+    db.User.find({
       where: {
         google_id: data[i].associate_google_id
       }
