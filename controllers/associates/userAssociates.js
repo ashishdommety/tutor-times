@@ -6,17 +6,19 @@ module.exports = function(req,res){
       where: {
         google_id: g_id
       }
-    }).then(async function(data){
-        let allAssociates = [];
-        for(let i=0; i<data.length; i++){
-          await db.User.find({
-            where: {
-              google_id: data[i].associate_google_id
-            }
-          }).then(function(data){
-            allAssociates.push(data);
-          })
-        }
-        res.json(allAssociates);
-    }).catch(err => console.log(err));    
+    }).then(findUser(data)).catch(err => console.log(err));    
+};
+
+let findUser = async function(data){
+  let allAssociates = [];
+  for(let i=0; i<data.length; i++){
+    await db.User.find({
+      where: {
+        google_id: data[i].associate_google_id
+      }
+    }).then(function(data){
+      allAssociates.push(data);
+    })
+  }
+  res.json(allAssociates);
 };
