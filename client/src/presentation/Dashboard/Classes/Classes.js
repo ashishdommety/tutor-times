@@ -16,8 +16,9 @@ class Classes extends Component{
               <p>{x.name}</p>
               <p>{x.date}</p>
               <p>{x.time}</p>
+              <button>Re-schedule</button>
             </div>) 
-          }
+          }  
       </div>
     )
   }

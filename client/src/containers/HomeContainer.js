@@ -1,17 +1,16 @@
 import { connect } from 'react-redux';
 import Home from '../presentation/Home/Home';
-import fetchGoogleData from '../actionCreators/async/fetchGoogleData';
+import fetchUserAsync from '../actionCreators/async/fetchUserAsync';
 
 function mapStateToProps(state){
   return {
-    status: state.status,
-    picture: state.picture
+    pathName: state.pathName
   }
 }
 
 function mapDispatchToProps(dispatch){  
   return{ 
-    fetchGoogleData: (name, photo) => dispatch(fetchGoogleData(name, photo))
+    fetchUserAsync: (google_id) => dispatch(fetchUserAsync(google_id))
   }
 }
 

@@ -1,16 +1,17 @@
 /* 
 Controllers include:
-    - users public profile - READ (This could evolve depending on what info we want to display)
+    - search users - READ (This could evolve depending on what info we want to display)
+    - create new user if they don't exist in the database - CREATE
+    - update profile - UPDATE
+    - delete account - DELETE
 */
 
-module.exports = function(req,res){
-    let data = {
-            "name": "John Dow",
-            "image": "via.placeholder.com/100x100",
-            "subjects": ["english","physics","computer science"],
-            "motto": "Keep on learning",
-            "goal": "To build the next amazon"
-          };
-    
-    res.json(data);
-}
+const allUsers = require("./allUsers");
+const findUser = require("./findUser");
+const createUser = require("./createUser");
+
+module.exports = {
+    all: allUsers,
+    findUser,
+    createUser
+};

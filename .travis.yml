@@ -28,4 +28,6 @@ branches:
   - classes-tab
   - notes-tab
   - modularize-actions
+  - db-connection
+  - rest-api
 

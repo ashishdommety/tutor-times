@@ -21,6 +21,7 @@ class Landing extends Component{
             <h4>on {this.lastIndex().day}, {this.lastIndex().date} @ {this.lastIndex().time}</h4>
           </div>
         }
+        <button>Re-schedule</button>
       </div>
     )
   }
