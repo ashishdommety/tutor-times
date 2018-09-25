@@ -11,7 +11,7 @@ class SignUp extends Component{
         firstName: '',
         lastName: '',
         middleName: '',
-        email: '',
+        email: localStorage.email,
         phoneNumber: '',
         isTutor: false,
         bio: '',
@@ -54,8 +54,6 @@ class SignUp extends Component{
             <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleInputChange}/>
           <label>Middle Name: </label>
             <input type="text" name="middleName" value={this.state.middleName} onChange={this.handleInputChange}/>
-          <label>Email: </label>
-            <input type="text" name="email" value={this.state.email} onChange={this.handleInputChange}/>
           <label>Phone Number: </label>
             <input type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={this.handleInputChange}/>
           <label>I am here to:  </label>
