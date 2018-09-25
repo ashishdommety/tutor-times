@@ -6,6 +6,7 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const db = require("./models");
 const AWS = require('aws-sdk');
+
 AWS.config.region = process.env.REGION;
 
 // Serve static files from the React app (New website)
