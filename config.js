@@ -21,7 +21,7 @@ module.exports = {
   "production": {
     "username": process.env.DB_STAGING_USER,
     "password": process.env.DB_STAGING_PASS,
-    "database": "tutortimesDB",
+    "database": process.env.DB_STAGING_NAME,
     "host": process.env.DB_STAGING_HOST,
     "dialect": "mysql",
     "operatorsAliases": false

@@ -18,7 +18,8 @@ app.use(bodyParser.json());
 
 // add routes
 app.use("/",routes);
-
+console.log(`Node env is: ${process.env.NODE_ENV}`);
+console.log(`Databse name is: ${process.env.DB_STAGING_NAME}`);
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
