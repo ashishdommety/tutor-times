@@ -17,7 +17,8 @@ class Landing extends Component{
         </div>
         <div className="landingActions">
           <div className="landingComponent">
-            <h2>Find Friends</h2>
+            <h3>Make new friends!</h3>
+            <Link to="/dashboard/all-users"><button>View Users</button></Link>
           </div>
           <div className="landingComponent">
             <h3>Schedule a class with one of your tutors today!</h3>
