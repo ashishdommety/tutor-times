@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ProfileInfoContainer from '../../../containers/ProfileInfoContainer';
+import {Link} from 'react-router-dom';
 import './Landing.css'; 
 
 class Landing extends Component{
@@ -19,7 +20,8 @@ class Landing extends Component{
             <h2>Find Friends</h2>
           </div>
           <div className="landingComponent">
-            <h2>Schedule Class</h2>
+            <h3>Schedule a class with one of your tutors today!</h3>
+            <Link to="/dashboard/schedule-class"><button>Schedule Class</button></Link>
           </div>
         </div>
       </div>
