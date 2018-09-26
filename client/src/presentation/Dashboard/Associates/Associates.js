@@ -12,11 +12,11 @@ class Associates extends Component{
     return(
       <div id="display-associates">
         {!this.props.associates.length ? 'loading...' : this.props.associates.map((x,i) =>
-            <SingleAssociate
-            key={i}
-            name={x.name}
-            photoURL={x.photoURL}
-            bio="This is a bio about the user in the db"
+          <SingleAssociate
+          key={i}
+          name={x.name}
+          photoURL={x.photoURL}
+          bio="This is a bio about the user in the db"
           />
         )} 
       </div>
