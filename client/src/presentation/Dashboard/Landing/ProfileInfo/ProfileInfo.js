@@ -10,7 +10,7 @@ class ProfileInfo extends Component{
           <h3>Hi, {this.props.profile.name}!</h3>
           <hr/>
           <h4>Here's a reminder of your goal:</h4>
-          <p><strong>Goal:</strong>{this.props.profile.goal}</p>
+          <p>{this.props.profile.goal}</p>
         </div>
       </div>
     );
