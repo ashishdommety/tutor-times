@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import './Associates.css';
+import SingleAssociate from './SingleAssociate/SingleAssociate';
 
 class Associates extends Component{
 
@@ -10,18 +11,14 @@ class Associates extends Component{
   render(){
     return(
       <div id="display-associates">
-        {!this.props.associates.length ? 'loading...' : this.props.associates.map((x,i) =>{
-          return (
-            <div className="associate" key={i}>
-              <h2>{x.name}</h2>
-              <img src={x.photoURL} alt="profile"/>
-              <h3>Subjects: </h3>
-              <ul>
-                  {x.subjects === undefined ? "loading..." : x.subjects.map((y, j) => <li key={j}>{y}</li>)}
-              </ul>
-            </div>  
-          )
-        })} 
+        {!this.props.associates.length ? 'loading...' : this.props.associates.map((x,i) =>
+            <SingleAssociate
+            key={i}
+            name={x.name}
+            photoURL={x.photoURL}
+            bio="This is a bio about the user in the db"
+          />
+        )} 
       </div>
     )
   }
