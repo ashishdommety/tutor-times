@@ -4,3 +4,9 @@
       - edit note - UPDATE
       - delete note - DELETE
 */
+
+const displayNotes = require('./displayNotes');
+
+module.exports = {
+      userNotes: displayNotes
+}

@@ -3,7 +3,7 @@
   text-align: center;
   padding: 10px;
   border: 1px solid black;
-  /* border-radius: 10px; */
+  border-radius: 10px;
   grid-column-start: 2;
   margin: 50px;
 }

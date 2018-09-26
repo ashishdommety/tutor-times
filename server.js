@@ -4,7 +4,9 @@ const bodyParser = require("body-parser");
 const routes = require("./routes");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
+const db = require("./models");
 const AWS = require('aws-sdk');
+
 AWS.config.region = process.env.REGION;
 
 // Serve static files from the React app (New website)
@@ -16,7 +18,8 @@ app.use(bodyParser.json());
 
 // add routes
 app.use("/",routes);
-
+console.log(`Node env is: ${process.env.NODE_ENV}`);
+console.log(`Databse name is: ${process.env.DB_STAGING_NAME}`);
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function(req, res) {
@@ -28,6 +31,8 @@ app.get("*", function(req, res) {
 });
 
 // listen on PORT
-app.listen(PORT, function() {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log(`🌎 ==> Server now on port ${PORT}!`);
+  });
 });
