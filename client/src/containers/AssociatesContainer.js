@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import DisplayAssociates from '../presentation/Dashboard/DisplayAssociates/DisplayAssociates';
+import Associates from '../presentation/Dashboard/Associates/Associates';
 import fetchAllAssociatesAsync from '../actionCreators/async/fetchAllAssociatesAsync';
 
 function mapStateToProps(state){
@@ -14,6 +14,6 @@ function mapDispatchToProps(dispatch){
   }
 }
 
-const DisplayAssociatesContainer  = connect(mapStateToProps, mapDispatchToProps)(DisplayAssociates);
+const AssociatesContainer  = connect(mapStateToProps, mapDispatchToProps)(Associates);
 
-export default DisplayAssociatesContainer;
+export default AssociatesContainer;

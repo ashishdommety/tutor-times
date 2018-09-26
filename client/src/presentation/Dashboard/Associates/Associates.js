@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import './DisplayAssociates.css';
+import './Associates.css';
 
-class DisplayAssociates extends Component{
+class Associates extends Component{
 
   componentDidMount(){
     this.props.fetchAllAssociatesAsync();
@@ -27,4 +27,4 @@ class DisplayAssociates extends Component{
   }
 }
 
-export default DisplayAssociates;
+export default Associates;

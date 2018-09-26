@@ -1,9 +1,19 @@
-#tutor-landing{
+.landingComponent{
   align-self: center;
   text-align: center;
   padding: 10px;
   border: 1px solid black;
   border-radius: 10px;
-  grid-column-start: 2;
   margin: 50px;
+}
+
+#landing{
+  grid-column-start: 2;
+}
+
+@media only screen and (min-width:450px){
+  .landingActions{
+    display:flex;
+    
+  }
 }
