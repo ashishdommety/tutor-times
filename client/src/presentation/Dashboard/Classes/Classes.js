@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import './Classes.css';
 
 class Classes extends Component{
@@ -10,6 +11,7 @@ class Classes extends Component{
   render(){
     return(
       <div id="allClasses">
+        <Link to="/dashboard/schedule-class"><button>+</button></Link>
         {!this.props.classes.length ? 
           "Loading..." : this.props.classes.map((x,i) => 
             <div className="class" key={i}>

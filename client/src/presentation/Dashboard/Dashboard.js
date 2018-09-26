@@ -6,6 +6,7 @@ import LandingContainer from '../../containers/LandingContainer';
 import AssociatesContainer from '../../containers/AssociatesContainer';
 import ClassesContainer from '../../containers/ClassesContainer';
 import NotesContainer from '../../containers/NotesContainer';
+import ScheduleClass from './Classes/ScheduleClass/ScheduleClass';
 
 class Dashboard extends Component{
 
@@ -26,8 +27,9 @@ class Dashboard extends Component{
           <Switch>
             <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
             <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={AssociatesContainer}/>
-            <Route exact={true} path={this.props.match.path + "/classes"} component={ClassesContainer}/>
+            <Route path={this.props.match.path + "/classes"} component={ClassesContainer}/>
             <Route exact={true} path={this.props.match.path + "/notes"} component={NotesContainer}/>
+            <Route exact={true} path={this.props.match.path + "/schedule-class"} component={ScheduleClass} />
           </Switch>
         }
         </div>
