@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import ProfileInfo from './ProfileInfo/ProfileInfo';
 import './Landing.css'; 
 
 class Landing extends Component{
@@ -11,7 +12,7 @@ class Landing extends Component{
     return(
       <div id="landing">
         <div className="landingComponent">
-          <h1>Profile Info</h1>
+          <ProfileInfo/>
         </div>
         <div className="landingActions">
           <div className="landingComponent">
