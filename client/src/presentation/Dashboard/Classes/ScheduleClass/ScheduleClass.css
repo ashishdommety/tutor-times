@@ -1,0 +1,16 @@
+#scheduleClassForm{
+  border: solid 1px black;
+  padding: 20px;
+}
+
+#scheduleClassForm select{
+  display:block;
+}
+
+@media only screen and (min-width:450px){
+  #scheduleClassForm{
+    grid-column-start: 2;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

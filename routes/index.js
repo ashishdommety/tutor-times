@@ -11,7 +11,7 @@ const profile = require("../controllers/profile");
 
 module.exports = router
   // profile routes
-  .get("/user-data", profile.all) // done
+  .get("/all-users", profile.all) // done
   .get("/user-check", profile.findUser) // temp-done
   .post("/create-user", profile.createUser)
   // classes routes
