@@ -4,9 +4,7 @@ import {Switch, Route} from 'react-router-dom';
 import NavigationContainer from '../../containers/NavigationContainer';
 import LandingContainer from '../../containers/LandingContainer';
 import AssociatesContainer from '../../containers/AssociatesContainer';
-import ClassesContainer from '../../containers/ClassesContainer';
 import NotesContainer from '../../containers/NotesContainer';
-import ScheduleClass from './Classes/ScheduleClass/ScheduleClass';
 import AllUsersContainer from '../../containers/AllUsersContainer';
 // import AllUsers from './Associates/AllUsers/AllUsers';
 
@@ -29,9 +27,7 @@ class Dashboard extends Component{
           <Switch>
             <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
             <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={AssociatesContainer}/>
-            <Route path={this.props.match.path + "/classes"} component={ClassesContainer}/>
             <Route exact={true} path={this.props.match.path + "/notes"} component={NotesContainer}/>
-            <Route exact={true} path={this.props.match.path + "/schedule-class"} component={ScheduleClass} />
             <Route exact={true} path={this.props.match.path + "/display-users"} component={AllUsersContainer}/>
           </Switch>
         }

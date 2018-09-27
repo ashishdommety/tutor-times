@@ -24,7 +24,6 @@ const Navigation = (props) => {
     <div className="nav">
       <div>
         <Link to="/dashboard">Home</Link>
-        <Link to="/dashboard/classes">Classes</Link>
         <Link to="/dashboard/notes">Notes</Link>
         <Link to={"/dashboard/" + props.title}>{props.title[0].toUpperCase() + props.title.substring(1,props.title.length)}</Link>
       </div>
