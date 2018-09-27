@@ -7,6 +7,8 @@ import AssociatesContainer from '../../containers/AssociatesContainer';
 import ClassesContainer from '../../containers/ClassesContainer';
 import NotesContainer from '../../containers/NotesContainer';
 import ScheduleClass from './Classes/ScheduleClass/ScheduleClass';
+import AllUsersContainer from '../../containers/AllUsersContainer';
+// import AllUsers from './Associates/AllUsers/AllUsers';
 
 class Dashboard extends Component{
 
@@ -30,6 +32,7 @@ class Dashboard extends Component{
             <Route path={this.props.match.path + "/classes"} component={ClassesContainer}/>
             <Route exact={true} path={this.props.match.path + "/notes"} component={NotesContainer}/>
             <Route exact={true} path={this.props.match.path + "/schedule-class"} component={ScheduleClass} />
+            <Route exact={true} path={this.props.match.path + "/display-users"} component={AllUsersContainer}/>
           </Switch>
         }
         </div>
