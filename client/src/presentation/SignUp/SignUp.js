@@ -24,6 +24,7 @@ class SignUp extends Component{
   }
 
   componentDidUpdate(){
+    console.log(this.props.pathName);
     if(this.props.pathName !== "/sign-up"){
       this.props.history.push(this.props.pathName);
     }

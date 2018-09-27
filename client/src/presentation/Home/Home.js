@@ -19,7 +19,10 @@ class Home extends Component{
 
   componentDidUpdate(){
     console.log('component updated');
-    this.props.history.push(this.props.pathName.path);
+    console.log(this.props.pathName);
+    if(this.props.pathName !== "/"){
+      this.props.history.push(this.props.pathName);
+    }
   }
   
   render(){
