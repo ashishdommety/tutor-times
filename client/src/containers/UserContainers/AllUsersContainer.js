@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import AllUsers from '../presentation/Dashboard/Associates/AllUsers/AllUsers';
-import fetchAllUsersAsync from '../actionCreators/async/users/fetchAllUsersAsync';
+import AllUsers from '../../presentation/Dashboard/Associates/AllUsers/AllUsers';
+import fetchAllUsersAsync from '../../actionCreators/async/users/fetchAllUsersAsync';
 
 function mapStateToProps(state){
   return {

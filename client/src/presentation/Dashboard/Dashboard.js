@@ -3,10 +3,9 @@ import './Dashboard.css';
 import {Switch, Route} from 'react-router-dom';
 import NavigationContainer from '../../containers/NavigationContainer';
 import LandingContainer from '../../containers/LandingContainer';
-import AssociatesContainer from '../../containers/AssociatesContainer';
-import NotesContainer from '../../containers/NotesContainer';
-import AllUsersContainer from '../../containers/AllUsersContainer';
-// import AllUsers from './Associates/AllUsers/AllUsers';
+import AssociatesContainer from '../../containers/AssociateContainers/AssociatesContainer';
+import NotesContainer from '../../containers/NoteContainers/NotesContainer';
+import AllUsersContainer from '../../containers/UserContainers/AllUsersContainer';
 
 class Dashboard extends Component{
 

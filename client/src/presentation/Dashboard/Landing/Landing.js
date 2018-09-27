@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import ProfileInfoContainer from '../../../containers/ProfileInfoContainer';
+import ProfileInfoContainer from '../../../containers/ProfileContainers/ProfileInfoContainer';
 import {Link} from 'react-router-dom';
 import './Landing.css'; 
 
