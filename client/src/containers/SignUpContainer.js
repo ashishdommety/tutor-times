@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SignUp from '../presentation/SignUp/SignUp';
-import sendNewUserAsync from '../actionCreators/async/sendNewUserAsync';
+import sendNewUserAsync from '../actionCreators/async/profile/sendNewUserAsync';
 
 function mapStateToProps(state){
   return {

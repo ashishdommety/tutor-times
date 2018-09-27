@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Home from '../presentation/Home/Home';
-import fetchUserAsync from '../actionCreators/async/fetchUserAsync';
+import fetchUserAsync from '../actionCreators/async/users/fetchUserAsync';
 
 function mapStateToProps(state){
   return {

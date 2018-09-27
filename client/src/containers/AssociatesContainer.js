@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Associates from '../presentation/Dashboard/Associates/Associates';
-import fetchAllAssociatesAsync from '../actionCreators/async/fetchAllAssociatesAsync';
+import fetchAllAssociatesAsync from '../actionCreators/async/associates/fetchAllAssociatesAsync';
 
 function mapStateToProps(state){
   return {

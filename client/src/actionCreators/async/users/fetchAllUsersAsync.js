@@ -1,5 +1,5 @@
 import axios from 'axios';
-import fetchAllUsers from '../sync/fetchAllUsers';
+import fetchAllUsers from '../../sync/users/fetchAllUsers';
 
 const fetchAllUsersAsync = function(){
   return function(dispatch){

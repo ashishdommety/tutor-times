@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {fetchUser, noUser} from '../sync/fetchUser';
+import {fetchUser, noUser} from '../../sync/users/fetchUser';
 
 const fetchUserAsync = function fetchUserAsync(google_id){
   return function(dispatch){

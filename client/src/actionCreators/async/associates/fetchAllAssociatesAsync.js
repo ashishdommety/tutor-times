@@ -1,6 +1,5 @@
 import axios from 'axios';
-import fetchAllAssociates from '../sync/fetchAllAssociates';
-// const fetchAllAssociates = require('../sync').fetchAllAssociates;
+import fetchAllAssociates from '../../sync/associates/fetchAllAssociates';
 
 const fetchAllAssociatesAsync = function(){
   return function(dispatch){

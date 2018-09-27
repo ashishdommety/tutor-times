@@ -1,8 +1,7 @@
 import axios from 'axios';
-import fetchUserAsync from './fetchUserAsync';
+import fetchUserAsync from '../users/fetchUserAsync';
 
 const sendNewUserAsync = function sendNewUserAsync(newUser){
-  // console.log(newUser);
   return function(dispatch){
     console.log(newUser);
     axios.post("/create-user", newUser)

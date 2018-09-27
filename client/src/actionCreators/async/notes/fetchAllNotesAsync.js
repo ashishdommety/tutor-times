@@ -1,5 +1,5 @@
 import axios from 'axios';
-import fetchAllNotes from '../sync/fetchAllNotes';
+import fetchAllNotes from '../../sync/notes/fetchAllNotes';
 
 const fetchAllNotesAsync = function(){
   return function(dispatch){

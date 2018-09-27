@@ -7,12 +7,6 @@ function mapStateToProps(state){
   }
 }
 
-// function mapDispatchToProps(dispatch){  
-//   return{ 
-    
-//   }
-// }
-
 const LandingContainer = connect(mapStateToProps)(Landing);
 
 export default LandingContainer;
