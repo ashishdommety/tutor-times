@@ -8,7 +8,6 @@ module.exports = function(req,res){
         google_id: g_id
       }
     }).then(function(data){
-        console.log(data);
         data == null ? res.json({path:"/sign-up"}) : res.json(data);
     }).catch(err => console.log(err));   
 };

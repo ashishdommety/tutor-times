@@ -20,14 +20,9 @@ a{
 @media only screen and (min-width:450px){
   .nav{
     height: 100vh;
-    text-align: center;
+    text-align: left;
     grid-template-rows: 150px;
+    width: 120px;
     position:fixed;
   }
-  #profile_pic{
-    border-radius: 0%;
-    width: 100px;
-    height: 100px;
-  }
-
 }

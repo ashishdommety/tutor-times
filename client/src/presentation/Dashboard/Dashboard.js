@@ -3,9 +3,9 @@ import './Dashboard.css';
 import {Switch, Route} from 'react-router-dom';
 import NavigationContainer from '../../containers/NavigationContainer';
 import LandingContainer from '../../containers/LandingContainer';
-import DisplayAssociatesContainer from '../../containers/DisplayAssociatesContainer';
-import ClassesContainer from '../../containers/ClassesContainer';
-import NotesContainer from '../../containers/NotesContainer';
+import AssociatesContainer from '../../containers/AssociateContainers/AssociatesContainer';
+import NotesContainer from '../../containers/NoteContainers/NotesContainer';
+import AllUsersContainer from '../../containers/UserContainers/AllUsersContainer';
 
 class Dashboard extends Component{
 
@@ -25,9 +25,9 @@ class Dashboard extends Component{
           <h1 className="error-message">Please log in</h1>:
           <Switch>
             <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
-            <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={DisplayAssociatesContainer}/>
-            <Route exact={true} path={this.props.match.path + "/classes"} component={ClassesContainer}/>
+            <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={AssociatesContainer}/>
             <Route exact={true} path={this.props.match.path + "/notes"} component={NotesContainer}/>
+            <Route exact={true} path={this.props.match.path + "/display-users"} component={AllUsersContainer}/>
           </Switch>
         }
         </div>

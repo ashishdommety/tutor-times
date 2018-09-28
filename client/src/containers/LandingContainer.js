@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import Landing from '../presentation/Dashboard/Landing/Landing';
-import fetchAllClassesAsync from '../actionCreators/async/fetchAllClassesAsync';
 
 function mapStateToProps(state){
   return {
@@ -8,12 +7,6 @@ function mapStateToProps(state){
   }
 }
 
-function mapDispatchToProps(dispatch){  
-  return{ 
-    fetchAllClassesAsync: () => dispatch(fetchAllClassesAsync())
-  }
-}
-
-const LandingContainer = connect(mapStateToProps, mapDispatchToProps)(Landing);
+const LandingContainer = connect(mapStateToProps)(Landing);
 
 export default LandingContainer;
