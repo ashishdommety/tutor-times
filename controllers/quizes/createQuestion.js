@@ -1,18 +1,19 @@
 const db = require("../../models");
 
+// NOTE: Think about handling multiple questions in one async call.
 module.exports = function(req,res){
   // let new_question = req.body;
   let new_question = {
       google_id:"123abc",
-      quiz_id: "1432",
-      question_number: 1,
+      quiz_id: "1523",
+      question_number: 2,
       image: "",
       title: "Simple Math",
       grade: 2,
-      difficulty: 1,
+      difficulty: 2,
       score: 3,
-      question: "What is 1 + 1?",
-      answer: "2"
+      question: "What is 2 + 7?",
+      answer: "9"
     };
 
   db.Quiz.create({
