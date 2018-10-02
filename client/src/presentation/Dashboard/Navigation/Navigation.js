@@ -5,16 +5,6 @@ import './Navigation.css';
 
 const Navigation = (props) => {
   const forceMyOwnLogout = ((response) => {
-    // cookie.remove('MyGoogleID', { path: '/' });
-    // if (window.gapi) {
-    //     const auth2 = window.gapi.auth2.getAuthInstance()
-    //     if (auth2 != null) {
-    //         auth2.signOut().then(
-    //             auth2.disconnect().then(this.props.onLogoutSuccess)
-    //         )
-    //     }
-    // }
-    // this.forceUpdate();
     console.log('you logged out');
     localStorage.clear(); //clear localStorage
     window.location.pathname = "/"; // send user back to the homepage
@@ -26,6 +16,7 @@ const Navigation = (props) => {
         <Link to="/dashboard">Home</Link>
         <Link to="/dashboard/notes">Notes</Link>
         <Link to={"/dashboard/" + props.title}>{props.title[0].toUpperCase() + props.title.substring(1,props.title.length)}</Link>
+        <Link to={"/dashboard/quiz"}>Quiz</Link>
       </div>
       <div>
       {/* <GoogleLogout
