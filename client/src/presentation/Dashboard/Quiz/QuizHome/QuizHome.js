@@ -35,7 +35,16 @@ class QuizHome extends Component{
 
           { this.props.title !== "student" ? <button>+</button> : ''}
         </div>
-        <QuizTile title={this.props.title}/>
+        {this.state.quizzes.map((x,i) => 
+          <QuizTile 
+            profileTitle={this.props.title}
+            quizTitle={x.title}
+            path={x.path}
+            quizId={x.quizId}
+            key={i}
+          />
+        )}
+        
       </div>
     )
   }

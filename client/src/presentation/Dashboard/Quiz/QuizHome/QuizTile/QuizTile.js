@@ -6,9 +6,9 @@ class QuizTile extends Component{
     return(
       <div id="quiz-tile">
         <img src="" alt="bg-description"/>
-        <h3>Quiz Title</h3>
+        <h3>{this.props.quizTitle}</h3>
         <p>Difficulty Level</p>
-        { this.props.title !== "student" ? <button>Review</button> : ''}
+        { this.props.profileTitle !== "student" ? <button>Review</button> : ''}
       </div>
     )
   }
