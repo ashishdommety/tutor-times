@@ -12,4 +12,8 @@
   #all-quizes{
     grid-column-start: 2;
   }
+
+  .quiz-tiles{
+    display: flex;
+  }
 }

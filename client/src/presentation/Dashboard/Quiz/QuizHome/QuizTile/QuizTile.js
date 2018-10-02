@@ -4,10 +4,10 @@ import './QuizTile.css';
 class QuizTile extends Component{
   render(){
     return(
-      <div id="quiz-tile">
+      <div className="quiz-tile">
         <img src="" alt="bg-description"/>
         <h3>{this.props.quizTitle}</h3>
-        <p>Difficulty Level</p>
+        <p>{this.props.difficulty}</p>
         { this.props.profileTitle !== "student" ? <button>Review</button> : ''}
       </div>
     )

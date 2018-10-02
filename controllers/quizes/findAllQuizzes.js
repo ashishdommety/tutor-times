@@ -6,10 +6,24 @@ module.exports = function(req,res){
 
     for(let i=0; i< result.length; i++){
       let path = result[i].title.toLowerCase().replace(" ", "-");
+      let stage = result[i].difficulty;
+      let difficulty;
+
+      if(stage === 1){
+        difficulty = "easy";
+      }else if(stage === 2){
+        difficulty = "average";
+      }else if(stage === 3){
+        difficulty = "hard";
+      }else{
+        difficulty = "general";
+      }
+
       quizzes.add({
         quiz_id: result[i].quiz_id,
         title: result[i].title,
-        path
+        path,
+        difficulty
       });
     }
 
