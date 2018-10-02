@@ -21,6 +21,6 @@ module.exports = router
   .get("/get-notes", notes.userNotes) // temp-done (needs data from front-end)
   // quiz routes
   .post("/create-question", quiz.createQuestion)
-  .get("/all-quizzes/", quiz.findAllQuizzes)
+  .get("/all-quizzes", quiz.findAllQuizzes)
   .get("/find-one-quiz/:id", quiz.findOneQuiz);
 

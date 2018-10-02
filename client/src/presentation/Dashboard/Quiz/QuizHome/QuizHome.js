@@ -1,12 +1,30 @@
 import React, {Component} from 'react';
 import './QuizHome.css';
 import QuizTile from './QuizTile/QuizTile';
+import fetchAllQuizzes from '../../../../actionCreators/async/quiz/fetchAllQuizzes';
 
 /**
  * State Needed - profile.title
+ * Behavior needed - fetch all quizes
 */
 
 class QuizHome extends Component{
+  constructor(props){
+    super(props);
+
+    this.state = {
+      quizzes: [],
+      status: false
+    }
+  }
+
+  componentDidMount(){
+    fetchAllQuizzes().then((result) => 
+      this.setState({
+        quizzes: result.data
+      })
+    ).catch((err) => console.log(err));
+  }
 
   render(){
     return(
