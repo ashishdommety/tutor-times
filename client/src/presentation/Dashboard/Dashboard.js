@@ -6,7 +6,7 @@ import LandingContainer from '../../containers/LandingContainer';
 import AssociatesContainer from '../../containers/AssociateContainers/AssociatesContainer';
 import NotesContainer from '../../containers/NoteContainers/NotesContainer';
 import AllUsersContainer from '../../containers/UserContainers/AllUsersContainer';
-import QuizHome from './Quiz/QuizHome/QuizHome';
+import QuizProfile from '../../containers/QuizContainers/QuizProfile';
 
 class Dashboard extends Component{
 
@@ -29,7 +29,7 @@ class Dashboard extends Component{
             <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={AssociatesContainer}/>
             <Route exact={true} path={this.props.match.path + "/notes"} component={NotesContainer}/>
             <Route exact={true} path={this.props.match.path + "/display-users"} component={AllUsersContainer}/>
-            <Route exact={true} path={this.props.match.path + "/quiz"} component={QuizHome}/>
+            <Route exact={true} path={this.props.match.path + "/quiz"} component={QuizProfile}/>
           </Switch>
         }
         </div>

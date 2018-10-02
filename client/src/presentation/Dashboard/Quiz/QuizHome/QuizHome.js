@@ -4,7 +4,7 @@ import QuizTile from './QuizTile/QuizTile';
 
 /**
  * State Needed - profile.title
- */
+*/
 
 class QuizHome extends Component{
 
@@ -13,10 +13,11 @@ class QuizHome extends Component{
       <div id="all-quizes">
         <div id="quiz-options">
           <input placholder="Search for Quizes"></input>
-          {/* Only show buttons if tutor
-          <button>+</button> */}
+          <button>Search</button>
+
+          { this.props.title !== "student" ? <button>+</button> : ''}
         </div>
-        <QuizTile/>
+        <QuizTile title={this.props.title}/>
       </div>
     )
   }
