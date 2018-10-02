@@ -8,6 +8,7 @@ class QuizTile extends Component{
         <img src="" alt="bg-description"/>
         <h3>Quiz Title</h3>
         <p>Difficulty Level</p>
+        {/* if tutor, add this button-  <button>Review</button> */}
       </div>
     )
   }
