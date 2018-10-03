@@ -8,8 +8,9 @@ class CreateQuiz extends Component{
       grade: "",
       difficulty: "",
       questionAmount: "",
-      image: "",
-      totalScore: ""
+      imageUrl: "",
+      totalScore: "",
+      questions: []
     }
   }
 
@@ -23,7 +24,9 @@ class CreateQuiz extends Component{
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    this.props.createQuizAction(this.state);
+    this.props.history.push(this.props.match.path + "/new-question");
+    // console.log(this.state);
   }
 
   render(){
@@ -34,7 +37,7 @@ class CreateQuiz extends Component{
           <input placeholder="Grade" name="grade" type="text" value={this.state.grade} onChange={this.handleChange}/>
           <input placeholder="Difficulty (easy, medium, hard)" name="difficulty" type="text" value={this.state.difficulty} onChange={this.handleChange}/>
           <input placeholder="No. Of Questions" name="questionAmount" type="text" value={this.state.questionAmount} onChange={this.handleChange}/>
-          <input placeholder="Image" name="imageUrl" type="text" value={this.state.image} onChange={this.handleChange}/>
+          <input placeholder="Image" name="imageUrl" type="text" value={this.state.imageUrl} onChange={this.handleChange}/>
           <input placeholder="Total Score" name="totalScore" type="text" value={this.state.totalScore} onChange={this.handleChange}/>
         </form>
         <button onClick={this.handleSubmit}>Create Quiz</button>

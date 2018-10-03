@@ -1,7 +1,7 @@
 const quiz = function(state={}, action){
   switch(action.type){
-    case 'create-quiz':
-      return state;
+    case 'createQuiz':
+      return action.quizDetails;
     default:
       return state;
   }
