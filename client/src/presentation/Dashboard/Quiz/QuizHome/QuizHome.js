@@ -20,11 +20,11 @@ class QuizHome extends Component{
   }
 
   componentDidMount(){
-    fetchAllQuizzes().then((result) => 
+    fetchAllQuizzes().then((result) => {
       this.setState({
         quizzes: result.data
       })
-    ).catch((err) => console.log(err));
+    }).catch((err) => console.log(err));
   }
 
   render(){
@@ -36,14 +36,13 @@ class QuizHome extends Component{
           { this.props.title !== "student" ? <Link to={this.props.match.path+ "/create"}><button>+</button></Link> : ''}
         </div>
         <div className="quiz-tiles">
-        {console.log(this.state)}
         {this.state.quizzes.map((x,i) => 
           <QuizTile 
             key={i}
             profileTitle={this.props.title}
             quizTitle={x.title}
-            quizPath={this.state.rootPath + "/"+x.path}
-            quizId={x.quizId}
+            quizPath={this.state.rootPath + "/"+x.path+"/"+x.quiz_id}
+            quizId={x.quiz_id}
             difficulty={x.difficulty}
           />
         )}

@@ -9,7 +9,6 @@ class QuizTile extends Component{
         <img src="" alt="bg-description"/>
         <h3>{this.props.quizTitle}</h3>
         <p>{this.props.difficulty}</p>
-        {console.log(this.props)}
         { this.props.profileTitle !== "student" ? <button>Review</button> : <Link to={this.props.quizPath}><button>Take Quiz</button></Link>}
       </div>
     )
