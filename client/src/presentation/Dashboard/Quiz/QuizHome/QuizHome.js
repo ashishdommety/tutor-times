@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './QuizHome.css';
-import {Link} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
 import QuizTile from './QuizTile/QuizTile';
 import fetchAllQuizzes from '../../../../actionCreators/async/quiz/fetchAllQuizzes';
 
@@ -37,6 +37,7 @@ class QuizHome extends Component{
         </div>
         <div className="quiz-tiles">
         {this.state.quizzes.map((x,i) => 
+          <div>
           <QuizTile 
             key={i}
             profileTitle={this.props.title}
@@ -45,8 +46,11 @@ class QuizHome extends Component{
             quizId={x.quiz_id}
             difficulty={x.difficulty}
           />
+          </div>
         )}
         </div>
+
+        
       </div>
     )
   }
