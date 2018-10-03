@@ -5,30 +5,39 @@ class CreateQuiz extends Component{
     super(props);
     this.state = {
       title: "",
-      grade: 0,
-      difficulty: 0,
-      questionAmount: 0,
+      grade: "",
+      difficulty: "",
+      questionAmount: "",
       image: "",
-      totalScore: 0
+      totalScore: ""
     }
   }
 
-  handleChange = () => {
-    
+  handleChange = (event) => {
+    const value = event.target.value;
+    const name = event.target.name;
+    this.setState({
+      [name]: value
+    })
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
   }
 
   render(){
     return(
       <div>
         <form>
-          <input placeholder="Title" name="title" type="text" value={this.state.title}/>
-          <input placeholder="Grade" name="grade" type="text" value={this.state.grade}/>
-          <input placeholder="Difficulty" name="difficulty" type="text" value={this.state.difficulty}/>
-          <input placeholder="No. of Questions" name="questionAmount" type="text" value={this.state.questionAmount}/>
-          <input placeholder="Image" name="imageUrl" type="text" value={this.state.image}/>
-          <input placeholder="totalScore" name="totalScore" type="text" value={this.state.totalScore}/>
+          <input placeholder="Title" name="title" type="text" value={this.state.title} onChange={this.handleChange}/>
+          <input placeholder="Grade" name="grade" type="text" value={this.state.grade} onChange={this.handleChange}/>
+          <input placeholder="Difficulty (easy, medium, hard)" name="difficulty" type="text" value={this.state.difficulty} onChange={this.handleChange}/>
+          <input placeholder="No. Of Questions" name="questionAmount" type="text" value={this.state.questionAmount} onChange={this.handleChange}/>
+          <input placeholder="Image" name="imageUrl" type="text" value={this.state.image} onChange={this.handleChange}/>
+          <input placeholder="Total Score" name="totalScore" type="text" value={this.state.totalScore} onChange={this.handleChange}/>
         </form>
-        <button>Create Quiz</button>
+        <button onClick={this.handleSubmit}>Create Quiz</button>
       </div>
     )
   }
