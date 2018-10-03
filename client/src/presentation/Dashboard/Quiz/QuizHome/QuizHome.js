@@ -15,7 +15,7 @@ class QuizHome extends Component{
 
     this.state = {
       quizzes: [],
-      status: false
+      rootPath: this.props.match.path
     }
   }
 
@@ -36,12 +36,13 @@ class QuizHome extends Component{
           { this.props.title !== "student" ? <Link to={this.props.match.path+ "/create"}><button>+</button></Link> : ''}
         </div>
         <div className="quiz-tiles">
+        {console.log(this.state)}
         {this.state.quizzes.map((x,i) => 
           <QuizTile 
             key={i}
             profileTitle={this.props.title}
             quizTitle={x.title}
-            path={x.path}
+            quizPath={this.state.rootPath + "/"+x.path}
             quizId={x.quizId}
             difficulty={x.difficulty}
           />

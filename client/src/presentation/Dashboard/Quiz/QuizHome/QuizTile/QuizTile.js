@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './QuizTile.css';
 
 class QuizTile extends Component{
@@ -8,7 +9,8 @@ class QuizTile extends Component{
         <img src="" alt="bg-description"/>
         <h3>{this.props.quizTitle}</h3>
         <p>{this.props.difficulty}</p>
-        { this.props.profileTitle !== "student" ? <button>Review</button> : ''}
+        {console.log(this.props)}
+        { this.props.profileTitle !== "student" ? <button>Review</button> : <Link to={this.props.quizPath}><button>Take Quiz</button></Link>}
       </div>
     )
   }
