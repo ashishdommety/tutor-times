@@ -37,7 +37,7 @@ class QuizHome extends Component{
         </div>
         <div className="quiz-tiles">
         {this.state.quizzes.map((x,i) => 
-          <div>
+          <div key={i}>
           <QuizTile 
             key={i}
             profileTitle={this.props.title}
@@ -49,8 +49,6 @@ class QuizHome extends Component{
           </div>
         )}
         </div>
-
-        
       </div>
     )
   }

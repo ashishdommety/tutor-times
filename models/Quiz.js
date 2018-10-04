@@ -40,6 +40,22 @@ module.exports = function(sequelize, DataTypes){
       type: DataTypes.STRING,
       allowNull: false
     },
+    opt1: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    opt2: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    opt3: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    opt4: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     createdAt: {
      type: DataTypes.DATE,
      defaultValue: sequelize.fn('now')
