@@ -2,8 +2,9 @@ const db = require("../../models");
 
 module.exports = function(req,res){
   db.Quiz.findAll({}).then(result => {
-    let quizzes = new Set();
-
+    // set empty array
+    let quizzes = [];
+    // loop through results to create objects of the type we want on the front-end
     for(let i=0; i< result.length; i++){
       let path = result[i].title.toLowerCase().replace(" ", "-");
       let stage = result[i].difficulty;
@@ -19,16 +20,26 @@ module.exports = function(req,res){
         difficulty = "general";
       }
 
-      quizzes.add({
+      let obj = {
         quiz_id: result[i].quiz_id,
         title: result[i].title,
         path,
         difficulty
-      });
+      };
+      
+      quizzes.push(obj);
     }
 
-    res.json([...quizzes]);
+    let all = quizzes.filter((obj, pos, arr) => {
+      console.log(arr.map(mapObj => mapObj["quiz_id"]));
+      //we get an array of the quiz_ids
+      let arrOfIds = arr.map(mapObj => mapObj["quiz_id"]); 
+      // then check if the index of the quiz id is equalled to the position
+      return arrOfIds.indexOf(obj["quiz_id"]) === pos;
+    });
+
+    res.json(all);
   }).catch(function(err){
-    throw err;
+    res.json(err);
   }); 
 };

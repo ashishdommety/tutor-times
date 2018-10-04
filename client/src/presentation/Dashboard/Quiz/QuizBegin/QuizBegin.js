@@ -26,6 +26,7 @@ class QuizBegin extends Component {
     return(
       <div id="quiz-landing">
         <h1>Welcome to the <br/>{this.state.name}<br/> Quiz</h1>
+        {/* <Route /> */}
       </div>
     )
   }
