@@ -19,7 +19,7 @@ module.exports = function(req,res){
       }else{
         difficulty = "general";
       }
-
+      // create neccessary object
       let obj = {
         quiz_id: result[i].quiz_id,
         title: result[i].title,
@@ -31,7 +31,6 @@ module.exports = function(req,res){
     }
 
     let all = quizzes.filter((obj, pos, arr) => {
-      console.log(arr.map(mapObj => mapObj["quiz_id"]));
       //we get an array of the quiz_ids
       let arrOfIds = arr.map(mapObj => mapObj["quiz_id"]); 
       // then check if the index of the quiz id is equalled to the position
