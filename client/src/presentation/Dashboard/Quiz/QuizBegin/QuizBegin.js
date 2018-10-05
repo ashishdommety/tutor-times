@@ -25,7 +25,7 @@ class QuizBegin extends Component {
   render(){
     return(
       <div id="quiz-landing">
-        <h1>Welcome to the <br/>{this.state.name}<br/> Quiz</h1>
+        <h2>Welcome to the <br/>{this.state.name}<br/> Quiz</h2>
         {!this.state.questions.length ? "loading..." :  this.state.questions.map((x,i) =>
         <QuizQuestion
           key={i}
@@ -34,7 +34,8 @@ class QuizBegin extends Component {
           opt2={x.opt2}
           opt3={x.opt3}
           opt4={x.opt4}
-          />)}
+        />)}
+        <button>Check Score</button>
       </div>
     )
   }
