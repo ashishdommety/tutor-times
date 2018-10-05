@@ -30,6 +30,10 @@ class QuizBegin extends Component {
         <QuizQuestion
           key={i}
           question={x.question}
+          opt1={x.opt1}
+          opt2={x.opt2}
+          opt3={x.opt3}
+          opt4={x.opt4}
           />)}
       </div>
     )
