@@ -1,26 +1,26 @@
 import React, {Component} from 'react';
 import './QuizBegin.css';
+import fetchQuizQuestions from '../../../../actionCreators/async/quiz/fetchQuizQuestions';
 
 class QuizBegin extends Component {
   constructor(props,match){
     super(props,match);
     this.state={
-      name: this.props.match.params.name.split("-").map((x) => x[0].toUpperCase() + x.substring(1,x.length)).join(" ")
+      name: this.props.match.params.name.split("-").map((x) => x[0].toUpperCase() + x.substring(1,x.length)).join(" "),
+      questions: []
     }
   }
 
-  /* Fetch data from db about all questions and particular quiz data in this manner:
-  ~~
-  id: ""
-  title: "",
-  grade: "",
-  difficulty: "",
-  questionAmount: "",
-  imageUrl: "",
-  totalScore: "",
-  questions: []
-  ~~
-  */
+  componentDidMount(){
+    let quizId = this.props.match.params.id;
+    fetchQuizQuestions(quizId).then((result) => {
+      console.log(result.data);
+      this.setState({
+        questions: result.data
+      });
+    }).catch((err) => console.log(err));
+    
+  }
 
   render(){
     return(
