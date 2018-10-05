@@ -26,7 +26,11 @@ module.exports = function(req,res){
     difficulty: new_question.difficulty,
     score: new_question.score,
     question: new_question.question,
-    answer: new_question.answer
+    answer: new_question.answer,
+    opt1: new_question.opt1,
+    opt2: new_question.opt2,
+    opt3: new_question.opt3,
+    opt4: new_question.opt4
   }).then(result => {
     res.json(result);
   }).catch(function(err){
