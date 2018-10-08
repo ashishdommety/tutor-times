@@ -18,6 +18,7 @@ class QuizBegin extends Component {
     console.log('you submitted answers');
     let key = this.state.answers;
     let responses = this.props.userAnswers;
+    console.log(key);
     let score = 0;
     for(let i=0; i<key.length; i++){
       for(let j=0; j<responses.length; j++){
