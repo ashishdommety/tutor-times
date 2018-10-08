@@ -1,13 +1,8 @@
 import React, {Component} from 'react';
 import './QuizHome.css';
-import {Link, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import QuizTile from './QuizTile/QuizTile';
 import fetchAllQuizzes from '../../../../actionCreators/async/quiz/fetchAllQuizzes';
-
-/**
- * State Needed - profile.title
- * Behavior needed - fetch all quizes
-*/
 
 class QuizHome extends Component{
   constructor(props){
@@ -21,7 +16,6 @@ class QuizHome extends Component{
 
   componentDidMount(){
     fetchAllQuizzes().then((result) => {
-      console.log(result.data);
       this.setState({
         quizzes: result.data
       })

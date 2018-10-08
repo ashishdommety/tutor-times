@@ -15,7 +15,7 @@ class QuizBegin extends Component {
   }
 
   getUserAnswer = (qNum, answer) => {
-    let obj = { qNum, answer }
+    let obj = { qNum, answer };
 
     this.setState(prevState => ({
         userAnswers: [...prevState.userAnswers, obj]
