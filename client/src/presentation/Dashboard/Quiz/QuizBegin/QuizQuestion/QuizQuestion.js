@@ -2,24 +2,33 @@ import React, {Component} from 'react';
 import './QuizQuestion.css';
 
 class QuizQuestion extends Component{
+  // when you click on an option
+  // change the background color
+  // use a callback to add that element to an array
+
+  getAnswer = (e) => {
+    console.log(e.target.innerText);
+    this.props.getUserAnswer(this.props.question_number, e.target.innerText);
+  }
+
   render(){
     return(
       <div>
         <h3>{this.props.question_number}. {this.props.question}</h3>
         <div className="optionPairs">
-          <div className="options">
-              <span>{this.props.opt1}</span><input type="checkbox" name="opt1" value="opt1" className="answerInput"/>
+          <div className="options" onClick={this.getAnswer} >
+              {this.props.opt1}
           </div>
-          <div className="options">
-            <span>{this.props.opt2}</span><input type="checkbox" name="opt2" value="opt2" className="answerInput"/>
+          <div className="options" onClick={this.getAnswer} >
+            {this.props.opt2}
           </div>
         </div>
-        <div className="optionPairs">
+        <div className="optionPairs" onClick={this.getAnswer} >
           <div className="options">
-            <span>{this.props.opt3}</span><input type="checkbox" name="opt3" value="opt3" className="answerInput"/>
+            {this.props.opt3}
           </div>
-          <div className="options">
-            <span>{this.props.opt4}</span><input type="checkbox" name="opt4" value="opt4" className="answerInput"/>
+          <div className="options" onClick={this.getAnswer} >
+            {this.props.opt4}
           </div>
         </div>
       </div>
