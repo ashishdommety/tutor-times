@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './QuizBegin.css';
 import fetchQuizQuestions from '../../../../actionCreators/async/quiz/fetchQuizQuestions';
-import QuizQuestion from './QuizQuestion/QuizQuestion';
+import QuizQuestionContainer from '../../../../containers/QuizContainers/QuestionContainer';
 
 class QuizBegin extends Component {
   constructor(props,match){
@@ -55,16 +55,15 @@ class QuizBegin extends Component {
       <div id="quiz-landing">
         <h2>Welcome to the <br/>{this.state.name}<br/> Quiz</h2>
         {!this.state.questions.length ? "loading..." :  this.state.questions.map((x,i) =>
-        <QuizQuestion
-          key={i}
-          question={x.question}
-          question_number={x.question_number}
-          opt1={x.opt1}
-          opt2={x.opt2}
-          opt3={x.opt3}
-          opt4={x.opt4}
-          getUserAnswer={this.getUserAnswer}
-        />)}
+        <QuizQuestionContainer
+            key={i}
+            question={x.question}
+            question_number={x.question_number}
+            opt1={x.opt1}
+            opt2={x.opt2}
+            opt3={x.opt3}
+            opt4={x.opt4}/> 
+        )}
         <button onClick={this.submitAnswers}>Check Score</button>
       </div>
     )
@@ -72,3 +71,15 @@ class QuizBegin extends Component {
 }
 
 export default QuizBegin;
+
+// <QuizQuestion
+//           key={i}
+//           question={x.question}
+//           question_number={x.question_number}
+//           opt1={x.opt1}
+//           opt2={x.opt2}
+//           opt3={x.opt3}
+//           opt4={x.opt4}
+//           getUserAnswer={this.getUserAnswer}
+//         />
+

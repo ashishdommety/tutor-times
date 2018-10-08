@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import QuizQuestion from '../../presentation/Dashboard/Quiz/QuizBegin/QuizQuestion/QuizQuestion';
+import addUserAnswer from '../../actionCreators/sync/quiz/addUserAnswer';
 
 function mapStateToProps(state){
   return {
@@ -7,6 +8,13 @@ function mapStateToProps(state){
   }
 }
 
-const QuestionContainer = connect(mapStateToProps)(QuizQuestion);
+function mapDispatchToProps(dispatch){
+  return {
+    addUserAnswer: (userAnswer) => dispatch(addUserAnswer(userAnswer))
+  }
+}
+
+
+const QuestionContainer = connect(mapStateToProps, mapDispatchToProps)(QuizQuestion);
 
 export default QuestionContainer;

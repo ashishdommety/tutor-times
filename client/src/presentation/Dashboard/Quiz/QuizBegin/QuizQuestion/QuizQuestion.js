@@ -8,7 +8,12 @@ class QuizQuestion extends Component{
 
   getAnswer = (e) => {
     e.target.style.backgroundColor = "lightgreen";
-    this.props.getUserAnswer(this.props.question_number, e.target.innerText);
+    let responseObj = {
+      qNum: this.props.question_number,
+      answer: e.target.innerText
+    }
+
+    this.props.addUserAnswer(responseObj);
   }
 
   render(){
