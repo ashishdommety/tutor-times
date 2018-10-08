@@ -20,6 +20,7 @@ class QuizBegin extends Component {
   componentDidMount(){
     let quizId = this.props.match.params.id;
     fetchQuizQuestions(quizId).then((result) => {
+      console.log(result.data);
       this.setState({
         questions: result.data,
         answers: result.data.map((x) => x.answer)
@@ -35,6 +36,7 @@ class QuizBegin extends Component {
         <QuizQuestion
           key={i}
           question={x.question}
+          question_number={x.question_number}
           opt1={x.opt1}
           opt2={x.opt2}
           opt3={x.opt3}
