@@ -8,7 +8,8 @@ import NotesContainer from '../../containers/NoteContainers/NotesContainer';
 import AllUsersContainer from '../../containers/UserContainers/AllUsersContainer';
 import QuizProfile from '../../containers/QuizContainers/QuizProfile';
 import CreateQuizContainer from '../../containers/QuizContainers/CreateQuizContainer';
-import QuizBegin from './Quiz/QuizBegin/QuizBegin';
+import QuizBeginContainer from '../../containers/QuizContainers/QuizBeginContainer';
+// import QuizBegin from './Quiz/QuizBegin/QuizBegin';
 
 class Dashboard extends Component{
 
@@ -32,7 +33,7 @@ class Dashboard extends Component{
             <Route exact={true} path={this.props.match.path + "/notes"} component={NotesContainer}/>
             <Route exact={true} path={this.props.match.path + "/display-users"} component={AllUsersContainer}/>
             <Route exact={true} path={this.props.match.path + "/quiz"} component={QuizProfile}/>
-            <Route exact={true} path={this.props.match.path + "/quiz/:name/:id"} component={QuizBegin}/>
+            <Route exact={true} path={this.props.match.path + "/quiz/:name/:id"} component={QuizBeginContainer}/>
             <Route exact={false} path={this.props.match.path + "/quiz/create" } component={CreateQuizContainer}/>
           </Switch>
         }

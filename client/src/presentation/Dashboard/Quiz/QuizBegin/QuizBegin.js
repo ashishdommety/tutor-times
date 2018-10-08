@@ -9,25 +9,28 @@ class QuizBegin extends Component {
     this.state={
       name: this.props.match.params.name.split("-").map((x) => x[0].toUpperCase() + x.substring(1,x.length)).join(" "),
       questions: [],
-      answers: [],
-      userAnswers:[]
+      answers: []
     }
-  }
-
-  getUserAnswer = (qNum, answer) => {
-    let obj = { qNum, answer };
-
-    this.setState(prevState => ({
-        userAnswers: [...prevState.userAnswers, obj]
-      })
-    )
-    console.log(this.state.userAnswers);
   }
 
   submitAnswers = () => {
     // compare answers and user answers
-    console.log(this.state.userAnswers);
     console.log('you submitted answers');
+    // console.log(this.props.userAnswers);
+    // console.log(this.state.answers);
+    let key = this.state.answers;
+    let responses = this.props.userAnswers;
+    let score = 0;
+    for(let i=0; i<this.state.questions.length; i++){
+      for(let j=0; j<this.state.questions.length; j++){
+        if((key[i].qNum === responses[j].qNum) && (key[i].answer === responses[j].answer)){
+          score = score += 1;
+        }
+      }
+    }
+
+    console.log("your score is " + score);
+    
   }
 
   componentDidMount(){
