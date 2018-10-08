@@ -15,27 +15,13 @@ class QuizBegin extends Component {
   }
 
   getUserAnswer = (qNum, answer) => {
-    let obj = {
-      qNum,
-      answer
-    }
+    let obj = { qNum, answer }
 
-    console.log(obj);
-    // push this into userAnswers
-    
-    /* try using something like this: https://stackoverflow.com/questions/26253351/correct-modification-of-state-arrays-in-reactjs
-    to get answers
-    */
-    // if(!this.state.userAnswers[qNum]){
-      
-    // }
-    if(!this.state.userAnswers[qNum]){
-      this.setState(prevState => ({
+    this.setState(prevState => ({
         userAnswers: [...prevState.userAnswers, obj]
-      }))
-    }
-    
-
+      })
+    )
+    console.log(this.state.userAnswers);
   }
 
   submitAnswers = () => {
@@ -47,7 +33,7 @@ class QuizBegin extends Component {
   componentDidMount(){
     let quizId = this.props.match.params.id;
     fetchQuizQuestions(quizId).then((result) => {
-      console.log(result.data);
+      // console.log(result.data);
       let answerArray = result.data.map((x) => {
         let obj = {
           qNum: x.question_number,
