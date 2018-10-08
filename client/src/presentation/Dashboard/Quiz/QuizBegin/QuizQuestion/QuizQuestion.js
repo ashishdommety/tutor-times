@@ -7,7 +7,7 @@ class QuizQuestion extends Component{
   // use a callback to add that element to an array
 
   getAnswer = (e) => {
-    console.log(e.target.innerText);
+    e.target.style.backgroundColor = "lightgreen";
     this.props.getUserAnswer(this.props.question_number, e.target.innerText);
   }
 
