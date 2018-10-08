@@ -74,15 +74,3 @@ class QuizBegin extends Component {
 }
 
 export default QuizBegin;
-
-// <QuizQuestion
-//           key={i}
-//           question={x.question}
-//           question_number={x.question_number}
-//           opt1={x.opt1}
-//           opt2={x.opt2}
-//           opt3={x.opt3}
-//           opt4={x.opt4}
-//           getUserAnswer={this.getUserAnswer}
-//         />
-
