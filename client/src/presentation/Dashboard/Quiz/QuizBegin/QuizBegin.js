@@ -16,13 +16,11 @@ class QuizBegin extends Component {
   submitAnswers = () => {
     // compare answers and user answers
     console.log('you submitted answers');
-    // console.log(this.props.userAnswers);
-    // console.log(this.state.answers);
     let key = this.state.answers;
     let responses = this.props.userAnswers;
     let score = 0;
-    for(let i=0; i<this.state.questions.length; i++){
-      for(let j=0; j<this.state.questions.length; j++){
+    for(let i=0; i<key.length; i++){
+      for(let j=0; j<responses.length; j++){
         if((key[i].qNum === responses[j].qNum) && (key[i].answer === responses[j].answer)){
           score = score += 1;
         }
