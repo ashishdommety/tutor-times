@@ -27,7 +27,7 @@ class QuizBegin extends Component {
       }
     }
 
-    alert("your score is " + score);
+    alert("you scored " + score + " out of " + key.length);
     
   }
 
