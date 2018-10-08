@@ -8,16 +8,21 @@ class QuizBegin extends Component {
     super(props,match);
     this.state={
       name: this.props.match.params.name.split("-").map((x) => x[0].toUpperCase() + x.substring(1,x.length)).join(" "),
-      questions: []
+      questions: [],
+      answers: []
     }
+  }
+
+  submitAnswers = () => {
+    console.log('you submitted answers');
   }
 
   componentDidMount(){
     let quizId = this.props.match.params.id;
     fetchQuizQuestions(quizId).then((result) => {
-      console.log(result.data);
       this.setState({
-        questions: result.data
+        questions: result.data,
+        answers: result.data.map((x) => x.answer)
       });
     }).catch((err) => console.log(err));
   }
@@ -35,7 +40,7 @@ class QuizBegin extends Component {
           opt3={x.opt3}
           opt4={x.opt4}
         />)}
-        <button>Check Score</button>
+        <button onClick={this.submitAnswers}>Check Score</button>
       </div>
     )
   }
