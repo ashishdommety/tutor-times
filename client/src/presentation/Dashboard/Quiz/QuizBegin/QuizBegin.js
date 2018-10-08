@@ -29,14 +29,13 @@ class QuizBegin extends Component {
       }
     }
 
-    console.log("your score is " + score);
+    alert("your score is " + score);
     
   }
 
   componentDidMount(){
     let quizId = this.props.match.params.id;
     fetchQuizQuestions(quizId).then((result) => {
-      // console.log(result.data);
       let answerArray = result.data.map((x) => {
         let obj = {
           qNum: x.question_number,
@@ -56,7 +55,7 @@ class QuizBegin extends Component {
   render(){
     return(
       <div id="quiz-landing">
-        <h2>Welcome to the <br/>{this.state.name}<br/> Quiz</h2>
+        <h2>Welcome to the {this.state.name} Quiz!</h2>
         {!this.state.questions.length ? "loading..." :  this.state.questions.map((x,i) =>
         <QuizQuestionContainer
             key={i}
