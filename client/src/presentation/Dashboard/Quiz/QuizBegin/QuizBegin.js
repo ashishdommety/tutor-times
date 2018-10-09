@@ -9,7 +9,8 @@ class QuizBegin extends Component {
     this.state={
       name: this.props.match.params.name.split("-").map((x) => x[0].toUpperCase() + x.substring(1,x.length)).join(" "),
       questions: [],
-      answers: []
+      answers: [],
+      score: 0
     }
   }
 
@@ -28,8 +29,9 @@ class QuizBegin extends Component {
       }
     }
 
-    alert("you scored " + score + " out of " + key.length);
-    
+    this.setState({
+      score
+    })
   }
 
   componentDidMount(){
@@ -66,6 +68,7 @@ class QuizBegin extends Component {
             opt4={x.opt4}/> 
         )}
         <button onClick={this.submitAnswers}>Check Score</button>
+        {this.state.score === 0 ? '' : <p>You scored <strong>{this.state.score}</strong> out of {this.state.answers.length}</p>}
       </div>
     )
   }
