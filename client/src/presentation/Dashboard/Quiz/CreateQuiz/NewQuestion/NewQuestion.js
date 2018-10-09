@@ -2,6 +2,32 @@ import React, {Component} from 'react';
 import './NewQuestion.css';
 
 class NewQuestion extends Component{
+
+  addQuestions = () => {
+    /* Get all form inputs
+       Add them as an array of questions where each object looks like:
+        [
+          {
+            google_id: "",
+            quiz_id: ""
+            question_number: ""
+            image: "",
+            title: "",
+            grade: "",
+            difficulty: "",
+            score: "",
+            question: "",
+            answer: "",
+            opt1: "",
+            opt2: "",
+            opt3: "",
+            opt4: ""
+          }
+        ]
+    */
+    
+  }
+
   createQuestionInputs = () => {
     let len = parseInt(this.props.amount);
 
@@ -27,7 +53,7 @@ class NewQuestion extends Component{
     return(
       <div>
         {this.createQuestionInputs().map((x) => x)}
-        <button>Add Questions</button>
+        <button>Add Questions</button> 
       </div>
     )
   }
