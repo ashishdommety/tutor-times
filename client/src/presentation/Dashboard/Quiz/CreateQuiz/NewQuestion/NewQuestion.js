@@ -10,11 +10,11 @@ class NewQuestion extends Component{
       arr.push(<div className="newQuestionForm" key={i}>
       <h3>Question {i+1}</h3>
         <input placeholder="question" id={"q" + i} className="questionInput"/>
+        <input placeholder="answer" className="questionInput"/>
         <input placeholder="opt1" className="questionInput"/>
         <input placeholder="opt2" className="questionInput"/>
         <input placeholder="opt3" className="questionInput"/>
         <input placeholder="opt4" className="questionInput"/>
-        <input placeholder="answer" className="questionInput"/>
       </div>)
     }
 
