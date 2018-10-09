@@ -29,9 +29,7 @@ class QuizBegin extends Component {
       }
     }
 
-    this.setState({
-      score
-    })
+    this.setState({ score });
   }
 
   componentDidMount(){
