@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import NewQuestion from './NewQuestion/NewQuestion';
 
 class CreateQuiz extends Component{
   constructor(props){
@@ -10,13 +11,15 @@ class CreateQuiz extends Component{
       questionAmount: "",
       imageUrl: "",
       totalScore: "",
-      questions: []
+      questions: [],
+      quizBase: false
     }
   }
 
   handleChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
+    console.log(this.state.quizBase)
     this.setState({
       [name]: value
     })
@@ -25,7 +28,18 @@ class CreateQuiz extends Component{
   handleSubmit = e => {
     e.preventDefault();
     this.props.createQuizAction(this.state);
-    this.props.history.push(this.props.match.path + "/new-question");
+
+    let arr = [];
+    let arrLength = parseInt(this.state.questionAmount);
+    /*
+     *  Thinking through question addition:-
+     *    create a dummy array that 
+     */
+    this.setState({
+      quizBase: true,
+      
+    })
+    // this.props.history.push(this.props.match.path + "/new-question");
     // console.log(this.state);
   }
 
@@ -41,6 +55,7 @@ class CreateQuiz extends Component{
           <input placeholder="Total Score" name="totalScore" type="text" value={this.state.totalScore} onChange={this.handleChange}/>
         </form>
         <button onClick={this.handleSubmit}>Create Quiz</button>
+        {!this.state.quizBase ? '' : <NewQuestion amount={this.state.questionAmount}/>}
       </div>
     )
   }
