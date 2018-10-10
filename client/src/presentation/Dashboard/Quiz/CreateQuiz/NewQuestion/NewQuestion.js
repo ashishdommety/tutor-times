@@ -7,7 +7,7 @@ class NewQuestion extends Component{
     super(props);
     this.state = {
       google_id: localStorage.google_id,
-      quiz_id: "9430",
+      quiz_id: "9430", // how do we make this flexible and so that it never overwrites each other?
       question_number: 1,
       image: "",
       title: this.props.quiz.title,
@@ -52,7 +52,7 @@ class NewQuestion extends Component{
       <div>
         {this.state.question_number > this.props.quiz.questionAmount ? <p>You've completed creating your test!</p> :
         <div className="newQuestionForm">
-          <h3>Enter Question Details</h3>
+          <h3>Question {this.state.question_number}</h3>
           <form>
             <input placeholder="question" className="questionInput" name="question" value={this.state.question} onChange={this.handleInputChange}/>
             <input placeholder="answer" className="questionInput" name="answer" value={this.state.answer} onChange={this.handleInputChange}/>
