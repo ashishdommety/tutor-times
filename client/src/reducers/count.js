@@ -1,4 +1,4 @@
-const count = function(state=0, action){
+const count = function(state=1, action){
   switch(action.type){
     case "INCREMENT":
       return state + 1;
