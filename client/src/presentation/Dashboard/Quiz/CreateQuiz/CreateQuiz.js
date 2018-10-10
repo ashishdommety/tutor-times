@@ -27,8 +27,8 @@ class CreateQuiz extends Component{
     e.preventDefault();
     this.props.createQuizAction(this.state);
     // push to path of question
-    // console.log(this.props.path);
-    // this.props.history.push("/quiz/create/new-question");
+    console.log(this.props.location.pathname + "/new-question");
+    this.props.history.push(this.props.location.pathname + "/new-question/create");
   }
 
   render(){

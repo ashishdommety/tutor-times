@@ -6,6 +6,7 @@ import pathName from './pathName';
 import notes from './notes';
 import users from './users';
 import quiz from './quiz';
+import count from './count';
 
 const rootReducer = combineReducers({
   profile,
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
   pathName,
   notes,
   users,
-  quiz
+  quiz,
+  count
 });
 
 export default rootReducer;

@@ -9,7 +9,8 @@ import AllUsersContainer from '../../containers/UserContainers/AllUsersContainer
 import QuizProfile from '../../containers/QuizContainers/QuizProfile';
 import CreateQuizContainer from '../../containers/QuizContainers/CreateQuizContainer';
 import QuizBeginContainer from '../../containers/QuizContainers/QuizBeginContainer';
-import NewQuestion from './Quiz/CreateQuiz/NewQuestion/NewQuestion';
+import NewQuestionContainer from '../../containers/QuizContainers/NewQuestionContainer';
+// import NewQuestion from './Quiz/CreateQuiz/NewQuestion/NewQuestion';
 // import QuizBegin from './Quiz/QuizBegin/QuizBegin';
 
 class Dashboard extends Component{
@@ -36,7 +37,7 @@ class Dashboard extends Component{
             <Route exact={true} path={this.props.match.path + "/quiz"} component={QuizProfile}/>
             <Route exact={true} path={this.props.match.path + "/quiz/:name/:id"} component={QuizBeginContainer}/>
             <Route exact={true} path={this.props.match.path + "/quiz/create" } component={CreateQuizContainer}/>
-            <Route exact={true} path={this.props.match.path + "/quiz/create/new-question"} component={NewQuestion}/>
+            <Route exact={true} path={this.props.match.path + "/quiz/create/new-question/create"} component={NewQuestionContainer}/>
           </Switch>
         }
         </div>
