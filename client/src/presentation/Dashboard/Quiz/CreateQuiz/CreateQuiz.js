@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import NewQuestion from './NewQuestion/NewQuestion';
 
 class CreateQuiz extends Component{
   constructor(props){
@@ -9,8 +8,7 @@ class CreateQuiz extends Component{
       grade: "",
       difficulty: "",
       questionAmount: "",
-      imageUrl: "",
-      totalScore: ""
+      imageUrl: ""
     }
   }
 
@@ -40,7 +38,6 @@ class CreateQuiz extends Component{
           <input placeholder="Difficulty (easy, medium, hard)" name="difficulty" type="text" value={this.state.difficulty} onChange={this.handleChange}/>
           <input placeholder="No. Of Questions" name="questionAmount" type="text" value={this.state.questionAmount} onChange={this.handleChange}/>
           <input placeholder="Image" name="imageUrl" type="text" value={this.state.imageUrl} onChange={this.handleChange}/>
-          <input placeholder="Total Score" name="totalScore" type="text" value={this.state.totalScore} onChange={this.handleChange}/>
         </form>
         <button onClick={this.handleSubmit}>Create Quiz</button>
       </div>
