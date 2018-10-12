@@ -26,10 +26,6 @@ class NewQuestion extends Component{
     }
   }
 
-  componentDidUpdate(){
-    // console.log(this.refs.qInput.innerText)
-  }
-
   submitQuestion = (e) => {
     e.preventDefault();
     // send ajax request
