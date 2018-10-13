@@ -58,6 +58,7 @@ class QuizBegin extends Component {
         {!this.state.questions.length ? "loading..." :  this.state.questions.map((x,i) =>
         <QuizQuestionContainer
             key={i}
+            id={"q"+i}
             question={x.question}
             question_number={x.question_number}
             opt1={x.opt1}

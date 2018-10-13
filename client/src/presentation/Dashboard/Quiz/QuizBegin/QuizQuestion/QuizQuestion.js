@@ -18,7 +18,7 @@ class QuizQuestion extends Component{
 
   render(){
     return(
-      <div>
+      <div id={this.props.id} ref={this.props.id}>
         <h3>{this.props.question_number}. {this.props.question}</h3>
         <div className="optionPairs">
           <div className="options" onClick={this.getAnswer} >
