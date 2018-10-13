@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import NewQuestion from '../../presentation/Dashboard/Quiz/CreateQuiz/NewQuestion/NewQuestion';
-import incrementQuestionNumber from '../../actionCreators/sync/quiz/incrementQuestionNumber';
+import incrementQuestionNumber from '../../actionCreators/sync/quiz/incrementQuestionNumber/incrementQuestionNumber';
 
 function mapStateToProps(state){
   return {

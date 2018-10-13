@@ -7,6 +7,7 @@ const quiz = function(state=[], action){
         if(state[i].qNum === action.userAnswer.qNum){
           return state;
         }
+        // check if user is updating answer here
       }
       return [...state, action.userAnswer];
     default:

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CreateQuiz from '../../presentation/Dashboard/Quiz/CreateQuiz/CreateQuiz';
-import createQuizAction from '../../actionCreators/sync/quiz/createQuizAction'; 
+import createQuizAction from '../../actionCreators/sync/quiz/createQuizAction/createQuizAction'; 
 
 function mapStateToProps(state){
   return {
