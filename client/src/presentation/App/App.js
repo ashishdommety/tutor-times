@@ -1,15 +1,12 @@
 import React, {Component} from 'react';
 import HomeContainer from '../../containers/HomeContainer';
 import DashboardContainer from '../../containers/DashboardContainer';
-import SignUpContainer from '../../containers/SignUpContainer';
+import SignUpContainer from '../../containers/ProfileContainers/SignUpContainer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 
 
 class App extends Component {
-    componentDidUpate(){
-  
-    }
 
     render(){
       return (

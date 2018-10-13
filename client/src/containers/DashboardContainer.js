@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Dashboard from '../presentation/Dashboard/Dashboard';
-import fetchUserAsync from '../actionCreators/async/fetchUserAsync';
+import fetchUserAsync from '../actionCreators/async/users/fetchUserAsync';
 
 function mapStateToProps(state){
   return {

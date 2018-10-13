@@ -1,0 +1,13 @@
+.options{
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.answerInput{
+  display:block;
+  margin-left: auto;
+  width: 10px;
+}
+

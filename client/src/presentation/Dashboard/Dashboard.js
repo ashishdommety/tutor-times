@@ -3,9 +3,15 @@ import './Dashboard.css';
 import {Switch, Route} from 'react-router-dom';
 import NavigationContainer from '../../containers/NavigationContainer';
 import LandingContainer from '../../containers/LandingContainer';
-import DisplayAssociatesContainer from '../../containers/DisplayAssociatesContainer';
-import ClassesContainer from '../../containers/ClassesContainer';
-import NotesContainer from '../../containers/NotesContainer';
+import AssociatesContainer from '../../containers/AssociateContainers/AssociatesContainer';
+import NotesContainer from '../../containers/NoteContainers/NotesContainer';
+import AllUsersContainer from '../../containers/UserContainers/AllUsersContainer';
+import QuizProfile from '../../containers/QuizContainers/QuizProfile';
+import CreateQuizContainer from '../../containers/QuizContainers/CreateQuizContainer';
+import QuizBeginContainer from '../../containers/QuizContainers/QuizBeginContainer';
+import NewQuestionContainer from '../../containers/QuizContainers/NewQuestionContainer';
+// import NewQuestion from './Quiz/CreateQuiz/NewQuestion/NewQuestion';
+// import QuizBegin from './Quiz/QuizBegin/QuizBegin';
 
 class Dashboard extends Component{
 
@@ -25,9 +31,13 @@ class Dashboard extends Component{
           <h1 className="error-message">Please log in</h1>:
           <Switch>
             <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
-            <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={DisplayAssociatesContainer}/>
-            <Route exact={true} path={this.props.match.path + "/classes"} component={ClassesContainer}/>
+            <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={AssociatesContainer}/>
             <Route exact={true} path={this.props.match.path + "/notes"} component={NotesContainer}/>
+            <Route exact={true} path={this.props.match.path + "/display-users"} component={AllUsersContainer}/>
+            <Route exact={true} path={this.props.match.path + "/quiz"} component={QuizProfile}/>
+            <Route exact={true} path={this.props.match.path + "/quiz/:name/:id"} component={QuizBeginContainer}/>
+            <Route exact={true} path={this.props.match.path + "/quiz/create" } component={CreateQuizContainer}/>
+            <Route exact={true} path={this.props.match.path + "/quiz/create/new-question/create"} component={NewQuestionContainer}/>
           </Switch>
         }
         </div>
