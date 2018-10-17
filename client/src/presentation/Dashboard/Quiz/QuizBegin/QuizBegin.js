@@ -17,10 +17,13 @@ class QuizBegin extends Component {
   submitAnswers = () => {
     // compare answers and user answers
     console.log('you submitted answers');
+    console.log(this.state);
     let key = this.state.answers;
     let responses = this.props.userAnswers;
     console.log(key);
     let score = 0;
+    
+    // logic to compare answers
     for(let i=0; i<key.length; i++){
       for(let j=0; j<responses.length; j++){
         if((key[i].qNum === responses[j].qNum) && (key[i].answer === responses[j].answer)){
@@ -29,7 +32,12 @@ class QuizBegin extends Component {
       }
     }
 
-    this.setState({ score });
+    console.log(score);
+    this.setState(
+      { 
+        score 
+      }
+    );
   }
 
   componentDidMount(){
