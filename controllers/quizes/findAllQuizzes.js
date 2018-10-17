@@ -21,7 +21,6 @@ module.exports = function(req,res){
       }
       // create neccessary object
       let obj = {
-        quiz_id: result[i].quiz_id,
         title: result[i].title,
         path,
         difficulty
@@ -32,9 +31,9 @@ module.exports = function(req,res){
 
     let all = quizzes.filter((obj, pos, arr) => {
       //we get an array of the quiz_ids
-      let arrOfIds = arr.map(mapObj => mapObj["quiz_id"]); 
+      let arrOfIds = arr.map(mapObj => mapObj["title"]); 
       // then check if the index of the quiz id is equalled to the position
-      return arrOfIds.indexOf(obj["quiz_id"]) === pos;
+      return arrOfIds.indexOf(obj["title"]) === pos;
     });
 
     res.json(all);

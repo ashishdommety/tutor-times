@@ -7,10 +7,6 @@ class NewQuestion extends Component{
     super(props, refs);
     this.state = {
       google_id: localStorage.google_id,
-      quiz_id: "123456", // how do we make this flexible and so that it never overwrites each other?
-      /* Perhaps set them to numbers, a.k.a 1,2,3....
-      To update this every time we create a quiz, we fetch the last number and add 1 to it to create the next quiz. But what happens if two users start creating a quiz at the same time? 
-      Should we even have quiz ids? What if instead, we make sure the title can't be repeated. So, we fetch all the titles, remove duplicates, and make sure nothing is repeated, and that way, the title of the quiz is it's unique factor.  */
       question_number: 1,
       image: "",
       title: this.props.quiz.title,

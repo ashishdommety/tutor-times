@@ -14,7 +14,6 @@ module.exports = function(req,res){
   }
   db.Quiz.create({
     google_id: new_question.google_id,
-    quiz_id: new_question.quiz_id,
     question_number: new_question.question_number,
     image: new_question.image,
     title: new_question.title,
