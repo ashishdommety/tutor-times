@@ -2,18 +2,14 @@ import React, {Component} from 'react';
 import './QuizQuestion.css';
 
 class QuizQuestion extends Component{
-  // when you click on an option
-  // change the background color
-  // use a callback to add that element to an array
 
   getAnswer = (e) => {
     //turn all other options of same question to white
     let elements = document.getElementsByClassName(e.target.className);
-
     for(let i=0; i<elements.length; i++){
       elements[i].style.backgroundColor = "white";
     }
-    
+
     //turn selected answer bg to green
     e.target.style.backgroundColor = "lightgreen";
 
