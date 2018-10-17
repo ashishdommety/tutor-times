@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './QuizBegin.css';
 import fetchQuizQuestions from '../../../../actionCreators/async/quiz/fetchQuizQuestions';
 import QuizQuestionContainer from '../../../../containers/QuizContainers/QuestionContainer';
+import getScore from './helpers/getScore';
 
 class QuizBegin extends Component {
   constructor(props,match){
@@ -10,32 +11,18 @@ class QuizBegin extends Component {
       name: this.props.match.params.name.split("-").map((x) => x[0].toUpperCase() + x.substring(1,x.length)).join(" "),
       questions: [],
       answers: [],
-      score: 0
+      score: 0,
+      showScore: false
     }
   }
 
   submitAnswers = () => {
-    // compare answers and user answers
     console.log('you submitted answers');
-    console.log(this.state);
-    let key = this.state.answers;
-    let responses = this.props.userAnswers;
-    console.log(key);
-    let score = 0;
-    
-    // logic to compare answers
-    for(let i=0; i<key.length; i++){
-      for(let j=0; j<responses.length; j++){
-        if((key[i].qNum === responses[j].qNum) && (key[i].answer === responses[j].answer)){
-          score = score += 1;
-        }
-      }
-    }
-
-    console.log(score);
+    let score = getScore(this.state.answers, this.props.userAnswers);
     this.setState(
       { 
-        score 
+        score,
+        showScore: true
       }
     );
   }
@@ -78,7 +65,7 @@ class QuizBegin extends Component {
             opt4={x.opt4}/> 
         )}
         <button onClick={this.submitAnswers}>Check Score</button>
-        {this.state.score === 0 ? '' : <p>You scored <strong>{this.state.score}</strong> out of {this.state.answers.length}</p>}
+        {this.state.showScore? <p>You scored <strong>{this.state.score}</strong> out of {this.state.answers.length}</p> : ''}
       </div>
     )
   }
