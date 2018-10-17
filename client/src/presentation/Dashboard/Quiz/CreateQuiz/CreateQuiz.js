@@ -26,7 +26,7 @@ class CreateQuiz extends Component{
     this.props.createQuizAction(this.state);
     // push to path of question
     console.log(this.props.location.pathname + "/new-question");
-    this.props.history.push(this.props.location.pathname + "/new-question/create");
+    this.props.history.push(this.props.location.pathname + "/new-question");
   }
 
   render(){
