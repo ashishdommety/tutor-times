@@ -6,7 +6,6 @@ const getScore = function(key, responses, score = 0){
       }
     }
   }
-
   return score;
 }
 

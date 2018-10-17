@@ -17,7 +17,6 @@ class QuizBegin extends Component {
   }
 
   submitAnswers = () => {
-    console.log('you submitted answers');
     let score = getScore(this.state.answers, this.props.userAnswers);
     this.setState(
       { 
@@ -29,15 +28,12 @@ class QuizBegin extends Component {
 
   componentDidMount(){
     let titleName = this.props.match.params.name;
-    // console.log(titleName);
     fetchQuizQuestions(titleName).then((result) => {
-      console.log(result.data);
       let answerArray = result.data.map((x) => {
         let obj = {
           qNum: x.question_number,
           answer: x.answer
         }
-      
         return obj;
       });
 
@@ -45,7 +41,6 @@ class QuizBegin extends Component {
         questions: result.data,
         answers: answerArray
       });
-      // console.log(this.state);
     }).catch((err) => console.log(err));
   }
 
