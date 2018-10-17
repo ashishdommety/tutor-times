@@ -38,7 +38,7 @@ class QuizHome extends Component{
             key={i}
             profileTitle={this.props.title}
             quizTitle={x.title}
-            quizPath={this.state.rootPath + "/"+x.path+"/"+x.quiz_id}
+            quizPath={this.state.rootPath + "/"+x.path}
             quizId={x.quiz_id}
             difficulty={x.difficulty}
           />

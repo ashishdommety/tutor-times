@@ -33,8 +33,10 @@ class QuizBegin extends Component {
   }
 
   componentDidMount(){
-    let quizId = this.props.match.params.id;
-    fetchQuizQuestions(quizId).then((result) => {
+    let titleName = this.props.match.params.name;
+    // console.log(titleName);
+    fetchQuizQuestions(titleName).then((result) => {
+      console.log(result.data);
       let answerArray = result.data.map((x) => {
         let obj = {
           qNum: x.question_number,
@@ -48,6 +50,7 @@ class QuizBegin extends Component {
         questions: result.data,
         answers: answerArray
       });
+      // console.log(this.state);
     }).catch((err) => console.log(err));
   }
 

@@ -35,7 +35,7 @@ class Dashboard extends Component{
             <Route exact={true} path={this.props.match.path + "/notes"} component={NotesContainer}/>
             <Route exact={true} path={this.props.match.path + "/display-users"} component={AllUsersContainer}/>
             <Route exact={true} path={this.props.match.path + "/quiz"} component={QuizProfile}/>
-            <Route exact={true} path={this.props.match.path + "/quiz/:name/:id"} component={QuizBeginContainer}/>
+            <Route exact={true} path={this.props.match.path + "/quiz/:name"} component={QuizBeginContainer}/>
             <Route exact={true} path={this.props.match.path + "/quiz/create" } component={CreateQuizContainer}/>
             <Route exact={true} path={this.props.match.path + "/quiz/create/new-question/create"} component={NewQuestionContainer}/>
           </Switch>

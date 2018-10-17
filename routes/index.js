@@ -22,5 +22,5 @@ module.exports = router
   // quiz routes
   .post("/create-question", quiz.createQuestion)
   .get("/all-quizzes", quiz.findAllQuizzes)
-  .get("/find-one-quiz/:id", quiz.findOneQuiz);
+  .get("/find-one-quiz/:title", quiz.findOneQuiz);
 

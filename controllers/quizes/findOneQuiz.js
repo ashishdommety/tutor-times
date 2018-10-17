@@ -1,10 +1,13 @@
 const db = require("../../models");
+const titleCase = require("../../helpers/titleCase/titleCase");
 
 module.exports = function(req,res){
-  let id = req.params.id; // get from req.body.params
+  console.log(req.params);
+  let title = titleCase(req.params.title); // get from req.body.params
+  // convert simple-math to Simple Math
   db.Quiz.findAll({
     where: {
-      quiz_id: id
+      title
     }
   }).then(result => {
     res.json(result);
