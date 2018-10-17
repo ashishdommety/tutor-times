@@ -15,11 +15,9 @@ class Landing extends Component{
         <div className="landingComponent">
           <ProfileInfoContainer/>
         </div>
-        <div className="landingActions">
-          <div className="landingComponent">
-            <h3>Check out our fun quizzes</h3>
-            <Link to="/dashboard/quiz"><button>Take a Quiz</button></Link>
-          </div>
+        <div className="landingComponent">
+          <h3>Check out our fun quizzes</h3>
+          <Link to="/dashboard/quiz"><button>Take a Quiz</button></Link>
         </div>
       </div>
     )
