@@ -6,9 +6,9 @@ class ProfileInfo extends Component{
     return(
       <div id="profileInfo">
         <img src={localStorage.photoLink} alt="profile" id="profileImage"/>
-        <div className="profileDetails">
+        <div id="profileDetails">
           <h3>Hi, {this.props.profile.name}!</h3>
-          <hr/>
+          {/* <hr/> */}
           <h4>Here's a reminder of your goal:</h4>
           <p>{this.props.profile.goal}</p>
         </div>

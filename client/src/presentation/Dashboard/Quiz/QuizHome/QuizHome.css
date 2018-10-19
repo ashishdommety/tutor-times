@@ -15,5 +15,6 @@
 
   .quiz-tiles{
     display: flex;
+    flex-wrap: wrap;
   }
 }

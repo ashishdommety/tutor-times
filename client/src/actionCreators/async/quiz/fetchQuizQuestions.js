@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const fetchQuizQuestions = function(id){
-  return axios.get("/find-one-quiz/" + id)
+const fetchQuizQuestions = function(title){
+  return axios.get("/find-one-quiz/" + title)
 }
 
 export default fetchQuizQuestions;

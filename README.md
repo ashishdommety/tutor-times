@@ -15,4 +15,3 @@ Tutor-times is a web application that allows individual tutors to enhance their 
 - React & Redux (Front-End)
 - Node.js & Express.js (Back-End)
 - MySQL (Seqeulize as an ORM)
-
