@@ -4,10 +4,6 @@ module.exports = function(sequelize, DataTypes){
       type: DataTypes.STRING,
       allowNull: false
     },
-    quiz_id: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     question_number: {
       type: DataTypes.INTEGER,
       allowNull: false

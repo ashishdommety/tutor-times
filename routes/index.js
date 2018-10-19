@@ -11,16 +11,17 @@ const quiz = require("../controllers/quizes");
 
 module.exports = router
   // profile routes
-  .get("/all-users", profile.all) // done
-  .get("/user-check", profile.findUser) // done
+  .get("/all-users", profile.all)
+  .get("/user-check", profile.findUser)
   .post("/create-user", profile.createUser)
   // associates routes
-  .get("/get-associates", associates.all)
-  .get("/user-associates", associates.userAssociates)
+  // .get("/get-associates", associates.all)
+  // .get("/user-associates", associates.userAssociates)
   // note routes
-  .get("/get-notes", notes.userNotes) // temp-done (needs data from front-end)
+  // .get("/get-notes", notes.userNotes) 
   // quiz routes
   .post("/create-question", quiz.createQuestion)
   .get("/all-quizzes", quiz.findAllQuizzes)
-  .get("/find-one-quiz/:id", quiz.findOneQuiz);
+  // route for editing quizzes
+  .get("/find-one-quiz/:title", quiz.findOneQuiz);
 

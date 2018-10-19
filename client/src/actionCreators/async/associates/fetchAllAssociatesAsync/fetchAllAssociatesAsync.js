@@ -1,5 +1,5 @@
 import axios from 'axios';
-import fetchAllAssociates from '../../sync/associates/fetchAllAssociates';
+import fetchAllAssociates from '../../../sync/associates/fetchAllAssociates';
 
 const fetchAllAssociatesAsync = function(){
   return function(dispatch){

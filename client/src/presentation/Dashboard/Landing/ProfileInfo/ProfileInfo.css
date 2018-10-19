@@ -10,4 +10,8 @@
   #profileInfo{
     display:flex;
   }
+  #profileDetails{
+    text-align:left;
+    padding-left: 30px;
+  }
 }
