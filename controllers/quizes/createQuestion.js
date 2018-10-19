@@ -1,7 +1,6 @@
 const db = require("../../models");
 const difficultySwap = require("../../helpers/difficultySwap/difficultySwap");
 
-// NOTE: Think about handling multiple questions in one async call.
 module.exports = function(req,res){
   let new_question = req.body;
 
