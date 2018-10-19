@@ -1,20 +1,17 @@
-# Tutor Time 🤓
-Tutor-time is a web application that allows individual tutors to manage tutoring multiple students and gamify the self-learning experience for students at the same time.
+# Tutor Times 🤓
+Tutor-times is a web application that allows individual tutors to enhance their tutoring services to multiple students and gamify the learning experience for them at the same time.
 
-## Features: 
+## Features for Version 1: 
 ### For Students -
 - Log-on to the application with their g-mail acct.
-- Take a Quiz
+- Create and Edit Profile Information (including their goal with this application & it's accompanying services)
+- Take Quizes and get instant feedback
 
 ### For Tutors - 
 - Log-on to the application with their g-mail acct. 
-- Create a Quiz
-
-### Admin
-- Remove Users
-- Manage accounts
+- Create and Edit Quizzes for students to take
 
 ## Technologies Used:
-- React & Redux
-- Node.js & Express.js
-- MongoDB/MySQL
+- React & Redux (Front-End)
+- Node.js & Express.js (Back-End)
+- MySQL (Seqeulize as an ORM)
