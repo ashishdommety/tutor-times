@@ -15,7 +15,6 @@ class CreateQuiz extends Component{
   handleChange = (event) => {
     const value = event.target.value;
     const name = event.target.name;
-    // console.log(this.state.quizBase)
     this.setState({
       [name]: value
     })
@@ -25,7 +24,6 @@ class CreateQuiz extends Component{
     e.preventDefault();
     this.props.createQuizAction(this.state);
     // push to path of question
-    console.log(this.props.location.pathname + "/new-question");
     this.props.history.push(this.props.location.pathname + "/new-question");
   }
 
