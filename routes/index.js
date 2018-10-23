@@ -22,6 +22,7 @@ module.exports = router
   // quiz routes
   .post("/create-question", quiz.createQuestion)
   .get("/all-quizzes", quiz.findAllQuizzes)
+  .post("/edit-question/:title/:qNum", quiz.editQuestion)
   // route for editing quizzes
   .get("/find-one-quiz/:title", quiz.findOneQuiz);
 
