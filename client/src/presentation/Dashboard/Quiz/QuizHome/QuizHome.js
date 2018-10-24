@@ -38,7 +38,8 @@ class QuizHome extends Component{
             key={i}
             profileTitle={this.props.title}
             quizTitle={x.title}
-            quizPath={this.state.rootPath + "/"+x.path}
+            quizPath={this.state.rootPath + "/" + x.path}
+            reviewPath={this.state.rootPath + "/review/" + x.path}
             difficulty={x.difficulty}
           />
           </div>

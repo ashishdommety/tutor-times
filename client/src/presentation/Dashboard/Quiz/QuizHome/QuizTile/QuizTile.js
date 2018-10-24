@@ -9,7 +9,7 @@ class QuizTile extends Component{
         <img src="" alt="bg-description"/>
         <h3>{this.props.quizTitle}</h3>
         <p>{this.props.difficulty}</p>
-        { this.props.profileTitle !== "student" ? <button>Review</button> : <Link to={this.props.quizPath}><button>Take Quiz</button></Link>}
+        { this.props.profileTitle !== "student" ? <Link to={this.props.reviewPath}><button>Review</button></Link> : <Link to={this.props.quizPath}><button>Take Quiz</button></Link>}
       </div>
     )
   }
