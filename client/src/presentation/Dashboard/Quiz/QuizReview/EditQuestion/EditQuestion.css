@@ -13,3 +13,8 @@
   margin-top: 10px;
   margin-right: auto;
 }
+
+.correct-option{
+  font-weight: bold;
+  font-size: 20px;
+}

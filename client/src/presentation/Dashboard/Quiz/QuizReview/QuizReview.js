@@ -31,6 +31,7 @@ class QuizReview extends Component{
               id={"q"+i}
               question={x.question}
               question_number={x.question_number}
+              answer={x.answer}
               opt1={x.opt1}
               opt2={x.opt2}
               opt3={x.opt3}
