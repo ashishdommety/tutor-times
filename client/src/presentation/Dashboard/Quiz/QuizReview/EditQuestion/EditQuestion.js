@@ -4,8 +4,8 @@ import './EditQuestion.css';
 class EditQuestion extends Component{
   render(){
     return(
-      <div id={this.props.id} ref={this.props.id}>
-        <button>x</button>
+      <div id={this.props.id} ref={this.props.id} className="review-questions">
+        <button className="modify-question-btn">x</button>
         <h3>{this.props.question_number}. {this.props.question}</h3>
         <div className="optionPairs">
           <div className={`options q${this.props.question_number}-options`} data-target="hi" onClick={this.getAnswer} >
@@ -23,7 +23,7 @@ class EditQuestion extends Component{
             {this.props.opt4}
           </div>
         </div>
-        <button>Edit</button>
+        <button className="modify-question-btn edit-question-btn">Edit</button>
       </div>
     )
   }
