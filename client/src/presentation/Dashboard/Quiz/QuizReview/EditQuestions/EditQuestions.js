@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import './EditQuestion.css';
+import './EditQuestions.css';
+import EditButton from './EditButton/EditButton';
 
-class EditQuestion extends Component{
+class EditQuestions extends Component{
   constructor(props){
     super(props);
     this.state = {
@@ -10,19 +11,12 @@ class EditQuestion extends Component{
     }
   }
 
-  editQuestion = () => {
-    // toggle edit button to a save button
-    // allow users to uncheck an old answer and re-check a new one
-    // make options type-able
-    // Allow user to edit one question at a time
-    console.log('question number');
-  }
-
   checkOption = (option) => {
     return option === this.props.answer ? <div className="correct-option">{option} is correct</div> : option;
   };
 
   getAnswer = () => {
+    console.log(this.props.match);
     console.log(this.props.answer);
   }
 
@@ -47,10 +41,13 @@ class EditQuestion extends Component{
             {this.checkOption(this.props.opt4)}
           </div>
         </div>
-        <button className="modify-question-btn edit-question-btn" onClick={this.editQuestion}>Edit</button>
+        <EditButton 
+          qNum={this.props.question_number}
+          path={this.props.pagePath}
+          history={this.props.history}/>
       </div>
     )
   }
 };
 
-export default EditQuestion;
+export default EditQuestions;
