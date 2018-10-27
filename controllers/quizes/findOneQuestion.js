@@ -2,7 +2,7 @@ const db = require("../../models");
 const titleCase = require("../../helpers/titleCase/titleCase");
 
 module.exports = function(req,res){
-  let title = req.params.title;
+  let title = titleCase(req.params.title);
   let question_number = req.params.qNum;
 
   db.Quiz.find({

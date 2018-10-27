@@ -17,9 +17,10 @@ class EditOneQuestion extends Component {
   }
   componentDidMount(){
     // make ajax call to fetch particular question
-      // let title = 
-      // let qNum = 
-    findOneQuestion('Simple Math', '2').then((result) => {
+    let title = this.props.match.params.name;
+    let qNum = this.props.match.params.num;
+    // let qNum = 
+    findOneQuestion(title, qNum).then((result) => {
       console.log(result.data);
       this.setState({
         question_number: result.data.question_number,
