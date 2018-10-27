@@ -11,7 +11,7 @@ import CreateQuizContainer from '../../containers/QuizContainers/CreateQuizConta
 import QuizBeginContainer from '../../containers/QuizContainers/QuizBeginContainer';
 import NewQuestionContainer from '../../containers/QuizContainers/NewQuestionContainer';
 import QuizReview from "./Quiz/QuizReview/QuizReview";
-import EditOneQuestion from "./Quiz/QuizReview/EditQuestions/EditOneQuestion/EditOneQuestion";
+import EditOneQuestion from "./Quiz/QuizReview/EditOneQuestion/EditOneQuestion";
 // import NewQuestion from './Quiz/CreateQuiz/NewQuestion/NewQuestion';
 // import QuizBegin from './Quiz/QuizBegin/QuizBegin';
 
