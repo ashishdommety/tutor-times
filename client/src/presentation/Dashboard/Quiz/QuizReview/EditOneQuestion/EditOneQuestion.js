@@ -44,7 +44,10 @@ class EditOneQuestion extends Component {
     e.preventDefault();
     console.log('clicked button');
     editOneQuestion(this.props.match.params.name, this.props.match.params.num, this.state).then((result) => {
-      console.log(result.data);
+      if(result.data.length){
+        let url = this.props.match.url.split("/").slice(0,5).join("/");
+        this.props.history.push(url);
+      }
     }).catch((err) => console.log(err))
   }
 
