@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './EditOneQuestion.css';
 import findOneQuestion from '../../../../../actionCreators/async/quiz/findOneQuestion';
+// import EditOneQuestionAsync from '../../../../../actionCreators/async/quiz/EditOneQuestionAsync';
+import editOneQuestion from '../../../../../actionCreators/async/quiz/editOneQuestion';
 
 class EditOneQuestion extends Component {
   constructor(props){
@@ -33,9 +35,25 @@ class EditOneQuestion extends Component {
       })
     }).catch((err) => console.log(err));
     // use the input to re-write state values
-    // allow input to have value from fetched
-    // send post request once user hits save
-    // re-route to quiz questions list
+  }
+
+  // allow input to have value from fetched
+  // send post request once user hits save
+  // re-route to quiz questions list
+  editQuestion = (e) => {
+    e.preventDefault();
+    console.log('clicked button');
+    editOneQuestion(this.props.match.params.name, this.props.match.params.num, this.state).then((result) => {
+      console.log(result.data);
+    }).catch((err) => console.log(err))
+  }
+
+  handleInputChange = (event) => {
+    const value = event.target.value;
+    const name = event.target.name;
+    this.setState({
+      [name]: value
+    });
   }
 
   render(){
@@ -44,29 +62,29 @@ class EditOneQuestion extends Component {
         <h2>Question {this.state.question_number}</h2>
         <div className="editInput">
           <p>Question:</p>
-          <input value={this.state.question} />
+          <input value={this.state.question} onChange={this.handleInputChange} name="question"/>
         </div>
         <div className="editInput">
           <p>Answer:</p>
-          <input value={this.state.answer}/>
+          <input value={this.state.answer} onChange={this.handleInputChange} name="answer"/>
         </div>
         <div className="editInput">
           <p>Option 1:</p>
-          <input value={this.state.opt1} />
+          <input value={this.state.opt1} onChange={this.handleInputChange} name="opt1"/>
         </div>
         <div className="editInput">
           <p>Option 2:</p>
-          <input value={this.state.opt2} />
+          <input value={this.state.opt2} onChange={this.handleInputChange} name="opt2"/>
         </div>
         <div className="editInput">
           <p>Option 3:</p>
-          <input value={this.state.opt3} />
+          <input value={this.state.opt3} onChange={this.handleInputChange} name="opt3"/>
         </div>
         <div className="editInput">
           <p>Option 4: </p>
-          <input value={this.state.opt4} />
+          <input value={this.state.opt4} onChange={this.handleInputChange} name="opt4"/>
         </div>
-        <button>Save</button>
+        <button onClick={this.editQuestion}>Save</button>
         <button>Cancel</button>
       </div>
     )

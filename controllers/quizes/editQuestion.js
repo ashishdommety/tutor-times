@@ -1,12 +1,13 @@
 const db = require("../../models");
+const titleCase = require("../../helpers/titleCase/titleCase");
 
 module.exports = function(req,res){
-  let title = req.params.title;
+  let title = titleCase(req.params.title);
   let question_number = req.params.qNum;
-  let propertyToChange = {question: "What is 2 + 3?"}; // req.body.updates; 
+  let propertyToChange = req.body;
 
   db.Quiz.update(
-    propertyToChange, // make object value pair more flexible
+    propertyToChange, 
     {where: 
       {
         title,
