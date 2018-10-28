@@ -10,6 +10,8 @@ import QuizProfile from '../../containers/QuizContainers/QuizProfile';
 import CreateQuizContainer from '../../containers/QuizContainers/CreateQuizContainer';
 import QuizBeginContainer from '../../containers/QuizContainers/QuizBeginContainer';
 import NewQuestionContainer from '../../containers/QuizContainers/NewQuestionContainer';
+import QuizReview from "./Quiz/QuizReview/QuizReview";
+import EditOneQuestion from "./Quiz/QuizReview/EditOneQuestion/EditOneQuestion";
 // import NewQuestion from './Quiz/CreateQuiz/NewQuestion/NewQuestion';
 // import QuizBegin from './Quiz/QuizBegin/QuizBegin';
 
@@ -38,6 +40,8 @@ class Dashboard extends Component{
             <Route exact={true} path={this.props.match.path + "/quiz/:name"} component={QuizBeginContainer}/>
             <Route exact={true} path={this.props.match.path + "/quiz/create/new" } component={CreateQuizContainer}/>
             <Route exact={true} path={this.props.match.path + "/quiz/create/new/new-question"} component={NewQuestionContainer}/>
+            <Route exact={true} path={this.props.match.path + "/quiz/review/:name"} component={QuizReview}/>
+            <Route exact={true} path={this.props.match.path + "/quiz/review/:name/edit/:num"} component={EditOneQuestion}/>
           </Switch>
         }
         </div>
