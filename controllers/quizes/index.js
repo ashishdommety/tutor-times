@@ -8,9 +8,13 @@
 const createQuestion = require("./createQuestion");
 const findAllQuizzes = require("./findAllQuizzes");
 const findOneQuiz = require("./findOneQuiz");
+const editQuestion = require("./editQuestion");
+const findOneQuestion = require("./findOneQuestion");
 
 module.exports = {
   createQuestion,
   findAllQuizzes,
-  findOneQuiz
+  findOneQuiz,
+  editQuestion,
+  findOneQuestion
 };
