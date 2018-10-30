@@ -3,7 +3,8 @@ import './QuizReview.css';
 import fetchQuizQuestions from '../../../../actionCreators/async/quiz/fetchQuizQuestions';
 import EditQuestions from './EditQuestions/EditQuestions';
 import DeleteQuizButton from './DeleteQuizButton/DeleteQuizButton';
-import AddOneQuestion from './AddOneQuestion/AddOneQuestion';
+// import AddOneQuestionButton from './AddOneQuestion/AddOneQuestion';
+import AddOneQuestionButtonContainer from '../../../../containers/QuizContainers/AddOneQuestionButtonContainer';
 
 class QuizReview extends Component{
   constructor(props){
@@ -35,7 +36,7 @@ class QuizReview extends Component{
         history={this.props.history}/>
      
       {!this.state.questions.length ? '' : 
-        <AddOneQuestion
+        <AddOneQuestionButtonContainer
           title={this.state.questions[0].title}
           question_number={this.state.questions[this.state.questions.length - 1].question_number + 1}
           difficulty={this.state.questions[0].difficulty}
