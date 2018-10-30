@@ -10,11 +10,13 @@ const findAllQuizzes = require("./findAllQuizzes");
 const findOneQuiz = require("./findOneQuiz");
 const editQuestion = require("./editQuestion");
 const findOneQuestion = require("./findOneQuestion");
+const deleteQuestion = require("./deleteQuestion");
 
 module.exports = {
   createQuestion,
   findAllQuizzes,
   findOneQuiz,
   editQuestion,
-  findOneQuestion
+  findOneQuestion,
+  deleteQuestion
 };
