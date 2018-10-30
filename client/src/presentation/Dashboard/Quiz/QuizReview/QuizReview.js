@@ -28,9 +28,11 @@ class QuizReview extends Component{
   render(){
     return(
       <div id="quizReview">
-        {!this.state.questions.length ? "loading..." :  this.state.questions.map((x,i) =>
-            <div>
-            <DeleteQuizButton title={this.props.match.params.name}/>
+        <DeleteQuizButton 
+              title={this.props.match.params.name}
+              history={this.props.history}/>
+        {!this.state.questions.length ? "loading..." :  
+        this.state.questions.map((x,i) =>
             <EditQuestions
                 key={i}
                 id={"q"+i}
@@ -43,7 +45,7 @@ class QuizReview extends Component{
                 opt4={x.opt4}
                 pagePath={this.props.match.url}
                 history={this.props.history}/> 
-            </div>
+
         )}
       </div>
     )
