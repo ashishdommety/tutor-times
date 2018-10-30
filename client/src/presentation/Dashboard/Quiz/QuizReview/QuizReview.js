@@ -41,6 +41,7 @@ class QuizReview extends Component{
           question_number={this.state.questions[this.state.questions.length - 1].question_number + 1}
           difficulty={this.state.questions[0].difficulty}
           grade={this.state.questions[0].grade}
+          history={this.props.history}
         />
       }
         {!this.state.questions.length ? "loading..." :  

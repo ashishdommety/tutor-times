@@ -15,7 +15,7 @@ class AddOneQuestionButton extends Component{
 
     console.log(currentQuiz);
     this.props.createQuizAction(currentQuiz);
-    // this.props.history.push()
+    this.props.history.push("/dashboard/quiz/create/new/new-question");
   }
 
   render(){
