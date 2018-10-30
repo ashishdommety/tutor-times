@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './CreateQuiz.css';
 
 class CreateQuiz extends Component{
   constructor(props){
@@ -29,7 +30,7 @@ class CreateQuiz extends Component{
 
   render(){
     return(
-      <div>
+      <div className="createQuizDisplay">
         <form>
           <input placeholder="Title" name="title" type="text" value={this.state.title} onChange={this.handleChange}/>
           <input placeholder="Grade" name="grade" type="text" value={this.state.grade} onChange={this.handleChange}/>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './EditQuestions.css';
 import EditButton from './EditButton/EditButton';
+import DeleteOneQuestion from '../DeleteOneQuestion/DeleteOneQuestion';
 
 class EditQuestions extends Component{
   constructor(props){
@@ -15,6 +16,10 @@ class EditQuestions extends Component{
     return option === this.props.answer ? <div className="correct-option">{option} is correct</div> : option;
   };
 
+  deleteQuestion = () => {
+
+  }
+
   getAnswer = () => {
     console.log(this.props.match);
     console.log(this.props.answer);
@@ -23,7 +28,10 @@ class EditQuestions extends Component{
   render(){
     return(
       <div id={this.props.id} ref={this.props.id} className="review-questions">
-        <button className="modify-question-btn">x</button>
+        <DeleteOneQuestion 
+          qNum={this.props.question_number}
+          path={this.props.pagePath}
+          history={this.props.history}/>
         <h3>{this.props.question_number}. {this.props.question}</h3>
         <div className="optionPairs">
           <div className={`options q${this.props.question_number}-options`} onClick={this.getAnswer} >
