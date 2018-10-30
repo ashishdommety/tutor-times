@@ -3,6 +3,7 @@ import './QuizReview.css';
 import fetchQuizQuestions from '../../../../actionCreators/async/quiz/fetchQuizQuestions';
 import EditQuestions from './EditQuestions/EditQuestions';
 import DeleteQuizButton from './DeleteQuizButton/DeleteQuizButton';
+import AddOneQuestion from './AddOneQuestion/AddOneQuestion';
 
 class QuizReview extends Component{
   constructor(props){
@@ -31,6 +32,7 @@ class QuizReview extends Component{
         <DeleteQuizButton 
               title={this.props.match.params.name}
               history={this.props.history}/>
+        <AddOneQuestion/>
         {!this.state.questions.length ? "loading..." :  
         this.state.questions.map((x,i) =>
             <EditQuestions
