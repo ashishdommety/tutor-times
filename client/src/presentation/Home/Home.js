@@ -18,8 +18,6 @@ class Home extends Component{
   }; 
 
   componentDidUpdate(){
-    console.log('component updated');
-    console.log(this.props.pathName);
     if(this.props.pathName !== "/"){
       this.props.history.push(this.props.pathName);
     }

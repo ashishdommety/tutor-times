@@ -13,12 +13,8 @@ class QuizReview extends Component{
   }
 
   componentDidMount(){
-    // console.log(this.props.history);
     let titleName = this.props.match.params.name;
-    // console.log(this.props.match.url);
-    // console.log(titleName);
     fetchQuizQuestions(titleName).then((result) => {
-      // console.log(result.data);
       this.setState({
         questions: result.data
       });
@@ -45,7 +41,6 @@ class QuizReview extends Component{
                 opt4={x.opt4}
                 pagePath={this.props.match.url}
                 history={this.props.history}/> 
-
         )}
       </div>
     )

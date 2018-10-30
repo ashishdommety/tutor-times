@@ -12,8 +12,6 @@ import QuizBeginContainer from '../../containers/QuizContainers/QuizBeginContain
 import NewQuestionContainer from '../../containers/QuizContainers/NewQuestionContainer';
 import QuizReview from "./Quiz/QuizReview/QuizReview";
 import EditOneQuestion from "./Quiz/QuizReview/EditOneQuestion/EditOneQuestion";
-// import NewQuestion from './Quiz/CreateQuiz/NewQuestion/NewQuestion';
-// import QuizBegin from './Quiz/QuizBegin/QuizBegin';
 
 class Dashboard extends Component{
 

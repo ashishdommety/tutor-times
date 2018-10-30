@@ -16,7 +16,6 @@ class QuizHome extends Component{
 
   componentDidMount(){
     fetchAllQuizzes().then((result) => {
-      console.log(result.data)
       this.setState({
         quizzes: result.data
       })

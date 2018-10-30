@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './EditOneQuestion.css';
 import findOneQuestion from '../../../../../actionCreators/async/quiz/findOneQuestion';
-// import EditOneQuestionAsync from '../../../../../actionCreators/async/quiz/EditOneQuestionAsync';
 import editOneQuestion from '../../../../../actionCreators/async/quiz/editOneQuestion';
 
 class EditOneQuestion extends Component {
@@ -21,9 +20,7 @@ class EditOneQuestion extends Component {
     // make ajax call to fetch particular question
     let title = this.props.match.params.name;
     let qNum = this.props.match.params.num;
-    // let qNum = 
     findOneQuestion(title, qNum).then((result) => {
-      console.log(result.data);
       this.setState({
         question_number: result.data.question_number,
         question: result.data.question,
@@ -34,15 +31,10 @@ class EditOneQuestion extends Component {
         opt4: result.data.opt4
       })
     }).catch((err) => console.log(err));
-    // use the input to re-write state values
   }
 
-  // allow input to have value from fetched
-  // send post request once user hits save
-  // re-route to quiz questions list
   editQuestion = (e) => {
     e.preventDefault();
-    console.log('clicked button');
     editOneQuestion(this.props.match.params.name, this.props.match.params.num, this.state).then((result) => {
       if(result.data.length){
         let url = this.props.match.url.split("/").slice(0,5).join("/");

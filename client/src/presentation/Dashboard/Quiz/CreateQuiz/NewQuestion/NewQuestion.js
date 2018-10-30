@@ -27,7 +27,6 @@ class NewQuestion extends Component{
     // send ajax request
     createQuestion(this.state)
       .then(result => {
-        // console.log(result.data);
         this.props.incrementQuestionNumber();
         this.setState({
           question_number: this.props.count,
@@ -39,11 +38,7 @@ class NewQuestion extends Component{
           opt3: "",
           opt4: ""
         });
-        console.log("written to db");
       }).catch(err => console.log(err));
-    // once it's returned
-    // clear input fields
-    // increment question number
   }
   handleInputChange = (event) => {
     const value = event.target.value;
