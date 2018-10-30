@@ -29,10 +29,19 @@ class QuizReview extends Component{
   render(){
     return(
       <div id="quizReview">
+      
         <DeleteQuizButton 
-              title={this.props.match.params.name}
-              history={this.props.history}/>
-        <AddOneQuestion/>
+        title={this.props.match.params.name}
+        history={this.props.history}/>
+     
+      {!this.state.questions.length ? '' : 
+        <AddOneQuestion
+          title={this.state.questions[0].title}
+          question_number={this.state.questions[this.state.questions.length - 1].question_number + 1}
+          difficulty={this.state.questions[0].difficulty}
+          grade={this.state.questions[0].grade}
+        />
+      }
         {!this.state.questions.length ? "loading..." :  
         this.state.questions.map((x,i) =>
             <EditQuestions
@@ -47,7 +56,6 @@ class QuizReview extends Component{
                 opt4={x.opt4}
                 pagePath={this.props.match.url}
                 history={this.props.history}/> 
-
         )}
       </div>
     )

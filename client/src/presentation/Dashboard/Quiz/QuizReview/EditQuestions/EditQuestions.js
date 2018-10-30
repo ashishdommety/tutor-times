@@ -16,15 +16,6 @@ class EditQuestions extends Component{
     return option === this.props.answer ? <div className="correct-option">{option} is correct</div> : option;
   };
 
-  deleteQuestion = () => {
-
-  }
-
-  getAnswer = () => {
-    console.log(this.props.match);
-    console.log(this.props.answer);
-  }
-
   render(){
     return(
       <div id={this.props.id} ref={this.props.id} className="review-questions">
