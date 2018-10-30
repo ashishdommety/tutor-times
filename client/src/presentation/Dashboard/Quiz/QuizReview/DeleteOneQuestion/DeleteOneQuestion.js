@@ -7,11 +7,11 @@ class DeleteOneQuestion extends Component{
   }
 
   deleteQuestion = () => {
-    console.log(this.props.question_number);
     let pathArr = this.props.path.split("/");
     let title = pathArr[pathArr.length - 1];
-    deleteQuestion(title, this.props.question_number).then((result) => {
-      console.log('you deleted this question!');
+    deleteQuestion(title, this.props.qNum).then((result) => {
+      // re-route to main quiz page (this is temporary. Preferably re-render the page)
+      this.props.history.push(this.props.path.split("/").splice(0,3).join("/"));
     }).catch((err) => console.log(err));
   };
 

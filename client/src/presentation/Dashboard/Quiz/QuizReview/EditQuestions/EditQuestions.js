@@ -29,8 +29,9 @@ class EditQuestions extends Component{
     return(
       <div id={this.props.id} ref={this.props.id} className="review-questions">
         <DeleteOneQuestion 
-          question_number={this.props.question_number}
-          path={this.props.pagePath} />
+          qNum={this.props.question_number}
+          path={this.props.pagePath}
+          history={this.props.history}/>
         <h3>{this.props.question_number}. {this.props.question}</h3>
         <div className="optionPairs">
           <div className={`options q${this.props.question_number}-options`} onClick={this.getAnswer} >
