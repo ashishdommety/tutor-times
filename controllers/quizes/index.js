@@ -11,6 +11,7 @@ const findOneQuiz = require("./findOneQuiz");
 const editQuestion = require("./editQuestion");
 const findOneQuestion = require("./findOneQuestion");
 const deleteQuestion = require("./deleteQuestion");
+const deleteQuiz = require("./deleteQuiz");
 
 module.exports = {
   createQuestion,
@@ -18,5 +19,6 @@ module.exports = {
   findOneQuiz,
   editQuestion,
   findOneQuestion,
-  deleteQuestion
+  deleteQuestion,
+  deleteQuiz
 };

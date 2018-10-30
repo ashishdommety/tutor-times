@@ -27,5 +27,6 @@ module.exports = router
   // route for editing quizzes
   .get("/find-one-quiz/:title", quiz.findOneQuiz)
   // route for deleting questions
-  .post("/delete-question/:title/:qNum", quiz.deleteQuestion);
+  .post("/delete-question/:title/:qNum", quiz.deleteQuestion)
+  .post("/delete-quiz/:title", quiz.deleteQuiz);
 
