@@ -20,11 +20,6 @@ const Navigation = (props) => {
         <Link to={"/dashboard/quiz"} className="link"><FontAwesomeIcon icon="pencil-alt" /> Quiz</Link>
         <Link to={"/"} id="logout-button" onClick={forceMyOwnLogout} className="link"><FontAwesomeIcon icon="sign-out-alt" /> Logout</Link>
       </div>
-      {/* <GoogleLogout
-        buttonText="Logout"
-        onLogoutSuccess={forceMyOwnLogout}
-      ></GoogleLogout> */}
-      
     </div>
   )
 }
