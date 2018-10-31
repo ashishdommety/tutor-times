@@ -4,7 +4,10 @@ import DashboardContainer from '../../containers/DashboardContainer';
 import SignUpContainer from '../../containers/ProfileContainers/SignUpContainer';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHome, faPencilAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
+library.add(faHome, faPencilAlt, faSignOutAlt);
 
 class App extends Component {
 
