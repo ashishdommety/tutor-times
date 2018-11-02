@@ -17,7 +17,7 @@ class Landing extends Component{
         </div>
         <div className="landingComponent block block-small">
           <p>Quizzes are a great way to learn.</p>
-          <Link to="/dashboard/quiz"><button>{this.props.title === "tutor"? "Review" : "Take"} a Quiz</button></Link>
+          <Link to="/dashboard/quiz"><button className="blue-btn">{this.props.title === "tutor"? "Review" : "Take"} a Quiz</button></Link>
         </div>
       </div>
     )

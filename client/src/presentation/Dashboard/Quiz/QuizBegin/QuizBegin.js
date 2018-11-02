@@ -60,7 +60,7 @@ class QuizBegin extends Component {
             opt4={x.opt4}
         /> 
         )}
-        <button onClick={this.submitAnswers}>Check Score</button>
+        <button className="blue-btn" onClick={this.submitAnswers}>Check Score</button>
         {this.state.showScore? <p>You scored <strong>{this.state.score}</strong> out of {this.state.answers.length}</p> : ''}
       </div>
     )

@@ -20,7 +20,7 @@ class AddOneQuestionButton extends Component{
 
   render(){
     return(
-      <button onClick={this.addNewQuestion}>Add Question</button>
+      <button className="green-btn" onClick={this.addNewQuestion}>Add Question</button>
     )
   }
 };

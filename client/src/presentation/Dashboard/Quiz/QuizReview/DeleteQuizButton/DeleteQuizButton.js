@@ -17,7 +17,7 @@ class DeleteQuizButton extends Component {
 
   render(){
     return(
-      <button onClick={this.deleteOneQuiz}>Delete Quiz</button>
+      <button className="red-btn" onClick={this.deleteOneQuiz}>Delete Quiz</button>
     )
   }
 };

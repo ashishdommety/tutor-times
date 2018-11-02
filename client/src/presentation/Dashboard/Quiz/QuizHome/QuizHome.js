@@ -27,8 +27,8 @@ class QuizHome extends Component{
       <div id="all-quizes" className="block">
         <div id="quiz-options">
           <input placholder="Search for Quizes"></input>
-          <button>Search</button>
-          { this.props.title !== "student" ? <Link to={this.props.match.path+ "/create/new"}><button>+</button></Link> : ''}
+          <button className="blue-btn">Search</button>
+          { this.props.title !== "student" ? <Link to={this.props.match.path+ "/create/new"}><button className="green-btn">+</button></Link> : ''}
         </div>
         <div className="quiz-tiles">
         {this.state.quizzes.map((x,i) => 

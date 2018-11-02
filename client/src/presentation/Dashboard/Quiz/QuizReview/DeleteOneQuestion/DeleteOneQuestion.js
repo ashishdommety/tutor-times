@@ -17,7 +17,7 @@ class DeleteOneQuestion extends Component{
   render(){
     return(
       <button 
-        className="modify-question-btn"
+        className="modify-question-btn red-btn"
         onClick={this.deleteQuestion}>x</button>
     );
   }

@@ -80,7 +80,7 @@ class NewQuestion extends Component{
             <input placeholder="opt2" className="questionInput" ref="qInput" name="opt2" value={this.state.opt2} onChange={this.handleInputChange}/>
             <input placeholder="opt3" className="questionInput" ref="qInput" name="opt3" value={this.state.opt3} onChange={this.handleInputChange}/>
             <input placeholder="opt4" className="questionInput" ref="qInput" name="opt4" value={this.state.opt4} onChange={this.handleInputChange}/>
-            <button onClick={this.submitQuestion}>Add Question</button>
+            <button className="green-btn" onClick={this.submitQuestion}>Add Question</button>
           </form>
         </div>
       )
@@ -98,7 +98,7 @@ class NewQuestion extends Component{
               <input placeholder="opt2" className="questionInput" ref="qInput" name="opt2" value={this.state.opt2} onChange={this.handleInputChange}/>
               <input placeholder="opt3" className="questionInput" ref="qInput" name="opt3" value={this.state.opt3} onChange={this.handleInputChange}/>
               <input placeholder="opt4" className="questionInput" ref="qInput" name="opt4" value={this.state.opt4} onChange={this.handleInputChange}/>
-              <button onClick={this.submitQuestion}>Add Question</button>
+              <button className="green-btn" onClick={this.submitQuestion}>Add Question</button>
             </form>
           </div>
           }

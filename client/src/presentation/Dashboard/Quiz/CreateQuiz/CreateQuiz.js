@@ -38,7 +38,7 @@ class CreateQuiz extends Component{
           <input placeholder="No. Of Questions" name="questionAmount" type="text" value={this.state.questionAmount} onChange={this.handleChange}/>
           <input placeholder="Image" name="imageUrl" type="text" value={this.state.imageUrl} onChange={this.handleChange}/>
         </form>
-        <button onClick={this.handleSubmit}>Create Quiz</button>
+        <button className="green-btn" onClick={this.handleSubmit}>Create Quiz</button>
       </div>
     )
   }
