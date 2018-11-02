@@ -37,7 +37,9 @@ class NewQuestion extends Component{
       copy.question_number = question_number;
       createQuestion(copy)
         .then(result => {
-          this.props.history.push(`/dashboard/quiz/review/${this.props.quiz.title}`);
+          let path = this.props.quiz.title.toLowerCase().split(" ").join("-");
+          console.log(`the path is ${path}`);
+          this.props.history.push(`/dashboard/quiz/review/${path}`);
         }).catch(err => console.log(err));
     }else{
       question_number = this.props.count;
