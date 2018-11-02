@@ -12,10 +12,10 @@ class Landing extends Component{
   render(){
     return(
       <div id="landing" >
-        <div className="landingComponent block">
+        <div className="landingComponent block block-small">
           <ProfileInfoContainer/>
         </div>
-        <div className="landingComponent block">
+        <div className="landingComponent block block-small">
           <p>Quizzes are a great way to learn.</p>
           <Link to="/dashboard/quiz"><button>{this.props.title === "tutor"? "Review" : "Take"} a Quiz</button></Link>
         </div>
