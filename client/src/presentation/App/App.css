@@ -1,3 +1,7 @@
 body{
-  --base-blue: #1B2034;
+  background: var(--background-blue);
+}
+
+.block{
+  background: white;
 }

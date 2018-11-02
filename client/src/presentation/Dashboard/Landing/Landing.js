@@ -11,11 +11,11 @@ class Landing extends Component{
 
   render(){
     return(
-      <div id="landing">
-        <div className="landingComponent">
+      <div id="landing" >
+        <div className="landingComponent block">
           <ProfileInfoContainer/>
         </div>
-        <div className="landingComponent">
+        <div className="landingComponent block">
           <p>Quizzes are a great way to learn.</p>
           <Link to="/dashboard/quiz"><button>{this.props.title === "tutor"? "Review" : "Take"} a Quiz</button></Link>
         </div>

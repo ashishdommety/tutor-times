@@ -5,7 +5,7 @@ import './QuizTile.css';
 class QuizTile extends Component{
   render(){
     return(
-      <div className="quiz-tile">
+      <div className="quiz-tile block">
         <img src="" alt="bg-description"/>
         <h3>{this.props.quizTitle}</h3>
         <p>{this.props.difficulty}</p>

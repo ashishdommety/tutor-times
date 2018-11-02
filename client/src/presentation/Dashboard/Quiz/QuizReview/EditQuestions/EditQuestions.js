@@ -18,7 +18,7 @@ class EditQuestions extends Component{
 
   render(){
     return(
-      <div id={this.props.id} ref={this.props.id} className="review-questions">
+      <div id={this.props.id} ref={this.props.id} className="review-questions block">
         <DeleteOneQuestion 
           qNum={this.props.question_number}
           path={this.props.pagePath}

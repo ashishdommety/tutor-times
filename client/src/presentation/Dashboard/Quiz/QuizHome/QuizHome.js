@@ -24,7 +24,7 @@ class QuizHome extends Component{
 
   render(){
     return(
-      <div id="all-quizes">
+      <div id="all-quizes" className="block">
         <div id="quiz-options">
           <input placholder="Search for Quizes"></input>
           <button>Search</button>
