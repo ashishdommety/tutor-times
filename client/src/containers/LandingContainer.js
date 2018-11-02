@@ -3,7 +3,7 @@ import Landing from '../presentation/Dashboard/Landing/Landing';
 
 function mapStateToProps(state){
   return {
-    classes: state.classes
+    title: state.profile.title
   }
 }
 

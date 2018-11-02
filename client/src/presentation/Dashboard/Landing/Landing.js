@@ -16,8 +16,8 @@ class Landing extends Component{
           <ProfileInfoContainer/>
         </div>
         <div className="landingComponent">
-          <h3>Check out our fun quizzes</h3>
-          <Link to="/dashboard/quiz"><button>Take a Quiz</button></Link>
+          <p>Quizzes are a great way to learn.</p>
+          <Link to="/dashboard/quiz"><button>{this.props.title === "tutor"? "Review" : "Take"} a Quiz</button></Link>
         </div>
       </div>
     )
