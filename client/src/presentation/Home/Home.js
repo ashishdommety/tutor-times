@@ -27,8 +27,8 @@ class Home extends Component{
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to Tutor Time</h1>
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <h1 className="App-title">Welcome to Tutor Times</h1>
         </header>
         <p className="App-intro">
           A place where tutors and students meet to learn from each other.

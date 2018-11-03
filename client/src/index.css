@@ -10,4 +10,8 @@ body {
   --red-button: #fe5658;
 }
 
+body{
+  background: var(--background-blue);
+}
+
 
