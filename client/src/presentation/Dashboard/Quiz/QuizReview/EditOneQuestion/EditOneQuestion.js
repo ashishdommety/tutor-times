@@ -53,7 +53,7 @@ class EditOneQuestion extends Component {
 
   render(){
     return(
-      <div className="editForm">
+      <div className="editForm block">
         <h2>Question {this.state.question_number}</h2>
         <div className="editInput">
           <p>Question:</p>
@@ -79,8 +79,8 @@ class EditOneQuestion extends Component {
           <p>Option 4: </p>
           <input value={this.state.opt4} onChange={this.handleInputChange} name="opt4"/>
         </div>
-        <button onClick={this.editQuestion}>Save</button>
-        <button>Cancel</button>
+        <button className="green-btn" onClick={this.editQuestion}>Save</button>
+        <button className="blue-btn">Cancel</button>
       </div>
     )
   }

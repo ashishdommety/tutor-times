@@ -9,10 +9,6 @@
 }
 
 @media only screen and (min-width:450px){
-  #all-quizes{
-    grid-column-start: 2;
-  }
-
   .quiz-tiles{
     display: flex;
     flex-wrap: wrap;

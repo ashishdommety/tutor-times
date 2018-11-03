@@ -5,9 +5,3 @@
   /* flex: 1 1 auto; */
   margin: 10px;
 }
-
-@media only screen and (min-width:450px){
-  #landing{
-    grid-column-start: 2;
-  }
-}
