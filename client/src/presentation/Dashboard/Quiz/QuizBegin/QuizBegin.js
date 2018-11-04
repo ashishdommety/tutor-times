@@ -46,7 +46,7 @@ class QuizBegin extends Component {
 
   render(){
     return(
-      <div id="quiz-landing">
+      <div id="quiz-landing" className="block">
         <h2>Welcome to the {this.state.name} Quiz!</h2>
         {!this.state.questions.length ? "loading..." :  this.state.questions.map((x,i) =>
         <QuizQuestionContainer
@@ -57,9 +57,10 @@ class QuizBegin extends Component {
             opt1={x.opt1}
             opt2={x.opt2}
             opt3={x.opt3}
-            opt4={x.opt4}/> 
+            opt4={x.opt4}
+        /> 
         )}
-        <button onClick={this.submitAnswers}>Check Score</button>
+        <button className="blue-btn" onClick={this.submitAnswers}>Check Score</button>
         {this.state.showScore? <p>You scored <strong>{this.state.score}</strong> out of {this.state.answers.length}</p> : ''}
       </div>
     )

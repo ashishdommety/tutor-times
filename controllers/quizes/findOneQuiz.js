@@ -1,5 +1,6 @@
 const db = require("../../models");
 const titleCase = require("../../helpers/titleCase/titleCase");
+const filterQuizQuestions = require("../../helpers/filterQuizQuestions/filterQuizQuestions");
 
 module.exports = function(req,res){
 
@@ -11,7 +12,7 @@ module.exports = function(req,res){
       title
     }
   }).then(result => {
-    res.json(result);
+    res.json(filterQuizQuestions(result));
   }).catch(function(err){
     throw err;
   }); 

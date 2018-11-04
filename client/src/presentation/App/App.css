@@ -1,0 +1,27 @@
+.block{
+  background: white;
+}
+
+button{
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+  color: white;
+}
+
+.blue-btn{
+  background: var(--blue-button);
+}
+
+.green-btn{
+  background: var(--green-button);
+}
+
+.red-btn{
+  background: var(--red-button);
+}
+
+/* .block-small:hover{
+  box-shadow: 0px 8px 6px -6px rgb(49, 49, 49);
+} */
+

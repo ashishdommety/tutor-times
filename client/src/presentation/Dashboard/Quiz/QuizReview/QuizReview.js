@@ -3,6 +3,8 @@ import './QuizReview.css';
 import fetchQuizQuestions from '../../../../actionCreators/async/quiz/fetchQuizQuestions';
 import EditQuestions from './EditQuestions/EditQuestions';
 import DeleteQuizButton from './DeleteQuizButton/DeleteQuizButton';
+// import AddOneQuestionButton from './AddOneQuestion/AddOneQuestion';
+import AddOneQuestionButtonContainer from '../../../../containers/QuizContainers/AddOneQuestionButtonContainer';
 
 class QuizReview extends Component{
   constructor(props){
@@ -13,12 +15,8 @@ class QuizReview extends Component{
   }
 
   componentDidMount(){
-    // console.log(this.props.history);
     let titleName = this.props.match.params.name;
-    // console.log(this.props.match.url);
-    // console.log(titleName);
     fetchQuizQuestions(titleName).then((result) => {
-      // console.log(result.data);
       this.setState({
         questions: result.data
       });
@@ -28,9 +26,20 @@ class QuizReview extends Component{
   render(){
     return(
       <div id="quizReview">
+      
         <DeleteQuizButton 
-              title={this.props.match.params.name}
-              history={this.props.history}/>
+        title={this.props.match.params.name}
+        history={this.props.history}/>
+     
+      {!this.state.questions.length ? '' : 
+        <AddOneQuestionButtonContainer
+          title={this.state.questions[0].title}
+          question_number={this.state.questions[this.state.questions.length - 1].question_number + 1}
+          difficulty={this.state.questions[0].difficulty}
+          grade={this.state.questions[0].grade}
+          history={this.props.history}
+        />
+      }
         {!this.state.questions.length ? "loading..." :  
         this.state.questions.map((x,i) =>
             <EditQuestions
@@ -45,7 +54,6 @@ class QuizReview extends Component{
                 opt4={x.opt4}
                 pagePath={this.props.match.url}
                 history={this.props.history}/> 
-
         )}
       </div>
     )

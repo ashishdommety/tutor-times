@@ -15,5 +15,8 @@
   .error-message{
     grid-column-start: 2;
   }
+  .action-screen{
+    grid-column-start: 2;
+  }
 }
 

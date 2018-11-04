@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './SignUp.css';
 
-// google_id, firstName, lastName, middleName, email, photoURL, isTutor, bio, goal, motto,phoneNumber
 class SignUp extends Component{
   constructor(props){
     super(props);
@@ -24,7 +23,6 @@ class SignUp extends Component{
   }
 
   componentDidUpdate(){
-    // console.log(this.props.pathName);
     if(this.props.pathName !== "/sign-up"){
       this.props.history.push(this.props.pathName);
     }
@@ -41,7 +39,6 @@ class SignUp extends Component{
   handleSubmit = e => {
     e.preventDefault();
     this.props.sendNewUserAsync(this.state);
-    console.log(this.state);
   }
 
   render(){

@@ -12,8 +12,6 @@ import QuizBeginContainer from '../../containers/QuizContainers/QuizBeginContain
 import NewQuestionContainer from '../../containers/QuizContainers/NewQuestionContainer';
 import QuizReview from "./Quiz/QuizReview/QuizReview";
 import EditOneQuestion from "./Quiz/QuizReview/EditOneQuestion/EditOneQuestion";
-// import NewQuestion from './Quiz/CreateQuiz/NewQuestion/NewQuestion';
-// import QuizBegin from './Quiz/QuizBegin/QuizBegin';
 
 class Dashboard extends Component{
 
@@ -31,6 +29,7 @@ class Dashboard extends Component{
         <NavigationContainer title={this.determineOpposite(this.props.title)}/>
         {!localStorage.length ? 
           <h1 className="error-message">Please log in</h1>:
+          <div className="action-screen"> 
           <Switch>
             <Route exact={true} path={this.props.match.path + "/"} component={LandingContainer}/>
             <Route exact={true} path={this.props.match.path + "/" + this.determineOpposite(this.props.title)} component={AssociatesContainer}/>
@@ -38,11 +37,12 @@ class Dashboard extends Component{
             <Route exact={true} path={this.props.match.path + "/display-users"} component={AllUsersContainer}/>
             <Route exact={true} path={this.props.match.path + "/quiz"} component={QuizProfile}/>
             <Route exact={true} path={this.props.match.path + "/quiz/:name"} component={QuizBeginContainer}/>
-            <Route exact={true} path={this.props.match.path + "/quiz/create/new" } component={CreateQuizContainer}/>
-            <Route exact={true} path={this.props.match.path + "/quiz/create/new/new-question"} component={NewQuestionContainer}/>
-            <Route exact={true} path={this.props.match.path + "/quiz/review/:name"} component={QuizReview}/>
-            <Route exact={true} path={this.props.match.path + "/quiz/review/:name/edit/:num"} component={EditOneQuestion}/>
-          </Switch>
+              <Route exact={true} path={this.props.match.path + "/quiz/create/new" } component={CreateQuizContainer}/>
+              <Route exact={true} path={this.props.match.path + "/quiz/create/new/new-question"} component={NewQuestionContainer}/>
+              <Route exact={true} path={this.props.match.path + "/quiz/review/:name"} component={QuizReview}/>
+              <Route exact={true} path={this.props.match.path + "/quiz/review/:name/edit/:num"} component={EditOneQuestion}/>
+            </Switch>
+          </div>
         }
         </div>
     )

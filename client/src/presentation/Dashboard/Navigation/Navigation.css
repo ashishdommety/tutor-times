@@ -1,13 +1,23 @@
 .nav{
-  background-color: #3A3335;
+  background-color: var(--base-blue);
   display:grid;
   padding: 20px;
   text-align:center;
+  text-decoration: none;
 }
-a{
+
+.link{
   color:white;
   display:block;
   padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid white;
+}
+
+.link:hover{
+  background-color:white;
+  color: var(--base-blue);
 }
 #profile_pic{
   margin-left:auto;

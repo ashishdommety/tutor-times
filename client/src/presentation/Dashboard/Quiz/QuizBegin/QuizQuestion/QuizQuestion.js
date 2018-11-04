@@ -4,13 +4,11 @@ import './QuizQuestion.css';
 class QuizQuestion extends Component{
 
   getAnswer = (e) => {
-    //turn all other options of same question to white
     let elements = document.getElementsByClassName(e.target.className);
     for(let i=0; i<elements.length; i++){
       elements[i].style.backgroundColor = "white";
     }
 
-    //turn selected answer bg to green
     e.target.style.backgroundColor = "lightgreen";
 
     let responseObj = {
