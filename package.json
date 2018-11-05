@@ -11,7 +11,7 @@
     "start": "node server.js",
     "build": "cd client && yarn install && yarn run build",
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
-    "test": "mocha",
+    "test": "nyc mocha",
     "heroku-postbuild": "cd client && yarn && yarn run build"
   },
   "dependencies": {
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
   }
 }

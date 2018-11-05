@@ -22,17 +22,11 @@ class NewQuestion extends Component{
     }
   }
 
-  //Re-write this function to work with a lot of new questions and one new question
   submitQuestion = (e) => {
     e.preventDefault();
-    // send ajax request
     let question_number;
     if(this.props.quiz.question_number){
       question_number = this.props.quiz.question_number;
-      console.log(`the question number is ${question_number}`);
-      // this.setState({
-      //   question_number
-      // });
       let copy = this.state;
       copy.question_number = question_number;
       createQuestion(copy)

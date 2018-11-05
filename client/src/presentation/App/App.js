@@ -9,7 +9,6 @@ import { faHome, faPencilAlt, faSignOutAlt, faGraduationCap } from '@fortawesome
 library.add(faHome, faPencilAlt, faSignOutAlt, faGraduationCap);
 
 class App extends Component {
-
     render(){
       return (
         <BrowserRouter>
