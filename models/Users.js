@@ -28,6 +28,14 @@ module.exports = function(sequelize, DataTypes){
       type: DataTypes.BOOLEAN,
       allowNull: false
     },
+    grade: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    score: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     bio: {
       type: DataTypes.STRING,
       allowNull: false
