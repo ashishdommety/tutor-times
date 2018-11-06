@@ -12,20 +12,25 @@ import QuizBeginContainer from "../../containers/QuizContainers/QuizBeginContain
 import NewQuestionContainer from "../../containers/QuizContainers/NewQuestionContainer";
 import QuizReview from "./Quiz/QuizReview/QuizReview";
 import EditOneQuestion from "./Quiz/QuizReview/EditOneQuestion/EditOneQuestion";
+import determineOppositeRole from "../../helpers/determineOppositeRole/determineOppositeRole";
 
 class Dashboard extends Component {
-  componentDidMount() {
-    this.props.fetchUserAsync(localStorage.google_id);
+  constructor(props){
+    super(props);
+    this.state = {
+      opposite: determineOppositeRole(this.props.title)
+    }
   }
 
-  determineOpposite(title) {
-    return title === "tutor" ? "students" : "tutors";
+  componentDidMount() {
+    this.props.fetchUserAsync(localStorage.google_id);
   }
 
   render() {
     return (
       <div className="dash">
-        <NavigationContainer title={this.determineOpposite(this.props.title)} />
+        <NavigationContainer 
+        title={this.state.opposite} />
         {!localStorage.length ? (
           <h1 className="error-message">Please log in</h1>
         ) : (
@@ -41,7 +46,7 @@ class Dashboard extends Component {
                 path={
                   this.props.match.path +
                   "/" +
-                  this.determineOpposite(this.props.title)
+                  this.state.opposite
                 }
                 component={AssociatesContainer}
               />
