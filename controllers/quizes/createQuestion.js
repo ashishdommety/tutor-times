@@ -1,7 +1,7 @@
 const db = require("../../models");
 const difficultySwap = require("../../helpers/difficultySwap/difficultySwap");
 
-module.exports = function(req,res){
+module.exports = function(req, res) {
   let new_question = req.body;
 
   db.Quiz.create({
@@ -18,10 +18,12 @@ module.exports = function(req,res){
     opt2: new_question.opt2,
     opt3: new_question.opt3,
     opt4: new_question.opt4
-  }).then(result => {
-    console.log(result.data);
-    res.json(result);
-  }).catch(function(err){
-    throw err;
-  }); 
+  })
+    .then(result => {
+      console.log(result.data);
+      res.json(result);
+    })
+    .catch(function(err) {
+      throw err;
+    });
 };

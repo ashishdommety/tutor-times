@@ -2,8 +2,7 @@ const db = require("../../models");
 const titleCase = require("../../helpers/titleCase/titleCase");
 const filterQuizQuestions = require("../../helpers/filterQuizQuestions/filterQuizQuestions");
 
-module.exports = function(req,res){
-
+module.exports = function(req, res) {
   // convert simple-math to Simple Math
   let title = titleCase(req.params.title);
 
@@ -11,9 +10,11 @@ module.exports = function(req,res){
     where: {
       title
     }
-  }).then(result => {
-    res.json(filterQuizQuestions(result));
-  }).catch(function(err){
-    throw err;
-  }); 
+  })
+    .then(result => {
+      res.json(filterQuizQuestions(result));
+    })
+    .catch(function(err) {
+      throw err;
+    });
 };
