@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class AddOneQuestionButton extends Component{
-  constructor(props){
+class AddOneQuestionButton extends Component {
+  constructor(props) {
     super(props);
   }
 
@@ -18,9 +18,11 @@ class AddOneQuestionButton extends Component{
     this.props.history.push("/dashboard/quiz/create/new/new-question");
   }
 
-  render(){
-    return(
-      <button className="green-btn" onClick={this.addNewQuestion}>Add Question</button>
+  render() {
+    return (
+      <button
+        className="green-btn"
+        onClick={this.addNewQuestion}>Add Question</button>
     )
   }
 };

@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes){
+module.exports = function(sequelize, DataTypes) {
   var Quiz = sequelize.define("Quiz", {
     google_id: {
       type: DataTypes.STRING,
@@ -53,14 +53,14 @@ module.exports = function(sequelize, DataTypes){
       allowNull: false
     },
     createdAt: {
-     type: DataTypes.DATE,
-     defaultValue: sequelize.fn('now')
+      type: DataTypes.DATE,
+      defaultValue: sequelize.fn("now")
     },
     updatedAt: {
       type: DataTypes.DATE,
-      defaultValue: sequelize.fn('now')
+      defaultValue: sequelize.fn("now")
     }
   });
 
   return Quiz;
-}
+};

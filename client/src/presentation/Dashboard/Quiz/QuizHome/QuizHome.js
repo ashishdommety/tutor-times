@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './QuizHome.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import QuizTile from './QuizTile/QuizTile';
 import fetchAllQuizzes from '../../../../actionCreators/async/quiz/fetchAllQuizzes';
 
-class QuizHome extends Component{
-  constructor(props){
+class QuizHome extends Component {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -14,7 +14,7 @@ class QuizHome extends Component{
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     fetchAllQuizzes().then((result) => {
       this.setState({
         quizzes: result.data
@@ -22,27 +22,27 @@ class QuizHome extends Component{
     }).catch((err) => console.log(err));
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div id="all-quizes" className="block">
         <div id="quiz-options">
           <input placholder="Search for Quizes"></input>
           <button className="blue-btn">Search</button>
-          { this.props.title !== "student" ? <Link to={this.props.match.path+ "/create/new"}><button className="green-btn">+</button></Link> : ''}
+          {this.props.title !== "student" ? <Link to={this.props.match.path + "/create/new"}><button className="green-btn">+</button></Link> : ''}
         </div>
         <div className="quiz-tiles">
-        {this.state.quizzes.map((x,i) => 
-          <div key={i}>
-          <QuizTile 
-            key={i}
-            profileTitle={this.props.title}
-            quizTitle={x.title}
-            quizPath={this.state.rootPath + "/" + x.path}
-            reviewPath={this.state.rootPath + "/review/" + x.path}
-            difficulty={x.difficulty}
-          />
-          </div>
-        )}
+          {this.state.quizzes.map((x, i) =>
+            <div key={i}>
+              <QuizTile
+                key={i}
+                profileTitle={this.props.title}
+                quizTitle={x.title}
+                quizPath={this.state.rootPath + "/" + x.path}
+                reviewPath={this.state.rootPath + "/review/" + x.path}
+                difficulty={x.difficulty}
+              />
+            </div>
+          )}
         </div>
       </div>
     )
