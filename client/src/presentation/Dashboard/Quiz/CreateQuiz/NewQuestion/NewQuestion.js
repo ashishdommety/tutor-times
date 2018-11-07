@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './NewQuestion.css';
 import createQuestion from '../../../../../actionCreators/async/quiz/createQuestion';
+import convertTitleToPath from "../../../../../helpers/convertTitleToPath/convertTitleToPath";
 
 class NewQuestion extends Component {
   constructor(props, refs) {
@@ -30,8 +31,8 @@ class NewQuestion extends Component {
       let copy = this.state;
       copy.question_number = question_number;
       createQuestion(copy)
-        .then(result => {
-          let path = this.props.quiz.title.toLowerCase().split(" ").join("-");
+        .then(() => {
+          let path = convertTitleToPath(this.props.quiz.title);
           console.log(`the path is ${path}`);
           this.props.history.push(`/dashboard/quiz/review/${path}`);
         }).catch(err => console.log(err));

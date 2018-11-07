@@ -1,4 +1,4 @@
-import determineOppositeRole from "./determineOppositeRole";
+const determineOppositeRole = require("./determineOppositeRole");
 
 describe("Returns the opposite role", () => {
   test("tutor should return 'students' ", () =>{

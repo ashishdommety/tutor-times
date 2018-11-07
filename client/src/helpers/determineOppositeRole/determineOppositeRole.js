@@ -1,3 +1,3 @@
-export default function(role){
+module.exports = function(role){
   return role === "tutor" ? "students" : "tutors";
 };
