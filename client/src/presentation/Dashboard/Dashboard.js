@@ -23,6 +23,7 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props);
     this.props.fetchUserAsync(localStorage.google_id);
   }
 

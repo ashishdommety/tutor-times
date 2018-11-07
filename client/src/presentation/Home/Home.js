@@ -8,10 +8,10 @@ class Home extends Component{
     localStorage.setItem("all", JSON.stringify(response.profileObj));
     let google_id = response.profileObj.googleId;
     // store login data in localStorage for immediate use
-    localStorage.setItem("google_id", google_id);
-    localStorage.setItem("name", response.profileObj.givenName);
-    localStorage.setItem("photoLink", response.profileObj.imageUrl);
-    localStorage.setItem("email", response.profileObj.email);
+    // localStorage.setItem("google_id", google_id);
+    // localStorage.setItem("name", response.profileObj.givenName);
+    // localStorage.setItem("photoLink", response.profileObj.imageUrl);
+    // localStorage.setItem("email", response.profileObj.email);
     // search for user in db.
     this.props.fetchUserAsync(google_id);
   }; 

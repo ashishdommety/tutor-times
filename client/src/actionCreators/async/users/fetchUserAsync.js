@@ -17,6 +17,7 @@ const fetchUserAsync = function fetchUserAsync(google_id){
           console.log("does exist in store");
           dispatch(fetchUser(user, "/dashboard"));
         }
+        // store values in localStorage for later use. See Issue #48.
       }).catch(err => console.log(err));
   }
 };
