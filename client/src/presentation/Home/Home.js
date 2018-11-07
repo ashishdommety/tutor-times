@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import "./Home.css";
 import { GoogleLogin } from "react-google-login";
 
