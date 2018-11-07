@@ -3,21 +3,16 @@ import { Link } from "react-router-dom";
 
 // Note:- This should probably be a link?
 class EditButton extends Component {
-  constructor(props) {
-    super(props);
-  }
-  EditQuestions = () => {
-    this.props.history.push(this.props.path + "/edit/" + this.props.qNum);
-  };
 
   render() {
     return (
-      <button
+      <Link
         className="modify-question-btn edit-question-btn blue-btn"
+        to={`${this.props.path}/edit/${this.props.qNum}`}
         onClick={this.EditQuestions}
       >
         Edit
-      </button>
+      </Link>
     );
   }
 }

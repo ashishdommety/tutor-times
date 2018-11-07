@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import deleteQuestion from "../../../../../actionCreators/async/quiz/deleteQuestion";
 
 class DeleteOneQuestion extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   deleteQuestion = () => {
     let pathArr = this.props.path.split("/");

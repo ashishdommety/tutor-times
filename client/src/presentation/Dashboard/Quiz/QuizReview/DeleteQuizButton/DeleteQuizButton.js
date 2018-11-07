@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import deleteQuiz from "../../../../../actionCreators/async/quiz/deleteQuiz";
 
 class DeleteQuizButton extends Component {
-  constructor(props){
-    super(props);
-  }
 
   deleteOneQuiz = () => {
     deleteQuiz(this.props.title)

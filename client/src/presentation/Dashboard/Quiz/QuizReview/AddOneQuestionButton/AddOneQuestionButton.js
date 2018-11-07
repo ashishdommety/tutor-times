@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class AddOneQuestionButton extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   addNewQuestion = () => {
     let currentQuiz = {
       title: this.props.title,
