@@ -1,4 +1,3 @@
-// import convertTitleToPath from "./convertTitleToPath";
 const convertTitleToPath = require("./convertTitleToPath");
 
 describe("Convert Quiz Titles to Paths", () => {

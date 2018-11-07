@@ -1,5 +1,4 @@
-// @flow
-module.exports = function(title: string) {
+module.exports = function(title) {
   return title
     .toLowerCase()
     .split(" ")

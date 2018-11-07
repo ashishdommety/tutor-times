@@ -26,13 +26,15 @@
     "build": "react-scripts build",
     "test": "jest --watch",
     "eject": "react-scripts eject",
-    "flow": "flow",
     "lint": "eslint src"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "eslint": "^5.8.0",
     "eslint-plugin-react": "^7.11.1",
-    "flow-bin": "^0.85.0"
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1"
   }
 }
