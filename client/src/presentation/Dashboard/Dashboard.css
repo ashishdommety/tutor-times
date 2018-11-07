@@ -1,22 +1,21 @@
-.main-body{
+.main-body {
   background-color: lightgrey;
 }
 
-.error-message{
+.error-message {
   text-align: center;
-  color:red;
+  color: red;
 }
 
-@media only screen and (min-width:450px){
-  .dash{
-    display:grid;
+@media only screen and (min-width: 450px) {
+  .dash {
+    display: grid;
     grid-template-columns: 160px 1fr;
   }
-  .error-message{
+  .error-message {
     grid-column-start: 2;
   }
-  .action-screen{
+  .action-screen {
     grid-column-start: 2;
   }
 }
-

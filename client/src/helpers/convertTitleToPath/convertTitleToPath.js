@@ -1,3 +1,7 @@
-module.exports = function(title){
-  return title.toLowerCase().split(" ").join("-");
+// @flow
+module.exports = function(title: string) {
+  return title
+    .toLowerCase()
+    .split(" ")
+    .join("-");
 };

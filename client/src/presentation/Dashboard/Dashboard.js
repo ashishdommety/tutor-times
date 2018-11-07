@@ -15,11 +15,11 @@ import EditOneQuestion from "./Quiz/QuizReview/EditOneQuestion/EditOneQuestion";
 import determineOppositeRole from "../../helpers/determineOppositeRole/determineOppositeRole";
 
 class Dashboard extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       opposite: determineOppositeRole(this.props.title)
-    }
+    };
   }
 
   componentDidMount() {
@@ -30,8 +30,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="dash">
-        <NavigationContainer 
-        title={this.state.opposite} />
+        <NavigationContainer title={this.state.opposite} />
         {!localStorage.length ? (
           <h1 className="error-message">Please log in</h1>
         ) : (
@@ -44,11 +43,7 @@ class Dashboard extends Component {
               />
               <Route
                 exact={true}
-                path={
-                  this.props.match.path +
-                  "/" +
-                  this.state.opposite
-                }
+                path={this.props.match.path + "/" + this.state.opposite}
                 component={AssociatesContainer}
               />
               <Route
