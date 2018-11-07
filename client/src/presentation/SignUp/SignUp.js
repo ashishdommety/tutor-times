@@ -15,7 +15,8 @@ class SignUp extends Component{
         isTutor: false,
         bio: '',
         goal: '',
-        motto: ''
+        motto: '',
+        grade: ''
       };
 
       this.handleInputChange = this.handleInputChange.bind(this);
@@ -58,6 +59,20 @@ class SignUp extends Component{
           <select value={this.state.isTutor} onChange={this.handleInputChange} name="isTutor">
             <option value={false}>Study</option>
             <option value={true}>Teach</option>
+          </select>
+          <label>I am in: </label>
+          <select value={this.state.grade} onChange={this.handleInputChange} name="grade">
+            <option value="three">Grade Three</option>
+            <option value="four">Grade Four</option>
+            <option value="five">Grade Five</option>
+            <option value="six">Grade Six</option>
+            <option value="seven">Grade Seven</option>
+            <option value="eight">Grade Eight</option>
+            <option value="nine">Grade Nine</option>
+            <option value="ten">Grade Ten</option>
+            <option value="eleven">Grade Twelve</option>
+            <option value="college">College</option>
+            <option value={this.state.isTutor ? "All" : "Other"}>{this.state.isTutor ? "All" : "Other"}</option>
           </select>
           <label>What do you hope to achieve from your classes? </label>
           <textarea type="text" name="goal" value={this.state.goal} onChange={this.handleInputChange}/>

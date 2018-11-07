@@ -15,7 +15,9 @@ module.exports = function(req,res){
     bio: new_user.bio,
     goal: new_user.goal, 
     motto: new_user.motto, 
-    phoneNumber: new_user.phoneNumber
+    phoneNumber: new_user.phoneNumber,
+    score: 100,
+    grade: new_user.grade
   }).then(result => {
     res.json({redirect: "/signin", user_data : result.dataValues});
   }).catch(function(err){
