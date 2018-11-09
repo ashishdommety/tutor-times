@@ -32,13 +32,46 @@ class CreateQuiz extends Component {
     return (
       <div className="createQuizDisplay">
         <form>
-          <input placeholder="Title" name="title" type="text" value={this.state.title} onChange={this.handleChange} />
-          <input placeholder="Grade" name="grade" type="text" value={this.state.grade} onChange={this.handleChange} />
-          <input placeholder="Difficulty (easy, medium, hard)" name="difficulty" type="text" value={this.state.difficulty} onChange={this.handleChange} />
-          <input placeholder="No. Of Questions" name="questionAmount" type="text" value={this.state.questionAmount} onChange={this.handleChange} />
-          <input placeholder="Image" name="imageUrl" type="text" value={this.state.imageUrl} onChange={this.handleChange} />
+          <input 
+            placeholder="Title" 
+            name="title" 
+            type="text" 
+            value={this.state.title} 
+            onChange={this.handleChange} 
+          />
+          <input 
+            placeholder="Grade" 
+            name="grade" 
+            type="text" 
+            value={this.state.grade}
+            onChange={this.handleChange} 
+          />
+          <input 
+            placeholder="Difficulty (easy, medium, hard)" 
+            name="difficulty" 
+            type="text" 
+            value={this.state.difficulty} 
+            onChange={this.handleChange} 
+          />
+          <input 
+            placeholder="No. Of Questions" 
+            name="questionAmount" 
+            type="text" 
+            value={this.state.questionAmount} 
+            onChange={this.handleChange} 
+          />
+          <input 
+            placeholder="Image" 
+            name="imageUrl" 
+            type="text" 
+            value={this.state.imageUrl} 
+            onChange={this.handleChange} 
+          />
         </form>
-        <button className="green-btn" onClick={this.handleSubmit}>Create Quiz</button>
+        <button 
+          className="green-btn" 
+          onClick={this.handleSubmit}
+        >Create Quiz</button>
       </div>
     )
   }
